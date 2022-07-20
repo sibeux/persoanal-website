@@ -73,7 +73,7 @@
             </div>
             <!-- logo image -->
             <div class="site-logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="images/logo-name.svg" alt="SibeUX" />
                 </a>
             </div>

@@ -732,6 +732,7 @@
                         <li class="list-inline-item"><a href="works-3.html"></a></li>
                         <li class="list-inline-item"><a href="works-4.html"></a></li>
                         <li class="list-inline-item"><a href="works-5.html"></a></li>
+                        <li class="list-inline-item"><a href="works-6.html"></a></li>
                     </ul>
                 </div>
 

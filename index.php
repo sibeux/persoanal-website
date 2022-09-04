@@ -108,7 +108,7 @@
         <!-- site footer -->
         <div class="footer">
             <!-- copyright text -->
-            <span class="copyright">© 2022 SibeUX Portfolio.</span>
+            <span class="copyright">© 2022 SibeUX Website.</span>
         </div>
 
     </header>

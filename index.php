@@ -531,7 +531,7 @@
                             <!-- timeline item -->
                             <div class="timeline-container wow fadeInUp">
                                 <div class="content">
-                                    <span class="time">2022 - Present</span>
+                                    <span class="time">2022 (5 Months)</span>
                                     <h3 class="title">Android Developer - Hacktiv8 Indonesia</h3>
                                     <p>Certified Independent Study Program
                                     </p>
@@ -541,9 +541,9 @@
                             <!-- timeline item -->
                             <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="content">
-                                    <span class="time">2022 - Present</span>
+                                    <span class="time">2021 - Present</span>
                                     <h3 class="title">BEM Fasilkom UNEJ</h3>
-                                    <p>Multimedia Staff at BEM Fasilkom UNEJ
+                                    <p>KOMINFO Staff at BEM Fasilkom UNEJ
                                     </p>
                                 </div>
                             </div>

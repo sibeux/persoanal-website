@@ -269,7 +269,7 @@
                                 <div class="col-md-6">
                                     <!-- about text -->
                                     <p>I am M. Nasrul Wahabi, information systems student at the University of Jember.
-                                        I am active in campus organizations, namely BEM FASILKOM UNEJ as multimedia
+                                        I am active in campus organizations, namely BEM FASILKOM UNEJ as KOMINFO
                                         staff. I'm currently
                                         majoring in programming as a android developer and media editing
                                         such as graphic design and videography. Besides that, I also often create

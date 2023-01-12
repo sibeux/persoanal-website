@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>M. Nasrul Wahabi</title>
+    <title>Latest Projects</title>
     <meta name="description" content="sibeux portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="images/sibe.png">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/slick.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style-more-project.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!--[if lt IE 9]>
@@ -93,7 +93,7 @@
         <!-- main menu -->
         <nav style="overflow: hidden;">
             <ul class="vertical-menu scrollspy">
-                <li class="active"><a href="#home"><i class="icon-home"></i>Home</a></li>
+                <li class="active"><a href="index.php#testimonials"><i class="icon-home"></i>Home</a></li>
                 <li><a href="#blog"><i class="icon-note"></i>Project</a></li>
             </ul>
         </nav>
@@ -119,55 +119,12 @@
                 <!-- section title -->
                 <h2 class="section-title wow fadeInUp">More Projects</h2>
 
-                <div class="spacer" data-height="60"></div>
+                <!-- copas dari sini untuk add project -->
+                <div class="spacer" data-height="40"></div>
 
                 <div class="row blog-wrapper">
 
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                    <span class="category">Application</span>
-                                </a>
-                                <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                    <img src="images/java-pro.svg" alt="blog-title" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/Aplikasi_E-Learning_Java"
-                                        target="_blank">RANKERIN - E-learning Application Using Java</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">16 December, 2021</li>
-                                    <li class="list-inline-item">SibeUX</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="./movie-web/indexx.html" target="_blank">
-                                    <span class="category">Website</span>
-                                </a>
-                                <a href="./movie-web/indexx.html" target="_blank">
-                                    <img src="images/web-cinema.svg" alt="blog-title" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a href="./movie-web/indexx.html"
-                                        target="_blank">Website Streaming Movie With Bootstrap</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">18 June, 2022</li>
-                                    <li class="list-inline-item">SibeUX</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
+                <div class="col-md-4">
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
@@ -192,88 +149,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="spacer" data-height="60"></div>
-
-                <div class="row blog-wrapper">
-
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                    <span class="category">Application</span>
-                                </a>
-                                <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                    <img src="images/java-pro.svg" alt="blog-title" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/Aplikasi_E-Learning_Java"
-                                        target="_blank">RANKERIN - E-learning Application Using Java</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">16 December, 2021</li>
-                                    <li class="list-inline-item">SibeUX</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="./movie-web/indexx.html" target="_blank">
-                                    <span class="category">Website</span>
-                                </a>
-                                <a href="./movie-web/indexx.html" target="_blank">
-                                    <img src="images/web-cinema.svg" alt="blog-title" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a href="./movie-web/indexx.html"
-                                        target="_blank">Website Streaming Movie With Bootstrap</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">18 June, 2022</li>
-                                    <li class="list-inline-item">SibeUX</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
-                                    target="_blank">
-                                    <span class="category">Datamining</span>
-                                </a>
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
-                                    target="_blank">
-                                    <img src="images/datamining.svg" alt="blog-title" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
-                                        target="_blank">Emerging
-                                        Pattern Classification Using Python</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">10 June, 2022</li>
-                                    <li class="list-inline-item">SibeUX</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="spacer" data-height="60"></div>
-
-                <div class="row blog-wrapper">
 
                     <div class="col-md-4">
                         <!-- blog item -->
@@ -348,6 +223,7 @@
                 </div>
 
             </div>
+            <!-- sampe sini -->
 
         </section>
 

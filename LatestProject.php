@@ -128,23 +128,73 @@
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
                                     target="_blank">
-                                    <span class="category">Datamining</span>
+                                    <span class="category">Android</span>
                                 </a>
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
                                     target="_blank">
-                                    <img src="images/datamining.svg" alt="blog-title" />
+                                    <img src="images/calculator.svg" alt="" />
                                 </a>
                             </div>
                             <div class="details">
                                 <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
-                                        target="_blank">Emerging
-                                        Pattern Classification Using Python</a></h4>
+                                        href="https://github.com/sibeux/android-java-mechanical-calculator"
+                                        target="_blank">Android Java Calculator Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">10 June, 2022</li>
-                                    <li class="list-inline-item">SibeUX</li>
+                                    <li class="list-inline-item">14 November, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-ecommerce"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-ecommerce"
+                                    target="_blank">
+                                    <img src="images/ecommerce.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-ecommerce"
+                                        target="_blank">Android Java E-Commerce Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">05 November, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-to-do-list"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-to-do-list"
+                                    target="_blank">
+                                    <img src="images/todolist 1.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-to-do-list"
+                                        target="_blank">Android Java To-Do
+                                    List Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">17 October, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
                                 </ul>
                             </div>
                         </div>

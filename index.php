@@ -252,8 +252,11 @@
                                         content
                                         game which will later be uploaded on my personal youtube channel (Habiqi).
                                     </p>
+
+                                    <!-- CURRICULUM CITAE -->
                                     <div class="mt-3">
-                                        <a href="https://drive.google.com/file/d/11WPU1e05fzfkql2Pie3_MGSE8SxR3hs1/view" target="_blank" class="btn btn-default">Download CV</a>
+                                        <a href="https://drive.google.com/file/d/1FIexWx39OxBeL8JDfwY5x5ilNiPuyeZl/view?usp=share_link" target="_blank" 
+                                        class="btn btn-default">Download CV</a>
                                     </div>
                                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
                                 </div>
@@ -829,7 +832,7 @@
                             <!-- client item -->
                             <div class="client-item">
                                 <div class="inner">
-                                    <img src="images/spring.svg" alt="client-name" />
+                                    <img src="images-works/Flutter 1.svg" alt="flutter" />
                                 </div>
                             </div>
                         </div>
@@ -859,75 +862,87 @@
 
                     <div class="row blog-wrapper">
 
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                        <span class="category">Application</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">
-                                        <img src="images/java-pro.svg" alt="blog-title" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">RANKERIN - E-learning Application Using Java</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">16 December, 2021</li>
-                                        <li class="list-inline-item">SibeUX</li>
-                                    </ul>
-                                </div>
+                    <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                    target="_blank">
+                                    <img src="images-works/bus-reser.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-bus-reservation"
+                                        target="_blank">Android Java Bus Reservation
+                                    Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">16 December, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="./movie-web/indexx.html" target="_blank">
-                                        <span class="category">Website</span>
-                                    </a>
-                                    <a href="./movie-web/indexx.html" target="_blank">
-                                        <img src="images/web-cinema.svg" alt="blog-title" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="./movie-web/indexx.html" target="_blank">Website Streaming Movie With Bootstrap</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">18 June, 2022</li>
-                                        <li class="list-inline-item">SibeUX</li>
-                                    </ul>
-                                </div>
+                <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
+                                    target="_blank">
+                                    <img src="images/calculator.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-mechanical-calculator"
+                                        target="_blank">Android Java Calculator Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">14 November, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">
-                                        <span class="category">Datamining</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">
-                                        <img src="images/datamining.svg" alt="blog-title" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">Emerging
-                                            Pattern Classification Using Python</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">10 June, 2022</li>
-                                        <li class="list-inline-item">SibeUX</li>
-                                    </ul>
-                                </div>
+                <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-ecommerce"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-ecommerce"
+                                    target="_blank">
+                                    <img src="images/ecommerce.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-ecommerce"
+                                        target="_blank">Android Java E-Commerce Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">05 November, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
                     </div>
 
                     <!-- need more? -->
                 <div class="mt-5 text-center">
-                    <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="">Let's go!!</a> 🚀</p>
+                    <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="">Let's go!!</a> 🚗</p>
                 </div>
 
                 </div>

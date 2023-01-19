@@ -128,6 +128,32 @@
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
+                                <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                    target="_blank">
+                                    <span class="category">Android</span>
+                                </a>
+                                <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                    target="_blank">
+                                    <img src="images-works/bus-reser.svg" alt="" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-bus-reservation"
+                                        target="_blank">Android Java Bus Reservation
+                                    Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">16 December, 2022</li>
+                                    <li class="list-inline-item">Hacktiv8</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
                                 <a href="https://github.com/sibeux/android-java-mechanical-calculator"
                                     target="_blank">
                                     <span class="category">Android</span>

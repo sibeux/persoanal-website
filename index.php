@@ -221,9 +221,9 @@
 
         <!-- section about -->
         <section id="about">
-
+        
             <div class="container">
-
+            <div class="particles" id="particles-js2"></div>
                 <!-- section title -->
                 <h2 class="section-title wow fadeInUp">About Me</h2>
 
@@ -255,8 +255,7 @@
 
                                     <!-- CURRICULUM CITAE -->
                                     <div class="mt-3">
-                                        <a href="https://drive.google.com/file/d/1FIexWx39OxBeL8JDfwY5x5ilNiPuyeZl/view?usp=share_link" target="_blank" 
-                                        class="btn btn-default">Download CV</a>
+                                        <a href="https://drive.google.com/file/d/1FIexWx39OxBeL8JDfwY5x5ilNiPuyeZl/view?usp=share_link" target="_blank" class="btn btn-default">Download CV</a>
                                     </div>
                                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
                                 </div>
@@ -425,15 +424,11 @@
                             <p class="mb-0">Adobe Premiere Pro, Adobe After Effects, Kinemaster.</p>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="mt-5 text-center">
                     <p class="mb-0">Looking for a project? <a href="#contact">Contact Me</a> now! 👋</p>
                 </div>
-
             </div>
-
         </section>
 
         <!-- section experience -->
@@ -501,6 +496,16 @@
                             <!-- timeline item -->
                             <div class="timeline-container wow fadeInUp">
                                 <div class="content">
+                                    <span class="time">Feb 2023 - Present</span>
+                                    <h3 class="title">Programmer</h3>
+                                    <p>Programmer Internship at BPJPH Kemenag
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- timeline item -->
+                            <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="content">
                                     <span class="time">2022 (5 Months)</span>
                                     <h3 class="title">Android Developer - Hacktiv8 Indonesia</h3>
                                     <p>Certified Independent Study Program
@@ -509,21 +514,11 @@
                             </div>
 
                             <!-- timeline item -->
-                            <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="timeline-container wow fadeInUp" data-wow-delay="0.4s">
                                 <div class="content">
                                     <span class="time">2021 - Present</span>
                                     <h3 class="title">BEM Fasilkom UNEJ</h3>
                                     <p>KOMINFO Staff at BEM Fasilkom UNEJ
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- timeline item -->
-                            <div class="timeline-container wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="content">
-                                    <span class="time">2017 - 2019</span>
-                                    <h3 class="title">Student Council</h3>
-                                    <p>Student Council staff at SMAN 01 Srengat
                                     </p>
                                 </div>
                             </div>
@@ -541,8 +536,121 @@
 
         </section>
 
+        <!-- tes -->
+        <section class="experience padding-tb" id="Resume" style="padding-top: 50px;">
+			<div class="container" style="padding: 5px;">
+				<div class="section-header">
+					<div class="title">
+						<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I Have Completed My Master
+							<span>Degree & Experience</span> With Leading Companies</h2>
+					</div>
+				</div>
+				<div class="section-wrapper">
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/cropped-Logo-Baku-UNEJ-2020-Square.png" 
+                                alt="experience" height="40" width="40">
+								<h6>Universitas Jember</h6>
+								<div class="exp-cata">
+									<span>2020 - Present</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>S1 Sistem Informasi</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/BEM%20Logo.png" 
+                                alt="experience" height="40" width="40">
+								<h6>BEM FASILKOM UNEJ</h6>
+								<div class="exp-cata">
+									<span>2021 - Present</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>KOMINFO Divison Staff</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="assets/images/exp/03.png" alt="experience">
+								<h6>Plays.tv University</h6>
+								<div class="exp-cata">
+									<span>2014 - 2019</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>Master Degree Visual Art & Design</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="assets/images/exp/04.png" alt="experience">
+								<h6>Timeuest Ltd.</h6>
+								<div class="exp-cata">
+									<span>2014 - 2019</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>Senior UI/UX Designer</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="assets/images/exp/05.png" alt="experience">
+								<h6>Playwell University</h6>
+								<div class="exp-cata">
+									<span>2014 - 2019</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>Master Degree Visual Art & Design</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+						<div class="exp-inner">
+							<div class="exp-thumb">
+								<img src="assets/images/exp/06.png" alt="experience">
+								<h6>Trackbox Ltd.</h6>
+								<div class="exp-cata">
+									<span>2014 - 2019</span>
+								</div>
+							</div>
+							<div class="exp-content">
+								<h3>Junior Graphic Designer</h3>
+								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
+									eenable extensible information</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <!-- test -->
+
         <!-- section works -->
-        <section id="works">
+        <section id="works" style="padding-top: 70px;">
 
             <div class="container">
 
@@ -862,88 +970,76 @@
 
                     <div class="row blog-wrapper">
 
-                    <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-bus-reservation"
-                                    target="_blank">
-                                    <span class="category">Android</span>
-                                </a>
-                                <a href="https://github.com/sibeux/android-java-bus-reservation"
-                                    target="_blank">
-                                    <img src="images-works/bus-reser.svg" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-bus-reservation"
-                                        target="_blank">Android Java Bus Reservation
-                                    Application</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">16 December, 2022</li>
-                                    <li class="list-inline-item">Hacktiv8</li>
-                                </ul>
+                        <div class="col-md-4">
+                            <!-- blog item -->
+                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                <div class="thumb">
+                                    <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
+                                        <span class="category">Android</span>
+                                    </a>
+                                    <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
+                                        <img src="images-works/bus-reser.svg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">Android Java Bus Reservation
+                                            Application</a></h4>
+                                    <ul class="list-inline meta mb-0 mt-2">
+                                        <li class="list-inline-item">16 December, 2022</li>
+                                        <li class="list-inline-item">Hacktiv8</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                    target="_blank">
-                                    <span class="category">Android</span>
-                                </a>
-                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                    target="_blank">
-                                    <img src="images/calculator.svg" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                        target="_blank">Android Java Calculator Application</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">14 November, 2022</li>
-                                    <li class="list-inline-item">Hacktiv8</li>
-                                </ul>
+                        <div class="col-md-4">
+                            <!-- blog item -->
+                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                <div class="thumb">
+                                    <a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">
+                                        <span class="category">Android</span>
+                                    </a>
+                                    <a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">
+                                        <img src="images/calculator.svg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">Android Java Calculator Application</a></h4>
+                                    <ul class="list-inline meta mb-0 mt-2">
+                                        <li class="list-inline-item">14 November, 2022</li>
+                                        <li class="list-inline-item">Hacktiv8</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                <div class="col-md-4">
-                        <!-- blog item -->
-                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                            <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-ecommerce"
-                                    target="_blank">
-                                    <span class="category">Android</span>
-                                </a>
-                                <a href="https://github.com/sibeux/android-java-ecommerce"
-                                    target="_blank">
-                                    <img src="images/ecommerce.svg" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-ecommerce"
-                                        target="_blank">Android Java E-Commerce Application</a></h4>
-                                <ul class="list-inline meta mb-0 mt-2">
-                                    <li class="list-inline-item">05 November, 2022</li>
-                                    <li class="list-inline-item">Hacktiv8</li>
-                                </ul>
+                        <div class="col-md-4">
+                            <!-- blog item -->
+                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                <div class="thumb">
+                                    <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
+                                        <span class="category">Android</span>
+                                    </a>
+                                    <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
+                                        <img src="images/ecommerce.svg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">Android Java E-Commerce Application</a></h4>
+                                    <ul class="list-inline meta mb-0 mt-2">
+                                        <li class="list-inline-item">05 November, 2022</li>
+                                        <li class="list-inline-item">Hacktiv8</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                     </div>
 
                     <!-- need more? -->
-                <div class="mt-5 text-center">
-                    <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="">Let's go!!</a> 🚗</p>
-                </div>
+                    <div class="mt-5 text-center">
+                        <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="">Let's go!!</a> 🚗</p>
+                    </div>
 
                 </div>
 
@@ -1041,6 +1137,7 @@
     <script src="js/infinite-scroll.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/particle.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/wow.min.js"></script>

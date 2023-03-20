@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style-experience.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!--[if lt IE 9]>
@@ -73,7 +74,7 @@
             </div>
             <!-- logo image -->
             <div class="site-logo">
-                <a href="index.php">
+                <a href="/">
                     <img src="images/logo-name.svg" alt="SibeUX" />
                 </a>
             </div>
@@ -85,7 +86,7 @@
 
         <!-- logo image -->
         <div class="site-logo">
-            <a href="index.php">
+            <a href="/">
                 <img src="images/logo-name.svg" alt="sibeUX" />
             </a>
         </div>
@@ -583,16 +584,16 @@
 					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 						<div class="exp-inner">
 							<div class="exp-thumb">
-								<img src="assets/images/exp/03.png" alt="experience">
-								<h6>Plays.tv University</h6>
+								<img src="https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/hacktiv8-1.png" 
+                                alt="experience" height="40" width="40">
+								<h6>Hacktiv8 Indonesia</h6>
 								<div class="exp-cata">
-									<span>2014 - 2019</span>
+									<span>2022</span>
 								</div>
 							</div>
 							<div class="exp-content">
-								<h3>Master Degree Visual Art & Design</h3>
-								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
-									eenable extensible information</p>
+								<h3>Android Java Developer</h3>
+								<p>Certified Independent Study as Android Java for Mobile Developer</p>
 							</div>
 						</div>
 					</div>
@@ -1038,7 +1039,7 @@
 
                     <!-- need more? -->
                     <div class="mt-5 text-center">
-                        <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="">Let's go!!</a> 🚗</p>
+                        <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="_blank">Let's go!!</a> 🚗</p>
                     </div>
 
                 </div>

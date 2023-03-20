@@ -1,0 +1,197 @@
+/* education & experience  */
+.experience {
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.experience .section-wrapper .exp-item {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .experience .section-wrapper .exp-item {
+        width: calc(100% / 2);
+    }
+}
+
+.experience .section-wrapper .exp-item:nth-child(even) .exp-inner {
+    margin-right: 0;
+}
+
+.experience .section-wrapper .exp-item:nth-child(odd) .exp-inner {
+    margin-left: 0;
+}
+
+.experience .section-wrapper .exp-item .exp-inner {
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 1px;
+    background: #fff;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 992px) {
+    .experience .section-wrapper .exp-item .exp-inner {
+        padding: 34px;
+    }
+}
+
+@media (min-width: 992px) {
+    .experience .section-wrapper .exp-item .exp-inner {
+        margin: 15px;
+    }
+}
+
+.experience .section-wrapper .exp-item .exp-inner:hover {
+    transform: translateY(-10px);
+}
+
+.experience .section-wrapper .exp-item .exp-inner:hover .exp-content h3 {
+    color: #ff4181;
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb {
+    position: relative;
+    align-items: center;
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb h6 {
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+}
+
+@media (min-width: 576px) {
+    .experience .section-wrapper .exp-item .exp-inner .exp-thumb h6 {
+        padding-left: 20px;
+        width: auto;
+    }
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb .exp-cata {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (min-width: 576px) {
+    .experience .section-wrapper .exp-item .exp-inner .exp-thumb .exp-cata {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb .exp-cata span {
+    position: relative;
+    font-size: 16px;
+    padding: 6px 14px;
+    background-image: linear-gradient(to right, #fed643, #ff4181);
+    color: #fff;
+    border-radius: 1px;
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb .exp-cata span::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fed643;
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-content h3 {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.experience .section-wrapper .exp-item .exp-inner .exp-content p {
+    line-height: 24px;
+    margin: 0;
+}
+
+.experience .text-center {
+    margin-top: 40px;
+}
+
+.banner-bottom .bottom-wrapper,
+.banner-bottom .bottom-wrapper .post-item,
+.blog-page .section-wrapper,
+.blog-page .section-wrapper .blog.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section,
+.blog-page .section-wrapper .blog.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section .tags,
+.blog-page .section-wrapper .sidebar-widget .widget-rec-post .recent-post li,
+.blog-page .section-wrapper .sidebar-widget .widget-tags ul,
+.blog-page .section-wrapper .sidebar-widget .widget-instagram ul,
+.about .section-wrapper,
+.about .section-wrapper .about-right .about-item .about-content ul li,
+.experience .section-wrapper,
+.experience .section-wrapper .exp-item .exp-inner .exp-thumb,
+.services .section-wrapper,
+.services .section-wrapper .service-item .service-inner,
+.portfolio .portfolio-top,
+.portfolio .portfolio-top .portfolio-right ul,
+.portfolio .section-wrapper .grid,
+.pricing .section-wrapper,
+.testimonial .section-wrapper .testimonial-slider .testimonial-item .testimonial-inner .testimonial-head,
+.testimonial .section-wrapper .testimonial-slider .testimonial-item .testimonial-inner .testimonial-head .testi-top,
+.testimonial .section-wrapper .testimonial-slider .testimonial-item .testimonial-inner .testimonial-footer,
+.testimonial .section-wrapper .testimonial-slider .testimonial-item .testimonial-inner .testimonial-footer ul,
+.blog .blog-header-part,
+.blog .section-wrapper,
+.blog .section-wrapper .post-item .post-inner .post-content,
+.blog .section-wrapper .post-item .post-inner .post-content .content-left,
+.blog .section-wrapper .post-item .post-inner .post-content .content-left li .social-media-list,
+.blog .section-wrapper .post-item .post-inner .post-content .content-part .entry-header .entry-meta,
+.social-link-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.exp-content h3,
+.exp-thumb h6 {
+    font-family: "Frank Ruhl Libre", serif;
+    color: #000;
+    line-height: 1.5;
+}
+
+.exp-thumb h6 {
+    font-size: 18px;
+}
+
+.section-header .title h2 {
+    font-weight: 300 !important;
+    line-height: 40px;
+    clear: both;
+    margin: 0.25em 0 0.25em;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.section-header .title h2 span {
+    color: #ff4181;
+    font-weight: 700;
+}
+
+#particles-js,
+#particles-js2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}

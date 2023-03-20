@@ -73,7 +73,7 @@
             </div>
             <!-- logo image -->
             <div class="site-logo">
-                <a href="index.php">
+                <a href="/">
                     <img src="images/logo-name.svg" alt="SibeUX" />
                 </a>
             </div>
@@ -85,7 +85,7 @@
 
         <!-- logo image -->
         <div class="site-logo">
-            <a href="index.php">
+            <a href="/">
                 <img src="images/logo-name.svg" alt="sibeUX" />
             </a>
         </div>
@@ -93,7 +93,7 @@
         <!-- main menu -->
         <nav style="overflow: hidden;">
             <ul class="vertical-menu scrollspy">
-                <li class="active"><a href="index.php#testimonials"><i class="icon-home"></i>Home</a></li>
+                <li class="active"><a href="/#testimonials"><i class="icon-home"></i>Home</a></li>
                 <li><a href="#blog"><i class="icon-note"></i>Project</a></li>
             </ul>
         </nav>

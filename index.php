@@ -601,13 +601,13 @@
 						<div class="exp-inner">
 							<div class="exp-thumb">
 								<img src="assets/images/exp/04.png" alt="experience">
-								<h6>Timeuest Ltd.</h6>
+								<h6>BPJPH Kemenag RI</h6>
 								<div class="exp-cata">
-									<span>2014 - 2019</span>
+									<span>February - Present (2023)</span>
 								</div>
 							</div>
 							<div class="exp-content">
-								<h3>Senior UI/UX Designer</h3>
+								<h3>Programmer</h3>
 								<p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
 									eenable extensible information</p>
 							</div>

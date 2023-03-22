@@ -128,7 +128,7 @@
 
                     <!-- info -->
                     <h1 class="mb-2 mt-0">M. Nasrul Wahabi</h1>
-                    <span>I'm a <span class="text-rotating">Mobile Developer, Graphic Designer, Information Systems
+                    <span>I'm <span class="text-rotating">a Mobile Developer, a Graphic Designer, an Information Systems
                             Student
                         </span></span>
 

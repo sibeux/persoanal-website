@@ -603,7 +603,7 @@
 								<img src="assets/images/exp/04.png" alt="experience">
 								<h6>BPJPH Kemenag RI</h6>
 								<div class="exp-cata">
-									<span>February - Present (2023)</span>
+									<span>2023 - Present</span>
 								</div>
 							</div>
 							<div class="exp-content">

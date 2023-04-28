@@ -290,7 +290,7 @@
                                     <div class="skill-item">
                                         <div class="skill-info clearfix">
                                             <h4 class="float-left mb-3 mt-0">Design Graphic</h4>
-                                            <span class="float-right">2 Year</span>
+                                            <span class="float-right">2 Years</span>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar data-background" role="progressbar"
@@ -320,7 +320,7 @@
                                     <div class="skill-item">
                                         <div class="skill-info clearfix">
                                             <h4 class="float-left mb-3 mt-0">Videography</h4>
-                                            <span class="float-right">2 Year</span>
+                                            <span class="float-right">2 Years</span>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar data-background" role="progressbar"

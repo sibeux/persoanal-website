@@ -508,7 +508,7 @@
                             <!-- timeline item -->
                             <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="content">
-                                    <span class="time">2022 (5 Months)</span>
+                                    <span class="time">Aug - Dec 2022</span>
                                     <h3 class="title">Android Developer - Hacktiv8 Indonesia</h3>
                                     <p>Certified Independent Study Program
                                     </p>

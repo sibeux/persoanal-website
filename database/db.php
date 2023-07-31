@@ -1,8 +1,8 @@
 <?php
 
 define('HOST', 'localhost');
-define('SIBEUX', 'sibb8757');
-define('pass', 'M41hpwg4TZTi82');
+define('SIBEUX', 'sibeuxm1');
+define('pass', 'pMklM1W36;oI.4');
 define('DB', 'sibb8757_web_porto');
 $db = new mysqli(HOST, SIBEUX, pass, DB);
 

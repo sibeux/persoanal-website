@@ -124,24 +124,21 @@
 
                 <div class="row blog-wrapper">
 
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-bus-reservation"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
                                     <span class="category">Android</span>
                                 </a>
-                                <a href="https://github.com/sibeux/android-java-bus-reservation"
-                                    target="_blank">
-                                    <img src="images-works/bus-reser.svg" alt="" />
+                                <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
+                                    <img src="images-works/bus-reser.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-bus-reservation"
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-bus-reservation"
                                         target="_blank">Android Java Bus Reservation
-                                    Application</a></h4>
+                                        Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">16 December, 2022</li>
                                     <li class="list-inline-item">Hacktiv8</li>
@@ -150,16 +147,14 @@
                         </div>
                     </div>
 
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">
                                     <span class="category">Android</span>
                                 </a>
-                                <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">
                                     <img src="images/calculator.svg" alt="" />
                                 </a>
                             </div>
@@ -175,22 +170,19 @@
                         </div>
                     </div>
 
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-ecommerce"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
                                     <span class="category">Android</span>
                                 </a>
-                                <a href="https://github.com/sibeux/android-java-ecommerce"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
                                     <img src="images/ecommerce.svg" alt="" />
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-ecommerce"
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-ecommerce"
                                         target="_blank">Android Java E-Commerce Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">05 November, 2022</li>
@@ -200,24 +192,21 @@
                         </div>
                     </div>
 
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/android-java-to-do-list"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-to-do-list" target="_blank">
                                     <span class="category">Android</span>
                                 </a>
-                                <a href="https://github.com/sibeux/android-java-to-do-list"
-                                    target="_blank">
+                                <a href="https://github.com/sibeux/android-java-to-do-list" target="_blank">
                                     <img src="images/todolist 1.svg" alt="" />
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a
-                                        href="https://github.com/sibeux/android-java-to-do-list"
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-to-do-list"
                                         target="_blank">Android Java To-Do
-                                    List Application</a></h4>
+                                        List Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">17 October, 2022</li>
                                     <li class="list-inline-item">Hacktiv8</li>
@@ -260,8 +249,8 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="./movie-web/indexx.html"
-                                        target="_blank">Website Streaming Movie With Bootstrap</a></h4>
+                                <h4 class="my-0 title"><a href="./movie-web/indexx.html" target="_blank">Website
+                                        Streaming Movie With Bootstrap</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">18 June, 2022</li>
                                     <li class="list-inline-item">SibeUX</li>

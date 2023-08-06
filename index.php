@@ -1084,7 +1084,7 @@
 
                     <!-- need more? -->
                     <div class="mt-5 text-center">
-                        <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="_blank">Let's
+                        <p class="mb-0">Want to see more projects? <a href="LatestProject" target="_blank">Let's
                                 go!!</a> 🚗</p>
                     </div>
 

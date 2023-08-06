@@ -349,7 +349,7 @@
                                 <?php
                                 // Calling api form youtube
                                 $youtube_subscribers = file_get_contents(
-                                    'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIIwrwKxcrTXlyYlRmBV7hg&key=AIzaSyBpI4HOOp9mSC5QKihtBX8rIfTKM1aaXJA'
+                                    'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIIwrwKxcrTXlyYlRmBV7hg&key=AIzaSyBU6wpZJjTM-yRG3dVcDtpoIiW09-S5sXg'
                                 );
 
                                 // Decoding json youtube api response

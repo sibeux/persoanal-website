@@ -615,38 +615,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="exp-inner">
-                            <div class="exp-thumb">
-                                <img src="assets/images/exp/05.png" alt="experience">
-                                <h6>Playwell University</h6>
-                                <div class="exp-cata">
-                                    <span>2014 - 2019</span>
-                                </div>
-                            </div>
-                            <div class="exp-content">
-                                <h3>Master Degree Visual Art & Design</h3>
-                                <p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
-                                    eenable extensible information</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                        <div class="exp-inner">
-                            <div class="exp-thumb">
-                                <img src="assets/images/exp/06.png" alt="experience">
-                                <h6>Trackbox Ltd.</h6>
-                                <div class="exp-cata">
-                                    <span>2014 - 2019</span>
-                                </div>
-                            </div>
-                            <div class="exp-content">
-                                <h3>Junior Graphic Designer</h3>
-                                <p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
-                                    eenable extensible information</p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

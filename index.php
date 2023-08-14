@@ -614,8 +614,9 @@
                             </div>
                             <div class="exp-content">
                                 <h3>KOMINFO Divison Staff</h3>
-                                <p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
-                                    eenable extensible information</p>
+                                <p>Head of the Multimedia Subdivision and KOMINFO Staff at
+                                    the BEM FASILKOM for the 2023
+                                    term.</p>
                             </div>
                         </div>
                     </div>

@@ -577,7 +577,9 @@
             <div class="container" style="padding: 5px;">
                 <div class="section-header">
                     <div class="title">
-                        <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I Have Completed My Master
+                        <h2 class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I Have
+                            Completed My
+                            Master
                             <span>Degree & Experience</span> With Leading Companies
                         </h2>
                     </div>

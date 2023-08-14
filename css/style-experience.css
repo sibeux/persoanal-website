@@ -167,14 +167,16 @@
 }
 
 .section-header .title h2 {
+    /*jika dua line ini gada, tulisan akan ke-bold kaya "Education & Experience" */
     font-weight: 300 !important;
     line-height: 40px;
+    /*  */
     clear: both;
     margin: 0.25em 0 0.25em;
     margin-bottom: 40px;
-    font-weight: 600;
-    color: #000;
-    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 700;
+    color: #454360;
+    font-family: "Rubik", serif;
     font-size: 30px;
     text-align: center;
 }

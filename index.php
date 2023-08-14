@@ -616,7 +616,7 @@
                                 <h3>KOMINFO Divison Staff</h3>
                                 <p>Head of the Multimedia Subdivision and KOMINFO Staff at
                                     the BEM FASILKOM for the 2023
-                                    term.</p>
+                                    term</p>
                             </div>
                         </div>
                     </div>
@@ -647,8 +647,8 @@
                             </div>
                             <div class="exp-content">
                                 <h3>Programmer</h3>
-                                <p>Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically
-                                    eenable extensible information</p>
+                                <p>An intern student of MSIB Batch 4 at BPJPH, serving as a member of the programming
+                                    division.</p>
                             </div>
                         </div>
                     </div>

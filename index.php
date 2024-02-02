@@ -986,6 +986,29 @@
                             <!-- blog item -->
                             <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                                 <div class="thumb">
+                                    <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
+                                        <span class="category">Web</span>
+                                    </a>
+                                    <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
+                                        <img src="https://cdn.discordapp.com/attachments/975298274917482556/1202837289336574002/spotify.svg?ex=65cee885&is=65bc7385&hm=b417b494f014854efacde82990b326d14e9f39eff5c12d6ad737bfc2d08c3ebb&"
+                                            alt="" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h4 class="my-0 title"><a href="https://sibeux.my.id/cloud-music-player/"
+                                            target="_blank">Cloud Music Streaming Website</a></h4>
+                                    <ul class="list-inline meta mb-0 mt-2">
+                                        <li class="list-inline-item">12 January, 2024</li>
+                                        <li class="list-inline-item">Sibeux</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- blog item -->
+                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                <div class="thumb">
                                     <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
                                         <span class="category">Android</span>
                                     </a>
@@ -1025,28 +1048,6 @@
                                             target="_blank">Android Java Calculator Application</a></h4>
                                     <ul class="list-inline meta mb-0 mt-2">
                                         <li class="list-inline-item">14 November, 2022</li>
-                                        <li class="list-inline-item">Hacktiv8</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
-                                        <span class="category">Android</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">
-                                        <img src="images/ecommerce.svg" alt="" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-ecommerce"
-                                            target="_blank">Android Java E-Commerce Application</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">05 November, 2022</li>
                                         <li class="list-inline-item">Hacktiv8</li>
                                     </ul>
                                 </div>

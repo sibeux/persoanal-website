@@ -1,10 +1,14 @@
+<?php
+require_once './data/models.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Module Akademi Crypto</title>
-    <meta name="description" content="sibeux portfolio">
+    <meta name="description" content="Modue Akademi Crypto">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="../image/x-icon" href="../images/sibe.png">
 
@@ -74,7 +78,7 @@
             </div>
             <!-- logo image -->
             <div class="site-logo">
-                <a href="/">
+                <a href="index.php">
                     <img src="https://akademicrypto.com/wp-content/uploads/2023/10/logo-new-1-2048x564.png"
                         alt="SibeUX" />
                 </a>
@@ -87,7 +91,7 @@
 
         <!-- logo image -->
         <div class="site-logo">
-            <a href="/">
+            <a href="index.php">
                 <img src="https://akademicrypto.com/wp-content/uploads/2023/10/logo-new-1-2048x564.png" alt="sibeUX" />
             </a>
         </div>
@@ -123,7 +127,7 @@
     <!-- main layout -->
     <main class="content">
 
-        <!-- section works -->
+        <!-- 1. Cryptocurrency Investing -->
         <section id="#1" style="padding-top: 70px;">
 
             <div class="container">
@@ -134,21 +138,25 @@
                 <br>
 
                 <div class="row portfolio-wrapper">
-
+                    <?php
+                    $index = 0;
+                    foreach ($cryptocurrency_investing as $item) {
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="https://www.youtube.com/watch?v=f0Mvq_xb4OE" class="work-video">
+                        <a href="<?php echo $cryptocurrency_investing[$index][0] ?>" class="work-video">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
-                                    <span class="term">01</span>
-                                    <h4 class="title">Big Crypto Thesis</h4>
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $cryptocurrency_investing[$index][1] ?></h4>
                                     <span class="more-button">
                                         <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
                                             class="more-button-image">
                                     </span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429146112_756517626445573_8379343490194820599_n.png?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFcSTvR7sMXKLr1IvDDaKcNPnY4gMw3PRk-djiAzDc9GSQE3PMe7d71xzs__x6OqM467ElTgtL0VRBeM_Tp1bB4&_nc_ohc=DK1giNY8KpUAX-scWzj&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTtS9fT1rRtk4LG8v1MZ2Q4-xJiapgBIHAxuC8dagDw0g&oe=660116C6"
+                                    <img src="<?php echo $cryptocurrency_investing[$index][2] ?>"
                                         alt="Module Akademi Crypto" />
                                     <div class="mask"></div>
                                 </div>
@@ -156,30 +164,14 @@
                         </a>
                     </div>
 
-                    <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="https://www.youtube.com/watch?v=kJw9EwYIAEA" class="work-video">
-                            <div class="portfolio-item rounded shadow-dark">
-                                <div class="details">
-                                    <span class="term">02</span>
-                                    <h4 class="title">Bitcoin a Ponzi Scheme</h4>
-                                    <span class="more-button">
-                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
-                                            class="more-button-image">
-                                    </span>
-                                </div>
-                                <div class="thumb">
-                                    <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429132496_6657014137734116_7240000763802707243_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeF0Xb-kUL_r9KerzwQtDw2PLa_QsaUsDZctr9CxpSwNl9_BiPQSZrBn7wzrFmO3ajAImvxra0L3R_Omg_r4eEit&_nc_ohc=hNGG1hrFU68AX9jRs7y&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSZV7n8MaXXM2NYinGaqFID9LAcfNxUv1OqWJD-zgXiHA&oe=66013B40"
-                                        alt="Module Akademi Crypto" />
-                                    <div class="mask"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
+                    <?php
+                        $index++;
+                    };
+                    ?>
         </section>
 
-        <div class="spacer" data-height="96"></div>
+        <div class=" spacer" data-height="96">
+        </div>
 
     </main>
 

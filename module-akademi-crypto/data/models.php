@@ -29,6 +29,13 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=4hZMKsKFtps",
         "Market Cycles",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/423422556_405241542190983_1218342507479156224_n.png?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHOiGMv1flgcRCrlPY2GTV5NZRqLDelhK41lGosN6WEro6aHlID-Oir-tClWLjYJgG9JCOaf9kLIcw4M7Gjyg-_&_nc_ohc=PZtX1zG9Jj8AX96Feuv&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQalvg3OUFiHvgq3RnGk4DU0ECo9bct0sYDKtRZUUO68A&oe=66016DF4"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=6wbCV1Mtz0E",
+        "Types of Cryptocurrencies",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/423221214_382700227805293_2594867661634066446_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeF4GjfeE4KzZFz2C7Iop3N8RQqAbJIxd15FCoBskjF3XlIJxQExve70pj8zM8_yjKHumZ2CZARV2r64Clha6p5H&_nc_ohc=4S4JeicMz90AX9kD70Y&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdStwAvhr_osWYazoaZmzyGiyQld_v93gI2k86wbNoM0vA&oe=66016DEE"
     )
+
 
 );

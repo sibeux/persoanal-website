@@ -17,6 +17,12 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=RD6yXZjy08E",
         "Crypto Basics",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429118640_415685864243226_4474005988128704942_n.png?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHkAInGo8qS6K3HHoiTyX7Fl1incD4Q8ZKXWKdwPhDxkr41YJlr0rSt6u8gZ6fRmCl-0YS-PckpBou9iZUC12O0&_nc_ohc=af30RvLd-ggAX-0TXpJ&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdRd-74al1A10wFdZ0sa_JTgsF1Eu1JjEFopfmy02icOVw&oe=66016555"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=eJH60oIboCk",
+        "Mindset Crypto Gambler's Mentality",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/422198983_1133728594467769_286555278813383842_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGDDdQJ0tXkaHEKzl3sOQGkicJRwK7Cj4uJwlHArsKPi-BOyo7V49iGJ9EikOcSMOGD25hpQyMJWNVsulixuHdd&_nc_ohc=7ddQk8kGJiUAX-KUhi5&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTx4XsJOfep_FbsUFp1qACLoWMaW9-TM9V9hU8f7tbnuw&oe=66018C2C"
     )
 
 );

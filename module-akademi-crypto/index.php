@@ -10,7 +10,8 @@ require_once './data/models.php';
     <title>Module Akademi Crypto</title>
     <meta name="description" content="Modue Akademi Crypto">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="../image/x-icon" href="../images/sibe.png">
+    <link rel="shortcut icon" type="../image/x-icon"
+        href="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429121048_25648503344748809_4247547527410173499_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeE547SwABNqR2Cce7a0qwQ-t_nP6s95nEO3-c_qz3mcQ8rR7uNT2XsFGMZ9DCVOlEt8kEMxl6wbH2NSHpVoDG-j&_nc_ohc=BkT19M93idgAX_FnX9S&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSW2oWiG5YL-RODdYF4wLTiH_3crOMtNOAzC2FILdvCBQ&oe=66014CE2">
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type=" text/css" media="all">

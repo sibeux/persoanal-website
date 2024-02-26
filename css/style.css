@@ -1202,6 +1202,10 @@ section.home.light .social-icons li a:hover {
   overflow: hidden;
 }
 
+.portfolio-item .thumb img {
+  width: 100%;
+}
+
 .portfolio-item .details {
   color: #FFF;
   position: absolute;

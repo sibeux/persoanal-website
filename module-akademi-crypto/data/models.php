@@ -47,7 +47,11 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=iuVT58rYeW0",
         "How to Research Crypto",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429620822_778389794215119_6679682828548772169_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHoab39u_JJcPxo-BoKMu6fnMtMIjkB5tScy0wiOQHm1GOyZmD576CoSQf28hrS1iVEuuosIZSMNRlCK0h9yTGT&_nc_ohc=3AQWCjC8M98AX-Gr3qa&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT6jdanmKgpEFFTlI9tITc1RBNqR8i1ZfnQfQtquqobiQ&oe=6603DF94"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=Mg3CIg6fkYI",
+        "How to Buy Crypto",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429644135_410510401500415_7319446311866187829_n.png?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHIHOYisQA_i8zkLjmUGfSbqnH-BOqL1SCqcf4E6ovVIOts1Fq4wFN2ZM5gAKDzKQmYPF-ZW2RcShW01eWhBeEM&_nc_ohc=yrkhrTj90LUAX-WtxjV&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT3IOAP4daTpfN5rh0P019cP1EVSq3AHohcuOqReTGS9g&oe=6603D4ED"
     )
-
-
 );

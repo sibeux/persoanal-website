@@ -35,6 +35,18 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=6wbCV1Mtz0E",
         "Types of Cryptocurrencies",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/423221214_382700227805293_2594867661634066446_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeF4GjfeE4KzZFz2C7Iop3N8RQqAbJIxd15FCoBskjF3XlIJxQExve70pj8zM8_yjKHumZ2CZARV2r64Clha6p5H&_nc_ohc=4S4JeicMz90AX9kD70Y&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdStwAvhr_osWYazoaZmzyGiyQld_v93gI2k86wbNoM0vA&oe=66016DEE"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=_Y2c1fE0Tx8",
+        "Attention Economy in Crypto",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429332426_417736767433885_987788558037527112_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHC8hpT4mMZBUKjLuBUDUVvYgtRFwh24ZtiC1EXCHbhm5-VF9msUkIkTsvIhDi4ycwGJgfXiuWAJhAmbxHk3XLM&_nc_ohc=B57MloV-WKAAX8dnwhs&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTLqA0H_kNTVNNa_ht5qbbD4il2Rnhx88JMsGzbkfp_iw&oe=6603CF15"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=iuVT58rYeW0",
+        "How to Research Crypto",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429620822_778389794215119_6679682828548772169_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHoab39u_JJcPxo-BoKMu6fnMtMIjkB5tScy0wiOQHm1GOyZmD576CoSQf28hrS1iVEuuosIZSMNRlCK0h9yTGT&_nc_ohc=3AQWCjC8M98AX-Gr3qa&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT6jdanmKgpEFFTlI9tITc1RBNqR8i1ZfnQfQtquqobiQ&oe=6603DF94"
     )
 
 

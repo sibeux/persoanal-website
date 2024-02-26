@@ -53,5 +53,17 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=Mg3CIg6fkYI",
         "How to Buy Crypto",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429644135_410510401500415_7319446311866187829_n.png?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHIHOYisQA_i8zkLjmUGfSbqnH-BOqL1SCqcf4E6ovVIOts1Fq4wFN2ZM5gAKDzKQmYPF-ZW2RcShW01eWhBeEM&_nc_ohc=yrkhrTj90LUAX-WtxjV&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT3IOAP4daTpfN5rh0P019cP1EVSq3AHohcuOqReTGS9g&oe=6603D4ED"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=iSUTD20VeJI",
+        "Risk & Portfolio Management",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429308252_283605727910824_83550433317628757_n.png?_nc_cat=109&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFaw1sQgsYWcCDv1H7CjqJlX18Tv8D7M_VfXxO_wPsz9YSQybyFBa-uFDq50XKSG3BLm1PavzssIe2xlFifu1dP&_nc_ohc=47cqNN3rJ-0AX8-JP-m&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQFewlhqqlq63sgz6clsWTDkyi8J-FDGICa_PtuOhXQjg&oe=6603BC83",
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=j_K7EIAQKqw",
+        "NFT Fundamentals",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429370411_2179536225728373_6106565422506509324_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGzsIVsjkWtX-G6R3THtqKACbcaXGaLzAgJtxpcZovMCPFyN4YBtCiK310Rx7xZdiQxLLGNXf77AoCYmL1xS-ts&_nc_ohc=T9HdpujLbxYAX8MQF8g&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQRUeam2XbVPjA8nbgIupTKEU1LkKmZoGof7sff_kDXzA&oe=6603C6FF"
     )
 );

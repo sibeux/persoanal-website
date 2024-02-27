@@ -115,7 +115,8 @@ $cryptocurrency_investing = array(
 $crypto_trading = array(
     array(
         "https://youtu.be/WPw-YX-jZvI",
-        "Cara Melakukan Trend Analysis"
+        "Cara Melakukan Trend Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429380135_839805308204760_2563204882936090489_n.png?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHuFPJXilQs5DG7rAB7SRnXBtsPd6hlxtQG2w93qGXG1HfxoSeOgSaZ4r6sVlxKLi6LK968NO7AJUdB_ZRrbIcr&_nc_ohc=G6KZy0DgSPMAX8SeJCl&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTszD6Gs-1_RAJ-KDHkUlXXg7vID_ZqRlQdh6a663FcgA&oe=66057E84"
     ),
 
     array(
@@ -153,5 +154,8 @@ $crypto_trading = array(
         "Mendalami Tokonemics Project"
     ),
 
-    
+    array(
+        'https://youtu.be/WVb5vOT1B4c',
+        'Intro to Narrative Analysis'
+    )
 );

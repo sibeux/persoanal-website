@@ -117,5 +117,35 @@ $crypto_trading = array(
         "https://www.youtube.com/watch?v=WPw-YX-jZvI",
         "Cara Melakukan Trend Analysis",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429380135_839805308204760_2563204882936090489_n.png?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHuFPJXilQs5DG7rAB7SRnXBtsPd6hlxtQG2w93qGXG1HfxoSeOgSaZ4r6sVlxKLi6LK968NO7AJUdB_ZRrbIcr&_nc_ohc=PpPHI-DX4_oAX82gwCG&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT15dqt9bafDlPjVkKiH4cMO3GkLv8OkZpCjYnvrNI7Lw&oe=66050E04"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=nKxMCCh9thg",
+        "Cara Melakukan Area Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429315853_1137113577310680_3269288026912984318_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHzeOsFJq08HDFkam8RO0A_m31VBIlfwB6bfVUEiV_AHmY2LmcM7WsjUa2-ld6oBD-yut7AldkhDJb4SG36sZx9&_nc_ohc=l4Ivyeh89QkAX8Lfox1&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdRHBqnPuTnc795cFpQ5_0AFD6aZRXzOM32vUlaCifwvEw&oe=6604F768"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=BG9BUv4lbCw",
+        "Cara Melakukan Pattern Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296948_283147777956419_4882939921734510825_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHA4lQB2pEHcnYq_QekI6h3DcIdyJBE4yANwh3IkETjII076-ErVE_8ZlNTrm9fhRJkgIMG1ciOVm7kuGkDadfw&_nc_ohc=uEgSQcK6c1QAX_Gs9nl&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSd7PMluOoRmZlcw44bNsAH5dewPAk4-H6DO-Ciq2yufA&oe=6605133C"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=Lh33CRHvuKo",
+        "Cara Melakukan Trigger Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429100759_1752153088625629_7947739052351146380_n.png?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFxTjvusPCJDBnlv52vnt-SY8IDmvh3YcZjwgOa-HdhxtnNhaMVPgwAKtUPpVlmlPN_9TR-QjOt8V37Ib-UjQD1&_nc_ohc=cHXhtBEazzkAX-Jp_9_&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQo2nTBUcGktjUr-zIOGaHb_AYN2lqtQws13kXiEIDwQA&oe=6604F621"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=zkEEDsVrkl8",
+        "Cara Melakukan Entry Exit Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429806534_906438167613000_3597224580679971811_n.png?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFM2c9irfK0eyV9w4rRs0t7P7rjFhwR8BI_uuMWHBHwEuO3wf6NIjz7cMA2bomSLU6g2TJ38VZILMiZm3qM_AWy&_nc_ohc=ud618dO2ycMAX8zZCvw&_nc_oc=AQmBaHlUdyjS8Ahj5dG78XAfbLNdhO-OFXwOMgOzVP_-jHukOJaXL0TmFpmfDXT9ei0&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQYb6lxlutusUpsT0qYZCHTo2LiidGusMrVQbk3ktUbVQ&oe=66050578"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=S1ke6cw57cM",
+        "Intro to Fundamental Research",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429033112_240248469173433_4327257829929853752_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHqFO3m9OjBACmEgVoludoLztTcfoVM8OjO1Nx-hUzw6D_5dPnGDaLg1opHE8wDS-HTGeQPrUnVbNcrcWWV3hjO&_nc_ohc=cIji9lXOUpUAX8lNy6x&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSJFT4v-c0wYmNXY1zgb2qQSt5c7m8_kJeJ9rLSeogE6Q&oe=660512A4"
     )
 );

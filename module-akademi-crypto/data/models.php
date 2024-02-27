@@ -89,5 +89,23 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=-Fs0bxLbemY",
         "Crypto Tools",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429124938_414782357700368_5218385822403132823_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJEPPmRTIkvjVatj0h3nw_5Vpnov0aWbvlWmei_RpZuwiC57QyWiCbwiF842ogmMNQeFIGI2a30XwXgQawZ5WM&_nc_ohc=puocjuFXglAAX9fH_vn&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQe6haE35da460mE0R8sdqXeDnV_0i54wVpEmcphg9ylg&oe=6604F45B"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=1svaUWmmRaQ",
+        "Smart Money in Crypto",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429813644_7088611151260582_3976966621062481963_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFbrc5DTBcC9AUHOemmo_N4RNF83nqNokVE0Xzeeo2iRW4mdEGxAGkJ9qzeXv-zyRhxOvTiLv0fkJP8AOqZvBmm&_nc_ohc=0Xxf51oF5DcAX-EYSi_&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdRYFm2JLhTAlBn2csgkzZ02Zd5XOWPfNJZSQb_9vtiOsQ&oe=6604E7DB"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=GfSywV-CYXA",
+        "Portfolio Strategy 2023 Cheat Sheet",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429092181_966610158405774_3813469682839133614_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFOm22SLViyaG92WROm568FobB1jkRqw6mhsHWORGrDqbQybPOB2YWOIK3ZVSy7CZpvNZfD1KLTVBfDA-NQiY1w&_nc_ohc=khJIrKKhwLsAX-kFiOt&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSAJ1PXI1LAiAcWNe-LajA5TFjoMATPi37JV6DMI3Ykkg&oe=6604E95D"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=gU62X9JSxRQ",
+        "Crypto Staking Strategy",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429611584_1143715463665433_6023516955569260324_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGL7lKH_wk1cUHquWYtYv69Z1KP2Gwc2wtnUo_YbBzbC6EOWVZmgfjHCwcgUy1bi5OqiBqkjxFZCtqboTR5ZJtR&_nc_ohc=EBX_32J6a9IAX9LEq9b&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTh3Ndy1XI5RCCIKaXMlVUWXe_i6aFNScB7ZfZtIsrLXg&oe=6604FC91"
     )
 );

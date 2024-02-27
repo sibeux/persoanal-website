@@ -1,5 +1,6 @@
 <?php
 
+// 1. Cryptocurrency Investing
 $cryptocurrency_investing = array(
     array(
         "https://www.youtube.com/watch?v=f0Mvq_xb4OE",
@@ -110,6 +111,11 @@ $cryptocurrency_investing = array(
     )
 );
 
+// 2. Crypto Trading
 $crypto_trading = array(
-    
+    array(
+        "https://www.youtube.com/watch?v=WPw-YX-jZvI",
+        "Cara Melakukan Trend Analysis",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429380135_839805308204760_2563204882936090489_n.png?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHuFPJXilQs5DG7rAB7SRnXBtsPd6hlxtQG2w93qGXG1HfxoSeOgSaZ4r6sVlxKLi6LK968NO7AJUdB_ZRrbIcr&_nc_ohc=PpPHI-DX4_oAX82gwCG&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdT15dqt9bafDlPjVkKiH4cMO3GkLv8OkZpCjYnvrNI7Lw&oe=66050E04"
+    )
 );

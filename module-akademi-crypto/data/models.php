@@ -109,3 +109,7 @@ $cryptocurrency_investing = array(
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429611584_1143715463665433_6023516955569260324_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGL7lKH_wk1cUHquWYtYv69Z1KP2Gwc2wtnUo_YbBzbC6EOWVZmgfjHCwcgUy1bi5OqiBqkjxFZCtqboTR5ZJtR&_nc_ohc=EBX_32J6a9IAX9LEq9b&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTh3Ndy1XI5RCCIKaXMlVUWXe_i6aFNScB7ZfZtIsrLXg&oe=6604FC91"
     )
 );
+
+$crypto_trading = array(
+    
+);

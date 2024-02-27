@@ -100,20 +100,8 @@ require_once './data/models.php';
         <!-- main menu -->
         <nav style="overflow:visible;">
             <ul class="vertical-menu scrollspy">
-                <li class="active"><a href="#1"><i></i>1. Cryptocurrency Investing</a></li>
-                <li><a href="#2"><i></i>Design</a></li>
-                <li><a href="#3"><i></i>Design</a></li>
-                <li><a href="#4"><i></i>Design</a></li>
-                <li><a href="#5"><i></i>Design</a></li>
-                <li><a href="#6"><i></i>Design</a></li>
-                <li><a href="#7"><i></i>Design</a></li>
-                <li><a href="#8"><i></i>Design</a></li>
-                <li><a href="#9"><i></i>Design</a></li>
-                <li><a href="#10"><i></i>Design</a></li>
-                <li><a href="#11"><i></i>Design</a></li>
-                <li><a href="12"><i></i>Design</a></li>
-                <li><a href="#13"><i></i>Design</a></li>
-                <li><a href="#14"><i></i>Design</a></li>
+                <li class="active"><a href="#cryptocurrency_investing"><i></i>1. Cryptocurrency Investing</a></li>
+                <li><a href="#crypto_trading"><i></i>2. Crypto Trading</a></li>
             </ul>
         </nav>
 
@@ -129,7 +117,7 @@ require_once './data/models.php';
     <main class="content">
 
         <!-- 1. Cryptocurrency Investing -->
-        <section id="#1" style="padding-top: 70px;">
+        <section id="cryptocurrency_investing" style="padding-top: 70px;">
 
             <div class="container">
 
@@ -171,8 +159,47 @@ require_once './data/models.php';
                     ?>
         </section>
 
-        <div class=" spacer" data-height="96">
-        </div>
+        <!-- 2. Crypto Trading -->
+        <section id="crypto_trading" style="padding-top: 70px;">
+
+            <div class="container">
+
+                <!-- section title -->
+                <h2 class="section-title wow fadeInUp">2. Crypto Trading</h2>
+
+                <br>
+
+                <div class="row portfolio-wrapper">
+                    <?php
+                    $index = 0;
+                    foreach ($crypto_trading as $item) {
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                    ?>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $crypto_trading[$index][0] ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $crypto_trading[$index][1] ?></h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
+                                </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $crypto_trading[$index][2] ?>" alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <?php
+                        $index++;
+                    };
+                    ?>
+        </section>
 
     </main>
 

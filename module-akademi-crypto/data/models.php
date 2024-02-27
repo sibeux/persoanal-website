@@ -65,5 +65,29 @@ $cryptocurrency_investing = array(
         "https://www.youtube.com/watch?v=j_K7EIAQKqw",
         "NFT Fundamentals",
         "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429370411_2179536225728373_6106565422506509324_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGzsIVsjkWtX-G6R3THtqKACbcaXGaLzAgJtxpcZovMCPFyN4YBtCiK310Rx7xZdiQxLLGNXf77AoCYmL1xS-ts&_nc_ohc=T9HdpujLbxYAX8MQF8g&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQRUeam2XbVPjA8nbgIupTKEU1LkKmZoGof7sff_kDXzA&oe=6603C6FF"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=wPJlFJxZ13E",
+        "Spot And Futures Market",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429757945_2044932232545712_243959622747317787_n.png?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFF8B_NHyQ_d1mD-BxVFDKs0Y0pH1MglZjRjSkfUyCVmJ905t6VBn9PQfwMq6oANyJ2hqey7REfn18bbAxVCOjA&_nc_ohc=um7wsFOTgpsAX_PVZL9&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTw4wsiY9FluJEZ_NDtB7vZnw1Pf6nv8CtK_KIDCME3vA&oe=6604E2EF"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=5IqHpOuZHL4",
+        "Trade Probabilistic Thinking",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429041995_263097443406510_3035113033285776916_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGC5Em7WWiSb9WFVaAIQn2o9MCn1uRZVQX0wKfW5FlVBTJtRxJawsdXkrpI0beyoEG-Cm9jiMRrP6L-CS1qCY5r&_nc_ohc=6H05NB5leQUAX8jNMBZ&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdS8pHKFk3aVoHU8I3yJPncO19UjR5VV85jPfPpCTMAtRQ&oe=6604EE6F"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=oqct0lQf4Ps",
+        "Bitcoin & Altcoin Correlation",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429625958_1452414845651324_2160289948102163037_n.png?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGNByI1fgPglk3zQDascw3uq1n5D1wG_xyrWfkPXAb_HMCFY2MxAE-E9ufDhk8b9pBiSo7ebio70slpmYI8KDK_&_nc_ohc=b77LBkaLwqkAX_CWQkV&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdST3Y5LnHypXTOORw4SWxVEwEjSeMagjaDLi2Za_uUXAQ&oe=6604DBED"
+    ),
+
+    array(
+        "https://www.youtube.com/watch?v=-Fs0bxLbemY",
+        "Crypto Tools",
+        "https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429124938_414782357700368_5218385822403132823_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJEPPmRTIkvjVatj0h3nw_5Vpnov0aWbvlWmei_RpZuwiC57QyWiCbwiF842ogmMNQeFIGI2a30XwXgQawZ5WM&_nc_ohc=puocjuFXglAAX9fH_vn&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdQe6haE35da460mE0R8sdqXeDnV_0i54wVpEmcphg9ylg&oe=6604F45B"
     )
 );

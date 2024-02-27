@@ -157,5 +157,100 @@ $crypto_trading = array(
     array(
         'https://youtu.be/WVb5vOT1B4c',
         'Intro to Narrative Analysis'
-    )
+    ),
+
+    array(
+        "https://youtu.be/Ospu9wp3uOY",
+        'How to be Early in Every Narratives'
+    ),
+
+    array(
+        'https://youtu.be/8feW8l226tE',
+        'Portofolio Allocation'
+    ),
+
+    array(
+        'https://youtu.be/Sm6xh_kDH-g',
+        'Possible Narratives For Next Bull Run'
+    ),
+
+    array(
+        'https://youtu.be/cdrywwkLGA0',
+        'Spatial Computing Narrative'
+    ),
+
+    array(
+        'https://youtu.be/BRCaDV1iPO0',
+        'Pemahaman Dasar Mengenai Apa itu Altcoins'
+    ),
+
+    array(
+        'https://youtu.be/klI_Kk_7P9E',
+        'Pemahaman Dasar Mengenai Teknik Scalping'
+    ),
+
+    array(
+        'https://youtu.be/8FlnbwXp_fY',
+        'Persiapan Mental Sebelum Melakukan Scalping Altcoins'
+    ),
+
+    array(
+        'https://youtu.be/GBNACnmTzR8',
+        'Persiapan Technical Sebelum Melakukan Scalping'
+    ),
+
+    array(
+        'https://youtu.be/e4FAEJF9nRQ',
+        'Cara Melakukan Screening Altcoins Untuk Scalping'
+    ),
+
+    array(
+        'https://youtu.be/Jtr4i7SxTaA',
+        'Pengenalan On Chain Trading'
+    ),
+
+    array(
+        'https://youtu.be/F3AfxN6M8wM',
+        'Menggali Decentralized Exchange'
+    ),
+
+    array(
+        'https://youtu.be/04yd1uKwJB4',
+        'Cara Menggunakan Wallet dan Exchange'
+    ),
+
+    array(
+        'https://youtu.be/_ottztA1UXc',
+        'Tools untuk On Chain'
+    ),
+
+    array(
+        'https://youtu.be/Wu2w5B7_26A',
+        'Kesalahan yang Harus dihindari Sebelum Transaksi On Chain'
+    ),
+
+    array(
+        'https://youtu.be/xG3mfsbduZI',
+        'Pengenalan Dow Theory Pada Market Crypto'
+    ),
+
+    array(
+        'https://youtu.be/-PAZGIXv8Qs',
+        'Memahami Konsep Trend dalam Dow Theory'
+    ),
+
+    array(
+        'https://youtu.be/tufBOW8UqWE',
+        'Memahami Konsep Trend Lanjutan Dalam Dow Theory'
+    ),
+
+    array(
+        'https://youtu.be/BXAgjxnIbxQ',
+        'Penggunaan Moving Averages dan Validasi Dow'
+    ),
+
+    array(
+        'https://youtu.be/n0s9hMxI_sI',
+        'Fase pada Dow Theory'
+    ),
 );

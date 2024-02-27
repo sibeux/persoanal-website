@@ -132,7 +132,7 @@
                                     <span class="category">Web</span>
                                 </a>
                                 <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
-                                    <img src="https://cdn.discordapp.com/attachments/975298274917482556/1202837289336574002/spotify.svg?ex=65cee885&is=65bc7385&hm=b417b494f014854efacde82990b326d14e9f39eff5c12d6ad737bfc2d08c3ebb&https://cdn.fbsbx.com/v/t59.2708-21/428553167_419579070527925_1425650050410585165_n.svg/spotify.svg?_nc_cat=110&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeFrj7wLkFIgggHwNlAsXnsd7AHsB1kkp_XsAewHWSSn9eVVRfQ6_U6FXaqDZNEhOTvRXmmI0zrU8iirRmltutp8&_nc_ohc=9Bet1hKnJ08AX9BaP8A&_nc_ht=cdn.fbsbx.com&oh=03_AdR27huIbCVPW3eAq8FFyRWWzw62vQFJM6yaitgxCn9FPw&oe=65DFF542&dl=1"
+                                    <img src="https://cdn.fbsbx.com/v/t59.2708-21/428553167_419579070527925_1425650050410585165_n.svg/spotify.svg?_nc_cat=110&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeFrj7wLkFIgggHwNlAsXnsd7AHsB1kkp_XsAewHWSSn9eVVRfQ6_U6FXaqDZNEhOTvRXmmI0zrU8iirRmltutp8&_nc_ohc=9Bet1hKnJ08AX9BaP8A&_nc_ht=cdn.fbsbx.com&oh=03_AdR27huIbCVPW3eAq8FFyRWWzw62vQFJM6yaitgxCn9FPw&oe=65DFF542&dl=1"
                                         alt="" />
                                 </a>
                             </div>

@@ -172,12 +172,17 @@ require_once './data/models.php';
                 <div class="row portfolio-wrapper">
                     <?php
                     $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
                     foreach ($crypto_trading as $item) {
                         $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $crypto_trading[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+                        $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
                     ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="<?php echo $crypto_trading[$index][0] ?>" class="work-video">
+                        <a href="<?php echo $link_video ?>" class="work-video">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
                                     <span class="term"><?php echo $formattedNumber ?></span>
@@ -188,7 +193,7 @@ require_once './data/models.php';
                                     </span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="<?php echo $crypto_trading[$index][2] ?>" alt="Module Akademi Crypto" />
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
                                     <div class="mask"></div>
                                 </div>
                             </div>

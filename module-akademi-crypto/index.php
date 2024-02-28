@@ -10,7 +10,8 @@ require_once './data/models.php';
     <title>Module Akademi Crypto</title>
     <meta name="description" content="Modue Akademi Crypto">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="../image/x-icon" href="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429121048_25648503344748809_4247547527410173499_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeE547SwABNqR2Cce7a0qwQ-t_nP6s95nEO3-c_qz3mcQ8rR7uNT2XsFGMZ9DCVOlEt8kEMxl6wbH2NSHpVoDG-j&_nc_ohc=BkT19M93idgAX_FnX9S&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSW2oWiG5YL-RODdYF4wLTiH_3crOMtNOAzC2FILdvCBQ&oe=66014CE2">
+    <link rel="shortcut icon" type="../image/x-icon"
+        href="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429121048_25648503344748809_4247547527410173499_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeE547SwABNqR2Cce7a0qwQ-t_nP6s95nEO3-c_qz3mcQ8rR7uNT2XsFGMZ9DCVOlEt8kEMxl6wbH2NSHpVoDG-j&_nc_ohc=BkT19M93idgAX_FnX9S&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdSW2oWiG5YL-RODdYF4wLTiH_3crOMtNOAzC2FILdvCBQ&oe=66014CE2">
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type=" text/css" media="all">
@@ -79,7 +80,8 @@ require_once './data/models.php';
             <!-- logo image -->
             <div class="site-logo">
                 <a href="index.php">
-                    <img src="https://akademicrypto.com/wp-content/uploads/2023/10/logo-new-1-2048x564.png" alt="SibeUX" />
+                    <img src="https://akademicrypto.com/wp-content/uploads/2023/10/logo-new-1-2048x564.png"
+                        alt="SibeUX" />
                 </a>
             </div>
         </div>
@@ -100,6 +102,7 @@ require_once './data/models.php';
             <ul class="vertical-menu scrollspy">
                 <li class="active"><a href="#cryptocurrency_investing"><i></i>1. Cryptocurrency Investing</a></li>
                 <li><a href="#crypto_trading"><i></i>2. Crypto Trading</a></li>
+                <li><a href="#kamus_pattern_crypto"><i></i>3. Kamus Pattern Crypto</a></li>
             </ul>
         </nav>
 
@@ -130,24 +133,26 @@ require_once './data/models.php';
                     foreach ($cryptocurrency_investing as $item) {
                         $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
                     ?>
-                        <!-- portfolio item -->
-                        <div class="col-md-4 col-sm-6 grid-item creative">
-                            <a href="<?php echo $cryptocurrency_investing[$index][0] ?>" class="work-video">
-                                <div class="portfolio-item rounded shadow-dark">
-                                    <div class="details">
-                                        <span class="term"><?php echo $formattedNumber ?></span>
-                                        <h4 class="title"><?php echo $cryptocurrency_investing[$index][1] ?></h4>
-                                        <span class="more-button">
-                                            <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8" class="more-button-image">
-                                        </span>
-                                    </div>
-                                    <div class="thumb">
-                                        <img src="<?php echo $cryptocurrency_investing[$index][2] ?>" alt="Module Akademi Crypto" />
-                                        <div class="mask"></div>
-                                    </div>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $cryptocurrency_investing[$index][0] ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $cryptocurrency_investing[$index][1] ?></h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $cryptocurrency_investing[$index][2] ?>"
+                                        alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
                     <?php
                         $index++;
@@ -182,24 +187,78 @@ require_once './data/models.php';
                             $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
                         };
                     ?>
-                        <!-- portfolio item -->
-                        <div class="col-md-4 col-sm-6 grid-item creative">
-                            <a href="<?php echo $link_video ?>" class="work-video">
-                                <div class="portfolio-item rounded shadow-dark">
-                                    <div class="details">
-                                        <span class="term"><?php echo $formattedNumber ?></span>
-                                        <h4 class="title"><?php echo $crypto_trading[$index][1] ?></h4>
-                                        <span class="more-button">
-                                            <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8" class="more-button-image">
-                                        </span>
-                                    </div>
-                                    <div class="thumb">
-                                        <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
-                                        <div class="mask"></div>
-                                    </div>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $link_video ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $crypto_trading[$index][1] ?></h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <?php
+                        $index++;
+                    };
+                    ?>
+        </section>
+
+        <!-- 3. Kamus Pattern Crypto -->
+        <section id="kamus_pattern_crypto" style="padding-top: 70px;">
+
+            <div class="container">
+
+                <!-- section title -->
+                <h2 class="section-title wow fadeInUp">3. Kamus Pattern Crypto</h2>
+
+                <br>
+
+                <div class="row portfolio-wrapper">
+                    <?php
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    foreach ($kamus_pattern_crypto as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $kamus_pattern_crypto[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $link_video ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $kamus_pattern_crypto[$index][1] ?></h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
+                                </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
                     <?php
                         $index++;

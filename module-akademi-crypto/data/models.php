@@ -254,3 +254,56 @@ $crypto_trading = array(
         'Fase pada Dow Theory'
     ),
 );
+
+// 3. Kamus Pattern Crypto
+$kamus_pattern_crypto = array(
+    array(
+        "https://youtu.be/wRRFkPkbytE",
+        'Apa Itu Pattern'
+    ),
+
+    array(
+        'https://youtu.be/a7A43v9GJtg',
+        'ABCD Pattern'
+    ),
+
+    array(
+        'https://youtu.be/cB6tVdQuX6o',
+        'Bat Pattern'
+    ),
+
+    array(
+        'https://youtu.be/heF7qqtX_10',
+        'Gartley Pattern'
+    ),
+
+    array(
+        'https://youtu.be/s7BMO0HGHf0',
+        'Crab Pattern'
+    ),
+
+    array(
+        'https://youtu.be/LfPvs5sjNpc',
+        'Diamond Pattern'
+    ),
+
+    array(
+        'https://youtu.be/j1mhysVSoLk',
+        'Broadening Patter'
+    ),
+
+    array(
+        'https://youtu.be/ngaV880EK2M',
+        "Andrew's Pitchfork Pattern"
+    ),
+
+    array(
+        'https://youtu.be/VFRvAg6H9Cg',
+        'Linear Regression Channel'
+    ),
+
+    array(
+        'https://youtu.be/kOx0h8xKTpM',
+        'Rectangle Channels'
+    )
+);

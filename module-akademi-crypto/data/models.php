@@ -307,3 +307,57 @@ $kamus_pattern_crypto = array(
         'Rectangle Channels'
     )
 );
+
+// 4. Crypto Smart Money
+$crypto_smart_money = array(
+    array(
+        'https://youtu.be/keuuDgHGwhY',
+        'Apa itu Smart Money'
+    ),
+
+    array(
+        'https://youtu.be/fQWvbh8Z4j4',
+        'Apa Fokus dari Smart Money'
+    ),
+
+    array(
+        'https://youtu.be/KKxjmcX36TI',
+        'Konsep Liquidity Part 1'
+    ),
+
+    array(
+        'https://youtu.be/3s4rzT5nQBw',
+        'Konsep Liquidity Part 2'
+    ),
+
+    array(
+        'https://youtu.be/pJagMSjzalo',
+        'Konsep Liquidity Part 3'
+    ),
+
+    array(
+        'https://youtu.be/W3nEDvQhVG8',
+        'Market Structure'
+    ),
+
+    array(
+        'https://youtu.be/RBdq1-MSH8U',
+        'Change of Character'
+    ),
+
+    array(
+        'https://youtu.be/GCs3cE_G-as',
+        'Orderblock'
+    ),
+
+    array(
+        'https://youtu.be/ClwekBgDc-M',
+        'Momentum'
+    ),
+
+    array(
+        'https://youtu.be/glUGZdIBTAM',
+        'Penerapan Smart Money'
+    ),
+);
+

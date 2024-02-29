@@ -990,7 +990,7 @@
                                         <span class="category">Web</span>
                                     </a>
                                     <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
-                                        <img src="https://cdn.fbsbx.com/v/t59.2708-21/428553167_419579070527925_1425650050410585165_n.svg/spotify.svg?_nc_cat=110&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeFrj7wLkFIgggHwNlAsXnsd7AHsB1kkp_XsAewHWSSn9eVVRfQ6_U6FXaqDZNEhOTvRXmmI0zrU8iirRmltutp8&_nc_ohc=9Bet1hKnJ08AX9BaP8A&_nc_ht=cdn.fbsbx.com&oh=03_AdR27huIbCVPW3eAq8FFyRWWzw62vQFJM6yaitgxCn9FPw&oe=65DFF542&dl=1"
+                                        <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/c86ece04beee5d65c4fc9be7113b945f03616c6b/spotify.svg"
                                             alt="" />
                                     </a>
                                 </div>

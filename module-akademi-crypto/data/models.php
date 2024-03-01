@@ -361,3 +361,55 @@ $crypto_smart_money = array(
     ),
 );
 
+// 5. Crypto Technical Indicators
+$crypto_technical_indicators = array(
+    array(
+        'https://youtu.be/qmN-vzSB2u0',
+        'Technical Indicators'
+    ),
+
+    array(
+        'https://youtu.be/IPmsPbZedIU',
+        'Pivot Point'
+    ),
+
+    array(
+        'https://youtu.be/D4rSajmHww0',
+        'Keltner Channel'
+    ),
+
+    array(
+        'https://youtu.be/I4exyAmStCc',
+        'Parabolic SAR'
+    ),
+
+    array(
+        'https://youtu.be/PT1G8UU3wGc',
+        'Renko Chart'
+    ),
+
+    array(
+        'https://youtu.be/ef7av9mnLOA',
+        'Know Sure Thing'
+    ),
+
+    array(
+        'https://youtu.be/Y_L0newHP1E',
+        'Donchain Channel'
+    ),
+
+    array(
+        'https://youtu.be/sXo5NyKGj-4',
+        'Chaikin Money Flow'
+    ),
+
+    array(
+        'https://youtu.be/i8mneg1Pspo',
+        'Ichimoku Cloud'
+    ),
+
+    array(
+        'https://youtu.be/dc8wuB5TqEI',
+        'Volume Profile Fixed Range'
+    ),
+);

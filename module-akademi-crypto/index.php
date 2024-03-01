@@ -104,6 +104,7 @@ require_once './data/models.php';
                 <li><a href="#crypto_trading"><i></i>2. Crypto Trading</a></li>
                 <li><a href="#kamus_pattern_crypto"><i></i>3. Kamus Pattern Crypto</a></li>
                 <li><a href="#crypto_smart_money"><i></i>4. Crypto Smart Money</a></li>
+                <li><a href="#crypto_technical_indicators"><i></i>5. Crypto Technical Indicators</a></li>
             </ul>
         </nav>
 
@@ -282,6 +283,60 @@ require_once './data/models.php';
                     $index = 0;
                     $pattern = '/youtu\.be\/([^\?]+)/';
                     $data = $crypto_smart_money;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $link_video ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $formattedNumber ?></span>
+                                    <h4 class="title"><?php echo $data[$index][1] ?></h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
+                                </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <?php
+                        $index++;
+                    };
+                    ?>
+        </section>
+
+        <!-- 5. Crypto Technical Indicators -->
+        <section id="crypto_technical_indicators" style="padding-top: 70px;">
+
+            <div class="container">
+
+                <!-- section title -->
+                <h2 class="section-title wow fadeInUp">5. Crypto Technical Indicators</h2>
+
+                <br>
+
+                <div class="row portfolio-wrapper">
+                    <?php
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_technical_indicators;
                     foreach ($data as $item) {
 
                         $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);

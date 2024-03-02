@@ -413,3 +413,56 @@ $crypto_technical_indicators = array(
         'Volume Profile Fixed Range'
     ),
 );
+
+// 6. Crypto Fibonacci Secret
+$crypto_fibonacci_secret = array(
+    array(
+        'https://youtu.be/UAXY5QSwPkQ',
+        'Apa itu Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/xadhaKEPNn8',
+        'Keajaiban Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/LzZkFLgXekM',
+        'Golden Ratio Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/O-pjIzMexCk',
+        'Sistem Angka Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/tN4CIK46USk',
+        'Retracement Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/B3bK1Ku19r8',
+        'Harmonic Support Using Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/8YUyo4TfCyA',
+        'Harmonic Resistance Using Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/d4I9LAcYQO0',
+        'Trend Based Fib Extension'
+    ),
+
+    array(
+        'https://youtu.be/nn_IXzegyl4',
+        'Fib Channels'
+    ),
+
+    array(
+        'https://youtu.be/uN0seDNtoQk',
+        'Pendalaman Fibonacci'
+    )
+);

@@ -466,3 +466,56 @@ $crypto_fibonacci_secret = array(
         'Pendalaman Fibonacci'
     )
 );
+
+// 7. Crypto Order Flow
+$crypto_order_flow = array(
+    array(
+        'https://youtu.be/Zhlim0dRy3E',
+        'Apa itu Order Flow'
+    ),
+
+    array(
+        'https://youtu.be/xhlElRX3H4w',
+        'Dasar dari Order Flow'
+    ),
+
+    array(
+        'https://youtu.be/lchJSJfb1P0',
+        'Cara melihat Footprint'
+    ),
+
+    array(
+        'https://youtu.be/kMv0w9r12b0',
+        'Cara membaca Order Flow'
+    ),
+
+    array(
+        'https://youtu.be/tYc-QlxHFLs',
+        'High Value Node dan Delta'
+    ),
+
+    array(
+        'https://youtu.be/StDKW01PBhc',
+        'Unfinished Business dan Cumulative Delta'
+    ),
+
+    array(
+        'https://youtu.be/h2fXVk-ttr8',
+        'Volume Cluster'
+    ),
+
+    array(
+        'https://youtu.be/jz9mMXqrFyc',
+        'Penggunaan ATAS'
+    ),
+
+    array(
+        'https://youtu.be/wSB0K97g9RE',
+        'Technical Indicators dalam ATAS'
+    ),
+
+    array(
+        'https://youtu.be/D8LAa7YXJB4',
+        'Heatmap'
+    )
+);

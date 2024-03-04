@@ -519,3 +519,56 @@ $crypto_order_flow = array(
         'Heatmap'
     )
 );
+
+// 8. Crypto Harmonic Trading
+$crypto_harmonic_trading = array(
+    array(
+        'https://youtu.be/Hjd9u5hv58E',
+        'Apa itu Harmonic Trading'
+    ),
+
+    array(
+        'https://youtu.be/NIs06OH6LrI',
+        'Tahapan Menerapkan Harmonic'
+    ),
+
+    array(
+        'https://youtu.be/KachMdL7TQA',
+        'Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/5Gduao3dmBc',
+        'Elliot Wave'
+    ),
+
+    array(
+        'https://youtu.be/F7mj70zQe50',
+        'Korelasi Elliot Wave dan Fibonacci'
+    ),
+
+    array(
+        'https://youtu.be/fGUzVxm8YQc',
+        'Dasar dari Pola dan Rasio Harmonic Trading'
+    ),
+
+    array(
+        'https://youtu.be/1nIyqQwOEoE',
+        'Berbagai Harmonic Pattern'
+    ),
+
+    array(
+        'https://youtu.be/yGYvhrURJgQ',
+        'Shark Pattern dan Butterflay Pattern'
+    ),
+
+    array(
+        'https://youtu.be/894p7GP78Oo',
+        'Entry Trigger'
+    ),
+
+    array(
+        'https://youtu.be/BJhsqFSxjYg',
+        'Rangkuman dan Fakta dari Harmonic Trading'
+    )
+);

@@ -572,3 +572,43 @@ $crypto_harmonic_trading = array(
         'Rangkuman dan Fakta dari Harmonic Trading'
     )
 );
+
+// 9. Crypto Research
+$crypto_research = array(
+    array(
+        'https://youtu.be/Y5KYWflBhpM',
+        'Introduction to Crypto Research'
+    ),
+    array(
+        'https://youtu.be/GmKYWjk_MCg',
+        'Value Proposition and Qualitative Analysis'
+    ),
+    array(
+        'https://youtu.be/Lt2r_6Nvngk',
+        'Quantitative Analysis'
+    ),
+    array(
+        'https://youtu.be/a8Hwh8xnfvQ',
+        'Token Terminal Tutorial'
+    ),
+    array(
+        'https://youtu.be/fraV6RYPE8M',
+        'Opinion, Strategy, and Follow Up'
+    ),
+    array(
+        'https://youtu.be/EDHRYzbarO8',
+        'Blockchain Economics'
+    ),
+    array(
+        'https://youtu.be/Zjd6R-t8pUo',
+        'Introduction to Crypto Airdrop'
+    ),
+    array(
+        'https://youtu.be/lUO70oI1Ls8',
+        'ZkSync Airdrop Tutorial'
+    ),
+    array(
+        'https://youtu.be/I67dMKr9FPk',
+        'Layer Zero - Akademi Crypto Belajar Crypto'
+    )
+);

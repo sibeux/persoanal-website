@@ -664,3 +664,35 @@ $btc_currency_internet = array(
         'Bitcoin Security'
     )
 );
+
+// 10b. Crypto Investing Principles
+$crypto_investing_principles = array(
+    array(
+        'https://youtu.be/MIED2PvpKWE',
+        'Keyakinan'
+    ),
+    array(
+        'https://youtu.be/s8Myee_Gllk',
+        'Keberanian'
+    ),
+    array(
+        'https://youtu.be/4TesiOJtCWE',
+        'Keterbukaan'
+    ),
+    array(
+        'https://youtu.be/tneSuVvFq2s',
+        'Kedisiplinan'
+    ),
+    array(
+        'https://youtu.be/XY_2eTiOdss',
+        'Kesabaran'
+    ),
+    array(
+        'https://youtu.be/stRWEKUcQ4o',
+        'Kebebasan'
+    ),
+    array(
+        'https://youtu.be/c5npHitnnjs',
+        'Kelanjutan'
+    )
+);

@@ -612,3 +612,55 @@ $crypto_research = array(
         'Layer Zero - Akademi Crypto Belajar Crypto'
     )
 );
+
+// 10a. Bitcoin The Currency of The Internet
+$btc_currency_internet = array(
+    array(
+        'https://youtu.be/vSxjXqkxqvo',
+        'The History of Money'
+    ),
+    array(
+        'https://youtu.be/VaVGHN8F69c',
+        'Bitcoin Whitepaper'
+    ),
+    array(
+        'https://youtu.be/M5Mzd0m5Qn0',
+        'Cryptography Basics'
+    ),
+    array(
+        'https://youtu.be/wHvphacFM0s',
+        'Bitcoin Basics Part 1'
+    ),
+    array(
+        'https://youtu.be/4keuBpxtz2U',
+        'Bitcoin Basics Part 2'
+    ),
+    array(
+        'https://youtu.be/g_Kp3_7KsM8',
+        'Bitcoin Nodes'
+    ),
+    array(
+        'https://youtu.be/RfdK0A0tVX4',
+        ''
+    ),
+    array(
+        'https://youtu.be/cGBsJ7MVQXg',
+        'Key & address'
+    ),
+    array(
+        'https://youtu.be/AwR8koR9VyI',
+        'Bitcoin Mining'
+    ),
+    array(
+        'https://youtu.be/uAgHUHo6AZU',
+        'Consensus Attack'
+    ),
+    array(
+        'https://youtu.be/VENEv1txY_Y',
+        'Lightning Network'
+    ),
+    array(
+        'https://youtu.be/QqdHHxEZLfc',
+        'Bitcoin Security'
+    )
+);

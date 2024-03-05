@@ -582,7 +582,7 @@ require_once './data/models.php';
             <div class="container">
 
                 <!-- section title -->
-                <h2 class="section-title wow fadeInUp">9. Crypto Research</h2>
+                <h2 class="section-title wow fadeInUp">9a. Crypto Research</h2>
 
                 <br>
 

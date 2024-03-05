@@ -108,7 +108,7 @@ require_once './data/models.php';
                 <li><a href="#crypto_fibonacci_secret"><i></i>6. Crypto Fibonacci Secret</a></li>
                 <li><a href="#crypto_order_flow"><i></i>7. Crypto Order Flow</a></li>
                 <li><a href="#crypto_harmonic_trading"><i></i>8. Crypto Harmonic Trading</a></li>
-                <li><a href="#crypto_research"><i></i>9. Crypto Research</a></li>
+                <li><a href="#crypto_research"><i></i>9a. Crypto Research</a></li>
                 <li><a href="#btc_currency_internet"><i></i>10a. Bitcoin The Currency of The Internet</a></li>
                 <li><a href="#crypto_investing_principles"><i></i>10b. Crypto Investing Principles</a></li>
             </ul>
@@ -576,7 +576,7 @@ require_once './data/models.php';
                                     ?>
         </section>
 
-        <!-- 9. Crypto Research -->
+        <!-- 9a. Crypto Research -->
         <section id="crypto_research" style="padding-top: 70px;">
 
             <div class="container">

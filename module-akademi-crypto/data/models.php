@@ -573,7 +573,7 @@ $crypto_harmonic_trading = array(
     )
 );
 
-// 9. Crypto Research
+// 9a. Crypto Research
 $crypto_research = array(
     array(
         'https://youtu.be/Y5KYWflBhpM',

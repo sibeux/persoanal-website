@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(144, 253, 253);
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #eee5da;
+    height: 100vh;
+    width: 5%;
+    float: left;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 20px auto;
+}

@@ -109,6 +109,7 @@ require_once './data/models.php';
                 <li><a href="#crypto_order_flow"><i></i>7. Crypto Order Flow</a></li>
                 <li><a href="#crypto_harmonic_trading"><i></i>8. Crypto Harmonic Trading</a></li>
                 <li><a href="#crypto_research"><i></i>9a. Crypto Research</a></li>
+                <li><a href="#crypto_investing_strategy"><i></i>9b. Crypto Investing Strategy</a></li>
                 <li><a href="#btc_currency_internet"><i></i>10a. Bitcoin The Currency of The Internet</a></li>
                 <li><a href="#crypto_investing_principles"><i></i>10b. Crypto Investing Principles</a></li>
             </ul>
@@ -591,6 +592,64 @@ require_once './data/models.php';
                                             $index = 0;
                                             $pattern = '/youtu\.be\/([^\?]+)/';
                                             $data = $crypto_research;
+                                            foreach ($data as $item) {
+                        
+                                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                                                $url = $data[$index][0];
+                                                preg_match($pattern, $url, $matches);
+                                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+                        
+                                                if (count($item) > 2) {
+                                                    $thumbnail = $item[2];
+                                                } else {
+                                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                                                };
+                                            ?>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item creative">
+                        <a href="<?php echo $link_video ?>" class="work-video">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term">
+                                        <?php echo $formattedNumber ?>
+                                    </span>
+                                    <h4 class="title">
+                                        <?php echo $data[$index][1] ?>
+                                    </h4>
+                                    <span class="more-button">
+                                        <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
+                                            class="more-button-image">
+                                    </span>
+                                </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <?php
+                                                $index++;
+                                            };
+                                            ?>
+        </section>
+
+        <!-- 9b. Crypto Investing Strategy -->
+        <section id="crypto_investing_strategy" style="padding-top: 70px;">
+
+            <div class="container">
+
+                <!-- section title -->
+                <h2 class="section-title wow fadeInUp">9b. Crypto Investing Strategy</h2>
+
+                <br>
+
+                <div class="row portfolio-wrapper">
+                    <?php
+                                            $index = 0;
+                                            $pattern = '/youtu\.be\/([^\?]+)/';
+                                            $data = $crypto_investing_strategy;
                                             foreach ($data as $item) {
                         
                                                 $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);

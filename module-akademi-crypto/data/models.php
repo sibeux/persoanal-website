@@ -613,6 +613,38 @@ $crypto_research = array(
     )
 );
 
+// 9b. Crypto Investing Strategy
+$crypto_investing_strategy = array(
+    array(
+        'https://youtu.be/fb5wxxX5UEc',
+        'Strategi Bajing Loncat'
+    ), 
+    array(
+        'https://youtu.be/7ULsoLAcZVc',
+        'Strategi Serigala Domba'
+    ), 
+    array(
+        'https://youtu.be/3HvgBco3Tp4',
+        'Strategi Moon Bag'
+    ), 
+    array(
+        'https://youtu.be/cZFLUMCXEuk',
+        'Strategi Gulung gulung'
+    ), 
+    array(
+        'https://youtu.be/KllakC4oPa0',
+        'Strategi Tebar Jala'
+    ), 
+    array(
+        'https://youtu.be/iq2SquOLJ-4',
+        'Startegi Terkonsentrasi'
+    ), 
+    array(
+        'https://youtu.be/UV7s-8obwMs',
+        'Strategi Cicilan'
+    )
+);
+
 // 10a. Bitcoin The Currency of The Internet
 $btc_currency_internet = array(
     array(

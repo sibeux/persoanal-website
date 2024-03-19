@@ -138,7 +138,9 @@
                                     class="fab fa-instagram"></i></a></li>
                         <li class="list-inline-item"><a href="https://www.facebook.com/m.n.wahabi/" target="_blank"><i
                                     class="fab fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="https://bit.ly/HabiqiYT" target="_blank"><i
+                        <li class="list-inline-item"><a href="https://twitter.com/WahabiNasrul" target="_blank"><i
+                                    class="fab fa-twitter"></i></a></li>
+                        <li <li class="list-inline-item"><a href="https://bit.ly/HabiqiYT" target="_blank"><i
                                     class="fab fa-youtube"></i></a></li>
                         <li class="list-inline-item"><a href="https://github.com/sibeux" target="_blank"><i
                                     class="fab fa-github"></i></a></li>
@@ -367,7 +369,9 @@
                                 // print count of youtube subscribers.
                                 // echo $subscribers_count;
                                 ?>
-                                <h3 class="mb-0 mt-0 number"><em class="count"><?php echo $subscribers_count ?></em>
+                                <h3 class="mb-0 mt-0 number"><em class="count">
+                                        <?php echo $subscribers_count ?>
+                                    </em>
                                 </h3>
                                 <p class="mb-0">Subscribers Youtube</p>
                             </div>
@@ -380,7 +384,9 @@
                         <div class="fact-item">
                             <span class="icon icon-people"></span>
                             <div class="details">
-                                <h3 class="mb-0 mt-0 number"><em class="count"><?php echo $views_count ?></em></h3>
+                                <h3 class="mb-0 mt-0 number"><em class="count">
+                                        <?php echo $views_count ?>
+                                    </em></h3>
                                 <p class="mb-0">Views Youtube</p>
                             </div>
                         </div>
@@ -392,7 +398,9 @@
                         <div class="fact-item">
                             <span class="icon icon-screen-desktop"></span>
                             <div class="details">
-                                <h3 class="mb-0 mt-0 number"><em class="count"><?php echo $videos_count ?></em></h3>
+                                <h3 class="mb-0 mt-0 number"><em class="count">
+                                        <?php echo $videos_count ?>
+                                    </em></h3>
                                 <p class="mb-0">Videos Youtube</p>
                             </div>
                         </div>

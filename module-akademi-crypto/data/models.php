@@ -618,27 +618,27 @@ $crypto_investing_strategy = array(
     array(
         'https://youtu.be/fb5wxxX5UEc',
         'Strategi Bajing Loncat'
-    ), 
+    ),
     array(
         'https://youtu.be/7ULsoLAcZVc',
         'Strategi Serigala Domba'
-    ), 
+    ),
     array(
         'https://youtu.be/3HvgBco3Tp4',
         'Strategi Moon Bag'
-    ), 
+    ),
     array(
         'https://youtu.be/cZFLUMCXEuk',
         'Strategi Gulung gulung'
-    ), 
+    ),
     array(
         'https://youtu.be/KllakC4oPa0',
         'Strategi Tebar Jala'
-    ), 
+    ),
     array(
         'https://youtu.be/iq2SquOLJ-4',
         'Startegi Terkonsentrasi'
-    ), 
+    ),
     array(
         'https://youtu.be/UV7s-8obwMs',
         'Strategi Cicilan'
@@ -726,5 +726,88 @@ $crypto_investing_principles = array(
     array(
         'https://youtu.be/c5npHitnnjs',
         'Kelanjutan'
+    )
+);
+
+// 11a. Bitcoin Transaction in Depth
+$bitcoin_transaction_depth = array(
+    array(
+        'https://youtu.be/c9D-SvCG-W4',
+        'Bitcoin Transaction in Depth'
+    ),
+
+    array(
+        'https://youtu.be/JIgIG-aIT-E',
+        'base58Check Encoding'
+    ),
+
+    array(
+        'https://youtu.be/_MKU41KC7Cc',
+        'Bitcoin Scripting'
+    ),
+
+    array(
+        'https://youtu.be/O8hfSBljCF8',
+        'Pay to Address P2A'
+    ),
+
+    array(
+        'https://youtu.be/Xdf04f74W6Q',
+        'Pay to Public Key P2PK'
+    ),
+
+    array(
+        'https://youtu.be/n8bowbkGt58',
+        'Hash Locked Transaction (HLT)'
+    ),
+
+    array(
+        'https://youtu.be/JI87m_2jlog',
+        'Sequence Number'
+    ),
+
+    array(
+        'https://youtu.be/IMX0_sBrLjs',
+        'Playing Around with IDE'
+    ),
+
+    array(
+        'https://youtu.be/Cw49xb5b9TM',
+        'QUIZ'
+    ),
+
+    array(
+        'https://youtu.be/G6yj1aJrDx0',
+        'Revisting Bitcoin Transaction'
+    ),
+
+    array(
+        'https://youtu.be/h-t7SZs_R6Y',
+        'Creating Bitcoin Script'
+    ),
+
+    array(
+        'https://youtu.be/G1MTw_Iszfs',
+        'RAW Transaction'
+    ),
+
+    array(
+        'https://youtu.be/R9doWQy4k5s',
+        'Advanced Bitcoin Protocol'
+    ),
+
+    array(
+        'https://youtu.be/asccSvgZsMI',
+        'Bitcoin Programming with BX'
+    ),
+
+    array(
+        'https://youtu.be/hUsxw2I2j7E',
+        'Key Generation with BX'
+    ),
+
+    array(
+        'https://youtu.be/fJa61ySBQVA',
+        'Other Important BX Operations'
     )
 );

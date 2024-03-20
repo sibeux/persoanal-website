@@ -113,7 +113,7 @@ require_once './data/models.php';
                 <li><a href="#crypto_investing_strategy"><i></i>9b. Crypto Investing Strategy</a></li>
                 <li><a href="#btc_currency_internet"><i></i>10a. Bitcoin The Currency of The Internet</a></li>
                 <li><a href="#crypto_investing_principles"><i></i>10b. Crypto Investing Principles</a></li>
-                <li><a href="#$bitcoin_transaction_depth"><i></i>11a. Bitcoin Transaction in Depth</a></li>
+                <li><a href="#bitcoin_transaction_depth"><i></i>11a. Bitcoin Transaction in Depth</a></li>
             </ul>
         </nav>
 
@@ -812,7 +812,7 @@ require_once './data/models.php';
         </section>
 
         <!-- 11a. Bitcoin Transaction in Depth -->
-        <section id="$bitcoin_transaction_depth" style="padding-top: 70px;">
+        <section id="bitcoin_transaction_depth" style="padding-top: 70px;">
 
             <div class="container">
 
@@ -825,7 +825,7 @@ require_once './data/models.php';
                     <?php
                                                             $index = 0;
                                                             $pattern = '/youtu\.be\/([^\?]+)/';
-                                                            $data = $$bitcoin_transaction_depth;
+                                                            $data = $bitcoin_transaction_depth;
                                                             foreach ($data as $item) {
                                         
                                                                 $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);

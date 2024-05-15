@@ -114,6 +114,7 @@ $crypto_trading = array(
     array(
         "https://youtu.be/WPw-YX-jZvI",
         "Cara Melakukan Trend Analysis",
+        "thumb",
     ),
 
     array(

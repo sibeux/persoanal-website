@@ -204,7 +204,7 @@ require_once './data/models.php';
                         $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
 
                         if (count($item) > 2) {
-                            $thumbnail = $item[2];
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/hqdefault.jpg";
                         } else {
                             $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
                         };

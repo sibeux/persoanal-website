@@ -141,19 +141,31 @@ require_once './data/models.php';
                 <div class="row portfolio-wrapper">
                     <?php
                     $index = 0;
-                    foreach ($cryptocurrency_investing as $item) {
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $cryptocurrency_investing;
+                    foreach ($data as $item) {
+
                         $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
                     ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="<?php echo $cryptocurrency_investing[$index][0] ?>" class="work-video">
+                        <a href="<?php echo $link_video ?>" class="work-video">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
                                     <span class="term">
                                         <?php echo $formattedNumber ?>
                                     </span>
                                     <h4 class="title">
-                                        <?php echo $cryptocurrency_investing[$index][1] ?>
+                                        <?php echo $data[$index][1] ?>
                                     </h4>
                                     <span class="more-button">
                                         <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/429296947_1546854652760630_8100638436237768936_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFJaJSmCt5HAZpIZyX131eqPUiMnZYzhyY9SIydljOHJgLnYbnXN_1xJKKS5R048im3eDS0C45gp3Fh6ZSjkAOh&_nc_ohc=EZ5k55sPikoAX_1Pd78&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTDGgtXG1Er_xAMJ2mv4RKQyklqeb_ti-95OZFHLczZ9Q&oe=660121F8"
@@ -161,8 +173,7 @@ require_once './data/models.php';
                                     </span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="<?php echo $cryptocurrency_investing[$index][2] ?>"
-                                        alt="Module Akademi Crypto" />
+                                    <img src="<?php echo $thumbnail ?>" alt="Module Akademi Crypto" />
                                     <div class="mask"></div>
                                 </div>
                             </div>
@@ -417,22 +428,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                            $index = 0;
-                            $pattern = '/youtu\.be\/([^\?]+)/';
-                            $data = $crypto_fibonacci_secret;
-                            foreach ($data as $item) {
-        
-                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                $url = $data[$index][0];
-                                preg_match($pattern, $url, $matches);
-                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-        
-                                if (count($item) > 2) {
-                                    $thumbnail = $item[2];
-                                } else {
-                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                };
-                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_fibonacci_secret;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -458,9 +469,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                $index++;
-                            };
-                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 7. Crypto Order Flow -->
@@ -475,22 +486,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                            $index = 0;
-                            $pattern = '/youtu\.be\/([^\?]+)/';
-                            $data = $crypto_order_flow;
-                            foreach ($data as $item) {
-        
-                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                $url = $data[$index][0];
-                                preg_match($pattern, $url, $matches);
-                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-        
-                                if (count($item) > 2) {
-                                    $thumbnail = $item[2];
-                                } else {
-                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                };
-                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_order_flow;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -516,9 +527,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                $index++;
-                            };
-                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 8. Crypto Harmonic Trading -->
@@ -533,22 +544,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                    $index = 0;
-                                    $pattern = '/youtu\.be\/([^\?]+)/';
-                                    $data = $crypto_harmonic_trading;
-                                    foreach ($data as $item) {
-                
-                                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                        $url = $data[$index][0];
-                                        preg_match($pattern, $url, $matches);
-                                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                
-                                        if (count($item) > 2) {
-                                            $thumbnail = $item[2];
-                                        } else {
-                                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                        };
-                                    ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_harmonic_trading;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -574,9 +585,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                        $index++;
-                                    };
-                                    ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 9a. Crypto Research -->
@@ -591,22 +602,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                            $index = 0;
-                                            $pattern = '/youtu\.be\/([^\?]+)/';
-                                            $data = $crypto_research;
-                                            foreach ($data as $item) {
-                        
-                                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                                $url = $data[$index][0];
-                                                preg_match($pattern, $url, $matches);
-                                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                        
-                                                if (count($item) > 2) {
-                                                    $thumbnail = $item[2];
-                                                } else {
-                                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                                };
-                                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_research;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -632,9 +643,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                                $index++;
-                                            };
-                                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 9b. Crypto Investing Strategy -->
@@ -649,22 +660,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                            $index = 0;
-                                            $pattern = '/youtu\.be\/([^\?]+)/';
-                                            $data = $crypto_investing_strategy;
-                                            foreach ($data as $item) {
-                        
-                                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                                $url = $data[$index][0];
-                                                preg_match($pattern, $url, $matches);
-                                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                        
-                                                if (count($item) > 2) {
-                                                    $thumbnail = $item[2];
-                                                } else {
-                                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                                };
-                                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_investing_strategy;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -690,9 +701,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                                $index++;
-                                            };
-                                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 10a. Bitcoin The Currency of The Internet -->
@@ -707,22 +718,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                                    $index = 0;
-                                                    $pattern = '/youtu\.be\/([^\?]+)/';
-                                                    $data = $btc_currency_internet;
-                                                    foreach ($data as $item) {
-                                
-                                                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                                        $url = $data[$index][0];
-                                                        preg_match($pattern, $url, $matches);
-                                                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                                
-                                                        if (count($item) > 2) {
-                                                            $thumbnail = $item[2];
-                                                        } else {
-                                                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                                        };
-                                                    ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $btc_currency_internet;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -748,9 +759,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                                        $index++;
-                                                    };
-                                                    ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 10b. Crypto Investing Principles -->
@@ -765,22 +776,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                                            $index = 0;
-                                                            $pattern = '/youtu\.be\/([^\?]+)/';
-                                                            $data = $crypto_investing_principles;
-                                                            foreach ($data as $item) {
-                                        
-                                                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                                                $url = $data[$index][0];
-                                                                preg_match($pattern, $url, $matches);
-                                                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                                        
-                                                                if (count($item) > 2) {
-                                                                    $thumbnail = $item[2];
-                                                                } else {
-                                                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                                                };
-                                                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $crypto_investing_principles;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -806,9 +817,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                                                $index++;
-                                                            };
-                                                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
         <!-- 11a. Bitcoin Transaction in Depth -->
@@ -823,22 +834,22 @@ require_once './data/models.php';
 
                 <div class="row portfolio-wrapper">
                     <?php
-                                                            $index = 0;
-                                                            $pattern = '/youtu\.be\/([^\?]+)/';
-                                                            $data = $bitcoin_transaction_depth;
-                                                            foreach ($data as $item) {
-                                        
-                                                                $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
-                                                                $url = $data[$index][0];
-                                                                preg_match($pattern, $url, $matches);
-                                                                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-                                        
-                                                                if (count($item) > 2) {
-                                                                    $thumbnail = $item[2];
-                                                                } else {
-                                                                    $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                                                                };
-                                                            ?>
+                    $index = 0;
+                    $pattern = '/youtu\.be\/([^\?]+)/';
+                    $data = $bitcoin_transaction_depth;
+                    foreach ($data as $item) {
+
+                        $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $url = $data[$index][0];
+                        preg_match($pattern, $url, $matches);
+                        $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
+
+                        if (count($item) > 2) {
+                            $thumbnail = $item[2];
+                        } else {
+                            $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
+                        };
+                    ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
                         <a href="<?php echo $link_video ?>" class="work-video">
@@ -864,9 +875,9 @@ require_once './data/models.php';
                     </div>
 
                     <?php
-                                                                $index++;
-                                                            };
-                                                            ?>
+                        $index++;
+                    };
+                    ?>
         </section>
 
     </main>

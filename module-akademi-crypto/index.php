@@ -93,7 +93,7 @@ require_once './data/models.php';
         <!-- logo image -->
         <div class="site-logo">
             <a href="index.php">
-                <img src="https://scontent.fmlg5-1.fna.fbcdn.net/v/t1.15752-9/430870163_1900336740419039_2546312039253035229_n.png?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGQH42PkqE8wNskUqh3XxnhZ7nwm0ub33JnufCbS5vfckE3E_knKHpMOQnjQKqQZcKluCXFsXUXyCqed8WgcYLT&_nc_ohc=06KDwlo1GW4AX_cuVfh&_nc_ht=scontent.fmlg5-1.fna&oh=03_AdTGqAiXS_04FOkRwBdPpgnX9I2qoWqzA7ZD1ubZeOVm2g&oe=6616E3DD"
+                <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/430870163_1900336740419039_2546312039253035229_n.png"
                     alt="sibeUX" />
             </a>
         </div>

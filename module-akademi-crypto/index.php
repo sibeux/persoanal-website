@@ -203,11 +203,8 @@ require_once './data/models.php';
                         preg_match($pattern, $url, $matches);
                         $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
 
-                        if (count($item) > 2) {
-                            $thumbnail = $item[2];
-                        } else {
+                        
                             $thumbnail = "https://img.youtube.com/vi/" .  $matches[1] . "/maxresdefault.jpg";
-                        };
                     ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">

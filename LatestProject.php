@@ -128,15 +128,39 @@
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
+                                <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                    <span class="category">Mobile</span>
+                                </a>
+                                <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                    <img src="assets/img/CYBEAT.svg" alt="Cybeat" />
+                                </a>
+                            </div>
+                            <div class="details">
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/cybeat_music_player"
+                                        target="_blank">Cybeat Music Player Mobile Application</a></h4>
+                                <ul class="list-inline meta mb-0 mt-2">
+                                    <li class="list-inline-item">21 April, 2024</li>
+                                    <li class="list-inline-item">Sibeux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- blog item -->
+                        <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                            <div class="thumb">
                                 <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
                                     <span class="category">Web</span>
                                 </a>
                                 <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
-                                    <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/c86ece04beee5d65c4fc9be7113b945f03616c6b/spotify.svg" alt="" />
+                                    <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/c86ece04beee5d65c4fc9be7113b945f03616c6b/spotify.svg"
+                                        alt="" />
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://sibeux.my.id/cloud-music-player/" target="_blank">Cloud Music Streaming Website</a></h4>
+                                <h4 class="my-0 title"><a href="https://sibeux.my.id/cloud-music-player/"
+                                        target="_blank">Cloud Music Streaming Website</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">12 January, 2024</li>
                                     <li class="list-inline-item">Sibeux</li>
@@ -157,7 +181,8 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">Android Java Bus Reservation
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-bus-reservation"
+                                        target="_blank">Android Java Bus Reservation
                                         Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">16 December, 2022</li>
@@ -179,7 +204,9 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-mechanical-calculator" target="_blank">Android Java Calculator Application</a></h4>
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/android-java-mechanical-calculator"
+                                        target="_blank">Android Java Calculator Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">14 November, 2022</li>
                                     <li class="list-inline-item">Hacktiv8</li>
@@ -200,7 +227,8 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-ecommerce" target="_blank">Android Java E-Commerce Application</a></h4>
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-ecommerce"
+                                        target="_blank">Android Java E-Commerce Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">05 November, 2022</li>
                                     <li class="list-inline-item">Hacktiv8</li>
@@ -221,7 +249,8 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-to-do-list" target="_blank">Android Java To-Do
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/android-java-to-do-list"
+                                        target="_blank">Android Java To-Do
                                         List Application</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">17 October, 2022</li>
@@ -243,7 +272,8 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/Aplikasi_E-Learning_Java" target="_blank">RANKERIN - E-learning Application Using Java</a></h4>
+                                <h4 class="my-0 title"><a href="https://github.com/sibeux/Aplikasi_E-Learning_Java"
+                                        target="_blank">RANKERIN - E-learning Application Using Java</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">16 December, 2021</li>
                                     <li class="list-inline-item">SibeUX</li>
@@ -278,15 +308,19 @@
                         <!-- blog item -->
                         <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                             <div class="thumb">
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">
+                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
+                                    target="_blank">
                                     <span class="category">Datamining</span>
                                 </a>
-                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">
+                                <a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
+                                    target="_blank">
                                     <img src="images/datamining.svg" alt="blog-title" />
                                 </a>
                             </div>
                             <div class="details">
-                                <h4 class="my-0 title"><a href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project" target="_blank">Emerging
+                                <h4 class="my-0 title"><a
+                                        href="https://github.com/sibeux/data-mining-college/tree/MyProgram/project"
+                                        target="_blank">Emerging
                                         Pattern Classification Using Python</a></h4>
                                 <ul class="list-inline meta mb-0 mt-2">
                                     <li class="list-inline-item">10 June, 2022</li>

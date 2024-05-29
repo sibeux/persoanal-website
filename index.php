@@ -994,6 +994,28 @@
                             <!-- blog item -->
                             <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                                 <div class="thumb">
+                                    <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                        <span class="category">Mobile</span>
+                                    </a>
+                                    <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                        <img src="assets/img/CYBEAT.svg" alt="Cybeat" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/cybeat_music_player"
+                                            target="_blank">Cybeat Music Player Mobile Application</a></h4>
+                                    <ul class="list-inline meta mb-0 mt-2">
+                                        <li class="list-inline-item">21 April, 2024</li>
+                                        <li class="list-inline-item">Sibeux</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- blog item -->
+                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                <div class="thumb">
                                     <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
                                         <span class="category">Web</span>
                                     </a>
@@ -1031,31 +1053,6 @@
                                             Application</a></h4>
                                     <ul class="list-inline meta mb-0 mt-2">
                                         <li class="list-inline-item">16 December, 2022</li>
-                                        <li class="list-inline-item">Hacktiv8</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                        target="_blank">
-                                        <span class="category">Android</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                        target="_blank">
-                                        <img src="images/calculator.svg" alt="" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a
-                                            href="https://github.com/sibeux/android-java-mechanical-calculator"
-                                            target="_blank">Android Java Calculator Application</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">14 November, 2022</li>
                                         <li class="list-inline-item">Hacktiv8</li>
                                     </ul>
                                 </div>

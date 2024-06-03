@@ -1,8 +1,8 @@
 <?php
 
 define('HOST', 'localhost');
-define('USER', 'root');
-define('pass', '');
+define('SIBEUX', 'sibk1922_cbux');
+define('pass', '1NvgEHFnwvDN96');
 define('DB', 'pbweb_cashflow');
 
 $db = new mysqli(HOST, USER, pass, DB);

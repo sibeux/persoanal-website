@@ -1,7 +1,7 @@
 <?php
 
 define('HOST', 'localhost');
-define('SIBEUX', 'sibk1922_cbux');
+define('USER', 'sibk1922_cbux');
 define('pass', '1NvgEHFnwvDN96');
 define('DB', 'sibk1922_pbweb_cashflow');
 

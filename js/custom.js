@@ -86,9 +86,31 @@ $(window).on("load", function () {
 			mainClass: "my-mfp-zoom-in",
 		});
 
+		function gdriveUrlIframe(url) {
+			var idMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+			var fileId = idMatch ? idMatch[1] : null;
+			if (fileId) {
+				return "https://drive.google.com/file/d/" + fileId + "/preview";
+			}
+			return null;
+		}
+
 		$(".work-video").magnificPopup({
 			type: "iframe",
 			closeBtnInside: false,
+			callbacks: {
+				elementParse: function (item) {
+					var clickedLink = item.el;
+					var hrefValue = clickedLink.attr("href");
+					console.log("Link yang diklik:", hrefValue);
+
+					// Set the iframe source based on the clicked link
+					if (hrefValue.includes("drive.google.com")) {
+						item.src = gdriveUrlIframe(hrefValue);
+						item.type = "iframe";
+					}
+				},
+			},
 			iframe: {
 				markup:
 					'<div class="mfp-iframe-scaler">' +
@@ -112,6 +134,10 @@ $(window).on("load", function () {
 					gmaps: {
 						index: "//maps.google.",
 						src: "%id%&output=embed",
+					},
+					gdrive: {
+						index: "drive.google.com/",
+						src: "%id%", // This will be replaced dynamically
 					},
 				},
 

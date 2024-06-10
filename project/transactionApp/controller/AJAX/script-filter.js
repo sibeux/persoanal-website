@@ -16,7 +16,7 @@ type.addEventListener("change", function () {
     ObjAjax.open(
 			"get",
 			"../controller/AJAX/filter-transaksi.php?type=" +
-				type.value,
+				type.value, 
 			true
 		);
     ObjAjax.send();

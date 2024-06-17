@@ -1,5 +1,7 @@
 <?php
 require_once './data/models.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -114,6 +116,7 @@ require_once './data/models.php';
                 <li><a href="#btc_currency_internet"><i></i>10a. Bitcoin The Currency of The Internet</a></li>
                 <li><a href="#crypto_investing_principles"><i></i>10b. Crypto Investing Principles</a></li>
                 <li><a href="#bitcoin_transaction_depth"><i></i>11a. Bitcoin Transaction in Depth</a></li>
+                <li><a href="#crypto_investing_tools"><i></i>11b. Crypto Investing Tools</a></li>
             </ul>
         </nav>
 
@@ -876,13 +879,13 @@ require_once './data/models.php';
                     ?>
         </section>
 
-        <!-- 11a. Bitcoin Transaction in Depth -->
-        <section id="bitcoin_transaction_depth" style="padding-top: 70px;">
+        <!-- 11b. Crypto Investing Tools -->
+        <section id="crypto_investing_tools" style="padding-top: 70px;">
 
             <div class="container">
 
                 <!-- section title -->
-                <h2 class="section-title wow fadeInUp">11a. Bitcoin Transaction in Depth</h2>
+                <h2 class="section-title wow fadeInUp">11b. Crypto Investing Tools</h2>
 
                 <br>
 
@@ -890,31 +893,23 @@ require_once './data/models.php';
                     <?php
             $index = 0;
             $pattern = '/youtu\.be\/([^\?]+)/';
-            $data = $bitcoin_transaction_depth;
+            $data = $crypto_investing_tools;
             foreach ($data as $item) {
 
                 $formattedNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
                 $url = $data[$index][0];
                 preg_match($pattern, $url, $matches);
-                $link_video = "https://www.youtube.com/watch?v=" . $matches[1];
-
-                if (count($item) > 2) {
-                    $thumbnail = $item[2];
-                } else {
-                    $thumbnail = "https://img.youtube.com/vi/" . $matches[1] . "/maxresdefault.jpg";
-                }
-                ;
+                
                 ?>
                     <!-- portfolio item -->
                     <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="https://drive.google.com/file/d/1xk24ruZ2haMDJhKuqynx0iDfM7QuyUjy/view?usp=drive_link"
-                            class="work-video">
+                        <a href="<?php echo $url ?>" class="work-video">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
                                     <span class="term">
                                         <?php echo $formattedNumber ?>
                                     </span>
-                                    <h4 class="title">
+                                    <h4 class=" title">
                                         <?php echo $data[$index][1] ?>
                                     </h4>
                                     <span class="more-button">

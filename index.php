@@ -1,3 +1,7 @@
+<?php
+include './database/db.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -28,6 +32,7 @@
 
 <body>
 
+    <!-- Sangat berterima kasih dengan preloader. Jika preloader loop infinite, berarti ada yang error  -->
     <!-- Preloader -->
     <div id="preloader">
         <div class="outer">
@@ -702,135 +707,217 @@
                 <!-- portolio wrapper -->
                 <div class="row portfolio-wrapper">
 
+                    <?php
+                    function getIcon($filter)
+                    {
+                        if ($filter == "Poster") {
+                            return "icon-picture";
+                        } elseif ($filter == "Art") {
+                            return "icon-star";
+                        } elseif ($filter == "Video") {
+                            return "icon-camrecorder";
+                        } elseif ($filter == "Logo") {
+                            return "icon-trophy";
+                        }
+                        ;
+                    }
+
+                    function getFIlter($filter)
+                    {
+                        if ($filter == "Poster") {
+                            return "art";
+                        } elseif ($filter == "Art") {
+                            return "branding";
+                        } elseif ($filter == "Video") {
+                            return "creative";
+                        } elseif ($filter == "Logo") {
+                            return "design";
+                        }
+                        ;
+                    }
+
+                    // Function to extract links from the text
+                    function extractLinks($extra_asset)
+                    {
+                        // Match all URLs within double quotes
+                        preg_match_all('/"([^"]+)"/', $extra_asset, $matches);
+
+                        // Return the array of URLs
+                        return $matches[1];
+                    }
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['UID'];
+                        $title = $row['title'];
+                        $filter = $row['filter'];
+                        $type = $row['type'];
+                        $asset = $row['asset_link'];
+                        $thumbnail = $row['thumb_link'];
+                        $extra_asset = $row['extra_link'];
+                        $p1_content = $row['p1_content'];
+                        $p2_content = $row['p2_content'];
+                        $caption = $row['caption_content'];
+
+                        if ($type == "work-image") {
+                            ?>
                     <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item art">
-                        <a href="images/works/iwdm-full.png" class="work-image">
+                    <div class="col-md-4 col-sm-6 grid-item <?php echo getFilter($filter) ?>">
+                        <a href="<?php echo $asset ?>" class="work-image">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
-                                    <span class="term">Poster</span>
-                                    <h4 class="title">Registration IWDM 2022</h4>
-                                    <span class="more-button"><i class="icon-magnifier-add"></i></span>
+                                    <span class="term"><?php echo $filter ?></span>
+                                    <h4 class="title"><?php echo $title ?></h4>
+                                    <span class="more-button"><i class="<?php echo getIcon($filter) ?>"></i></span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="images/works/iwdm.png" alt="Registration IWDM 2022" />
+                                    <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>" />
                                     <div class="mask"></div>
                                 </div>
                             </div>
                         </a>
                     </div>
-
+                    <?php
+                        } elseif ($row['type'] == "gallery-link") {
+                            // Get the links
+                            $gallery_link = extractLinks($extra_asset);
+                            ?>
                     <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item branding">
-                        <a href="#gallery-1" class="gallery-link">
+                    <div class="col-md-4 col-sm-6 grid-item <?php echo getFilter($filter) ?>">
+                        <a href="#gallery-<?php echo $id ?>" class="gallery-link">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
-                                    <span class="term">Art</span>
-                                    <h4 class="title">ID CARD Member BEM 2021/2022</h4>
-                                    <span class="more-button"><i class="icon-picture"></i></span>
+                                    <span class="term"><?php echo $filter ?></span>
+                                    <h4 class="title"><?php echo $title ?></h4>
+                                    <span class="more-button"><i class="<?php echo getIcon($filter) ?>"></i></span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="images/works/id (1).png" alt="Portfolio-title" />
+                                    <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>" />
                                     <div class="mask"></div>
                                 </div>
                             </div>
                         </a>
-                        <div id="gallery-1" class="gallery mfp-hide">
-                            <a href="images/works/id (2).png"></a>
+                        <div id="gallery-<?php echo $id ?>" class="gallery mfp-hide">
+                            <!-- <a href="images/works/id (2).png"></a>
                             <a href="images/works/id (3).png"></a>
-                            <a href="images/works/id (4).png"></a>
+                            <a href="images/works/id (4).png"></a> -->
+                            <?php
+                                    foreach ($gallery_link as $link) {
+                                        echo "<a href='$link'></a>";
+                                    }
+                                    ?>
+                            ?>
                         </div>
                     </div>
-
+                    <?php
+                        } elseif ($row['type'] == "work-video") {
+                            ?>
                     <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="#small-dialog" class="work-content">
+                    <div class="col-md-4 col-sm-6 grid-item <?php echo getFilter($filter) ?>">
+                        <a href="<?php echo $asset ?>" class="work-video">
                             <div class="portfolio-item rounded shadow-dark">
                                 <div class="details">
-                                    <span class="term">Video</span>
-                                    <h4 class="title">The impression message of FORTRAN HIMASIF 2020</h4>
-                                    <span class="more-button"><i class="icon-options"></i></span>
+                                    <span class="term"><?php echo $filter ?></span>
+                                    <h4 class="title"><?php echo $title ?></h4>
+                                    <span class="more-button"><i class="<?php echo getIcon($filter) ?>"></i></span>
                                 </div>
                                 <div class="thumb">
-                                    <img src="images/works/pesan.png" alt="Portfolio-title" />
+                                    <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>" />
                                     <div class="mask"></div>
                                 </div>
                             </div>
                         </a>
-                        <div id="small-dialog" class="white-popup zoom-anim-dialog mfp-hide">
-                            <img src="images/works/kesan.png" alt="Title" />
-                            <h2>The impression message of FORTRAN HIMASIF 2020</h2>
-                            <p>video impressions & messages during the implementation of FORTRAN HIMASIF 2022.</p>
-                            <p>This video was made using the Kinemaster Android application.</p>
-                            <a href="https://www.youtube.com/watch?v=-lyoDSUDAA8" target="_blank"
-                                class="btn btn-default">View on Youtube</a>
+                    </div>
+                    <?php
+                        } elseif ($type == 'work-content') {
+                            ?>
+                    <!-- portfolio item -->
+                    <div class="col-md-4 col-sm-6 grid-item <?php echo getFilter($filter) ?>">
+                        <a href="#small-dialog-<?php echo $id ?>" class="work-content">
+                            <div class="portfolio-item rounded shadow-dark">
+                                <div class="details">
+                                    <span class="term"><?php echo $filter ?></span>
+                                    <h4 class="title"><?php echo $title ?></h4>
+                                    <span class="more-button"><i class="<?php echo getIcon($filter) ?>"></i></span>
+                                </div>
+                                <div class="thumb">
+                                    <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>" />
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div id="small-dialog-<?php echo $id ?>" class="white-popup zoom-anim-dialog mfp-hide">
+                            <img src="<?php echo $asset ?>" alt="<?php echo $title ?>" />
+                            <h2><?php echo $title ?></h2>
+                            <p><?php echo $p1_content ?></p>
+                            <p><?php echo $p2_content ?></p>
+                            <a href="<?php echo $extra_asset ?>" target="_blank"
+                                class="btn btn-default"><?php echo $caption ?></a>
                         </div>
                     </div>
+                    <?php
+                        }
+                    }
+                    $db->close();
+                    ?>
 
-                    <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="https://www.youtube.com/watch?v=ZgBDq6sc_ec" class="work-video">
-                            <div class="portfolio-item rounded shadow-dark">
-                                <div class="details">
-                                    <span class="term">Video</span>
-                                    <h4 class="title">Teaser Study Excursie 2022</h4>
-                                    <span class="more-button"><i class="icon-camrecorder"></i></span>
-                                </div>
-                                <div class="thumb">
-                                    <img src="images/works/teaser-se.png" alt="Backdrop Study Excursie 2022" />
-                                    <div class="mask"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <!-- more button -->
+                    <!-- <div class="load-more text-center mt-4">
+                        <a style="color: white;" class="btn btn-default"><i class="fas fa-spinner"></i>Load more</a> -->
+                    <!-- numbered pagination (hidden for infinite scroll) -->
+                    <!-- <ul class="portfolio-pagination list-inline d-none">
+                            <li class="list-inline-item">1</li>
+                            <li class="list-inline-item"><a href="works-2.html"></a></li>
+                            <li class="list-inline-item"><a href="works-3.html"></a></li>
+                            <li class="list-inline-item"><a href="works-4.html"></a></li>
+                            <li class="list-inline-item"><a href="works-5.html"></a></li>
+                            <li class="list-inline-item"><a href="works-6.html"></a></li>
+                        </ul>
+                    </div> -->
 
-                    <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item creative">
-                        <a href="https://www.youtube.com/watch?v=fXktpTsh9hM" class="work-video">
-                            <div class="portfolio-item rounded shadow-dark">
-                                <div class="details">
-                                    <span class="term">Video</span>
-                                    <h4 class="title">Backdrop Study Excursie 2022</h4>
-                                    <span class="more-button"><i class="icon-camrecorder"></i></span>
-                                </div>
-                                <div class="thumb">
-                                    <img src="images/works/back-se.png" alt="Backdrop Study Excursie 2022" />
-                                    <div class="mask"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- portfolio item -->
-                    <div class="col-md-4 col-sm-6 grid-item design">
-                        <a href="https://www.instagram.com/p/Cc_40h-JXLF/" target="_blank">
-                            <div class="portfolio-item rounded shadow-dark">
-                                <div class="details">
-                                    <span class="term">Logo</span>
-                                    <h4 class="title">Logo Catra Sahitya 2021/2022</h4>
-                                    <span class="more-button"><i class="icon-link"></i></span>
-                                </div>
-                                <div class="thumb">
-                                    <img src="images/works/logos.png" alt="Portfolio-title" />
-                                    <div class="mask"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
 
-                <!-- more button -->
-                <div class="load-more text-center mt-4">
-                    <a style="color: white;" class="btn btn-default"><i class="fas fa-spinner"></i>Load more</a>
-                    <!-- numbered pagination (hidden for infinite scroll) -->
-                    <ul class="portfolio-pagination list-inline d-none">
-                        <li class="list-inline-item">1</li>
-                        <li class="list-inline-item"><a href="works-2.html"></a></li>
-                        <li class="list-inline-item"><a href="works-3.html"></a></li>
-                        <li class="list-inline-item"><a href="works-4.html"></a></li>
-                        <li class="list-inline-item"><a href="works-5.html"></a></li>
-                        <li class="list-inline-item"><a href="works-6.html"></a></li>
+                <!-- Pagination -->
+                <!-- <div class="pagination-wrapper text-center mt-4">
+                    <ul class="pagination">
+                        <?php if ($page > 1): ?>
+                        <li class="page-item"><a class="page-link" href="?page=<?php echo $page - 1; ?>">Previous</a>
+                        </li>
+                        <?php endif; ?>
+
+                        <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <li class="page-item <?php echo ($i == $page) ? 'active' : ''; ?>">
+                            <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        </li>
+                        <?php endfor; ?>
+
+                        <?php if ($page < $total_pages): ?>
+                        <li class="page-item"><a class="page-link" href="?page=<?php echo $page + 1; ?>">Next</a></li>
+                        <?php endif; ?>
+                    </ul>
+                </div> -->
+
+                <div class="pagination p12">
+                    <ul class="pag-p12">
+                        <?php if ($page > 1): ?>
+                        <a class="is-active" href="?page=<?php echo $page - 1; ?>">
+                            <li>Previous</li>
+                        </a>
+                        <?php endif; ?>
+
+                        <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <a class="<?php echo ($i == $page) ? 'is-active' : ''; ?>" href="?page=<?php echo $i; ?>">
+                            <li> <?php echo $i; ?> </li>
+                        </a>
+                        <?php endfor; ?>
+
+                        <?php if ($page < $total_pages): ?>
+                        <a href="?page=<?php echo $page + 1; ?>">
+                            <li>Next</li>
+                        </a>
+                        <?php endif; ?>
                     </ul>
                 </div>
+
 
                 <!-- need more? -->
                 <div class="mt-5 text-center">
@@ -838,323 +925,328 @@
                             target="_blank">Drive</a> 🚀</p>
                 </div>
 
-            </div>
+                <!-- section testimonials -->
+                <section id="testimonials">
 
-            <!-- section testimonials -->
-            <section id="testimonials">
+                    <div class="container">
 
-                <div class="container">
+                        <!-- section title -->
+                        <h2 class="section-title wow fadeInUp">Tools & Language</h2>
 
-                    <!-- section title -->
-                    <h2 class="section-title wow fadeInUp">Tools & Language</h2>
+                        <div class="spacer" data-height="60"></div>
+                        <!-- testimonials wrapper -->
+                        <div class="testimonials-wrapper">
 
-                    <div class="spacer" data-height="60"></div>
-
-                    <!-- testimonials wrapper -->
-                    <div class="testimonials-wrapper">
-
-                        <!-- testimonial item -->
-                        <div class="testimonial-item text-center mx-auto">
-                            <div class="thumb mb-3 mx-auto">
-                                <img src="images/vscode.svg" alt="customer-name" />
-                            </div>
-                            <h4 class="mt-3 mb-0">Visual Studio Code</h4>
-                            <span class="subtitle">IDE daily driver for programming</span>
-                            <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                                <p class="mb-0">I use VSCode to programming because VSCode has a
-                                    lot of extensions that are very useful in program development.</p>
-                            </div>
-                        </div>
-
-                        <!-- testimonial item -->
-                        <div class="testimonial-item text-center mx-auto">
-                            <div class="thumb mb-3 mx-auto">
-                                <img src="images/android studio.svg" alt="customer-name" />
-                            </div>
-                            <h4 class="mt-3 mb-0">Android Studio</h4>
-                            <span class="subtitle">Android Studio for Mobile Development</span>
-                            <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                                <p class="mb-0">I learned Java and Kotlin programming languages ​​to
-                                    develop android mobile applications using Android Studio.</p>
-                            </div>
-                        </div>
-
-                        <!-- testimonial item -->
-                        <div class="testimonial-item text-center mx-auto">
-                            <div class="thumb mb-3 mx-auto">
-                                <img src="images/figma.svg" alt="customer-name" />
-                            </div>
-                            <h4 class="mt-3 mb-0">Figma</h4>
-                            <span class="subtitle">Figma to design user interface application</span>
-                            <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                                <p class="mb-0">I use figma to design the interface of the applications that I develop,
-                                    such as websites and mobile apps.</p>
-                            </div>
-                        </div>
-
-                        <!-- testimonial item -->
-                        <div class="testimonial-item text-center mx-auto">
-                            <div class="thumb mb-3 mx-auto">
-                                <img src="images/github.svg" alt="customer-name" />
-                            </div>
-                            <h4 class="mt-3 mb-0">GitHub</h4>
-                            <span class="subtitle">GitHub repositories for portfolio</span>
-                            <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                                <p class="mb-0">I use GitHub to store all program code while i study programming.
-                                    And I can use this repository as a portfolio.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/python.svg" alt="client-name" />
+                            <!-- testimonial item -->
+                            <div class="testimonial-item text-center mx-auto">
+                                <div class="thumb mb-3 mx-auto">
+                                    <img src="images/vscode.svg" alt="customer-name" />
+                                </div>
+                                <h4 class="mt-3 mb-0">Visual Studio Code</h4>
+                                <span class="subtitle">IDE daily driver for programming</span>
+                                <div
+                                    class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                                    <p class="mb-0">I use VSCode to programming because VSCode has a
+                                        lot of extensions that are very useful in program development.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/linux.svg" alt="client-name" />
+
+                            <!-- testimonial item -->
+                            <div class="testimonial-item text-center mx-auto">
+                                <div class="thumb mb-3 mx-auto">
+                                    <img src="images/android studio.svg" alt="customer-name" />
+                                </div>
+                                <h4 class="mt-3 mb-0">Android Studio</h4>
+                                <span class="subtitle">Android Studio for Mobile Development</span>
+                                <div
+                                    class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                                    <p class="mb-0">I learned Java and Kotlin programming languages ​​to
+                                        develop android mobile applications using Android Studio.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/java.svg" alt="client-name" />
+
+                            <!-- testimonial item -->
+                            <div class="testimonial-item text-center mx-auto">
+                                <div class="thumb mb-3 mx-auto">
+                                    <img src="images/figma.svg" alt="customer-name" />
+                                </div>
+                                <h4 class="mt-3 mb-0">Figma</h4>
+                                <span class="subtitle">Figma to design user interface application</span>
+                                <div
+                                    class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                                    <p class="mb-0">I use figma to design the interface of the applications that I
+                                        develop,
+                                        such as websites and mobile apps.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/kotlin.svg" alt="client-name" />
+
+                            <!-- testimonial item -->
+                            <div class="testimonial-item text-center mx-auto">
+                                <div class="thumb mb-3 mx-auto">
+                                    <img src="images/github.svg" alt="customer-name" />
+                                </div>
+                                <h4 class="mt-3 mb-0">GitHub</h4>
+                                <span class="subtitle">GitHub repositories for portfolio</span>
+                                <div
+                                    class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                                    <p class="mb-0">I use GitHub to store all program code while i study
+                                        programming.
+                                        And I can use this repository as a portfolio.</p>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/git.svg" alt="client-name" />
+
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/python.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/ai.svg" alt="client-name" />
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/linux.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images-works/Flutter 1.svg" alt="flutter" />
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/java.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <!-- client item -->
-                            <div class="client-item">
-                                <div class="inner">
-                                    <img src="images/copilot.svg" alt="client-name" />
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/kotlin.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- section blog -->
-            <section id="blog">
-
-                <div class="container">
-
-                    <!-- section title -->
-                    <h2 class="section-title wow fadeInUp">Latest Projects</h2>
-
-                    <div class="spacer" data-height="60"></div>
-
-                    <div class="row blog-wrapper">
-
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
-                                        <span class="category">Mobile</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
-                                        <img src="assets/img/CYBEAT.svg" alt="Cybeat" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="https://github.com/sibeux/cybeat_music_player"
-                                            target="_blank">Cybeat Music Player Mobile Application</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">21 April, 2024</li>
-                                        <li class="list-inline-item">Sibeux</li>
-                                    </ul>
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/git.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
-                                        <span class="category">Web</span>
-                                    </a>
-                                    <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/c86ece04beee5d65c4fc9be7113b945f03616c6b/spotify.svg"
-                                            alt="" />
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a href="https://sibeux.my.id/cloud-music-player/"
-                                            target="_blank">Cloud Music Streaming Website</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">12 January, 2024</li>
-                                        <li class="list-inline-item">Sibeux</li>
-                                    </ul>
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/ai.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <!-- blog item -->
-                            <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                                <div class="thumb">
-                                    <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
-                                        <span class="category">Android</span>
-                                    </a>
-                                    <a href="https://github.com/sibeux/android-java-bus-reservation" target="_blank">
-                                        <img src="images-works/bus-reser.jpg" alt="" />
-                                    </a>
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images-works/Flutter 1.svg" alt="flutter" />
+                                    </div>
                                 </div>
-                                <div class="details">
-                                    <h4 class="my-0 title"><a
-                                            href="https://github.com/sibeux/android-java-bus-reservation"
-                                            target="_blank">Android Java Bus Reservation
-                                            Application</a></h4>
-                                    <ul class="list-inline meta mb-0 mt-2">
-                                        <li class="list-inline-item">16 December, 2022</li>
-                                        <li class="list-inline-item">Hacktiv8</li>
-                                    </ul>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <!-- client item -->
+                                <div class="client-item">
+                                    <div class="inner">
+                                        <img src="images/copilot.svg" alt="client-name" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- need more? -->
-                    <div class="mt-5 text-center">
-                        <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="_blank">Let's
-                                go!!</a> 🚗</p>
-                    </div>
+                </section>
 
-                </div>
+                <!-- section blog -->
+                <section id="blog">
 
-            </section>
+                    <div class="container">
 
-            <!-- section contact -->
-            <section id="contact">
+                        <!-- section title -->
+                        <h2 class="section-title wow fadeInUp">Latest Projects</h2>
 
-                <div class="container">
+                        <div class="spacer" data-height="60"></div>
 
-                    <!-- section title -->
-                    <h2 class="section-title wow fadeInUp">Contact Me</h2>
+                        <div class="row blog-wrapper">
 
-                    <div class="spacer" data-height="60"></div>
-
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <!-- contact info -->
-                            <div class="contact-info">
-                                <h3 class="wow fadeInUp">Let's talk about everything!</h3>
-                                <p class="wow fadeInUp">Don't like forms? Send me an <a
-                                        href="mailto:wahabinasrul@gmail.com">email</a>. 👋</p>
+                            <div class="col-md-4">
+                                <!-- blog item -->
+                                <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                    <div class="thumb">
+                                        <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                            <span class="category">Mobile</span>
+                                        </a>
+                                        <a href="https://github.com/sibeux/cybeat_music_player" target="_blank">
+                                            <img src="assets/img/CYBEAT.svg" alt="Cybeat" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <h4 class="my-0 title"><a href="https://github.com/sibeux/cybeat_music_player"
+                                                target="_blank">Cybeat Music Player Mobile Application</a></h4>
+                                        <ul class="list-inline meta mb-0 mt-2">
+                                            <li class="list-inline-item">21 April, 2024</li>
+                                            <li class="list-inline-item">Sibeux</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="col-md-4">
+                                <!-- blog item -->
+                                <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                    <div class="thumb">
+                                        <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
+                                            <span class="category">Web</span>
+                                        </a>
+                                        <a href="https://sibeux.my.id/cloud-music-player/" target="_blank">
+                                            <img src="https://raw.githubusercontent.com/sibeux/license-sibeux/c86ece04beee5d65c4fc9be7113b945f03616c6b/spotify.svg"
+                                                alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <h4 class="my-0 title"><a href="https://sibeux.my.id/cloud-music-player/"
+                                                target="_blank">Cloud Music Streaming Website</a></h4>
+                                        <ul class="list-inline meta mb-0 mt-2">
+                                            <li class="list-inline-item">12 January, 2024</li>
+                                            <li class="list-inline-item">Sibeux</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!-- blog item -->
+                                <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                                    <div class="thumb">
+                                        <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                            target="_blank">
+                                            <span class="category">Android</span>
+                                        </a>
+                                        <a href="https://github.com/sibeux/android-java-bus-reservation"
+                                            target="_blank">
+                                            <img src="images-works/bus-reser.jpg" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <h4 class="my-0 title"><a
+                                                href="https://github.com/sibeux/android-java-bus-reservation"
+                                                target="_blank">Android Java Bus Reservation
+                                                Application</a></h4>
+                                        <ul class="list-inline meta mb-0 mt-2">
+                                            <li class="list-inline-item">16 December, 2022</li>
+                                            <li class="list-inline-item">Hacktiv8</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="col-md-8">
-                            <!-- Contact Form -->
-                            <form id="contact-form" class="contact-form mt-6">
+                        <!-- need more? -->
+                        <div class="mt-5 text-center">
+                            <p class="mb-0">Want to see more projects? <a href="LatestProject.php" target="_blank">Let's
+                                    go!!</a> 🚗</p>
+                        </div>
 
-                                <div class="messages"></div>
+                    </div>
 
-                                <div class="row">
-                                    <div class="column col-md-6">
-                                        <!-- Name input -->
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="InputName" id="InputName"
-                                                placeholder="Your name" required="required"
-                                                data-error="Name is required.">
-                                            <div class="help-block with-errors"></div>
+                </section>
+
+                <!-- section contact -->
+                <section id="contact">
+
+                    <div class="container">
+
+                        <!-- section title -->
+                        <h2 class="section-title wow fadeInUp">Contact Me</h2>
+
+                        <div class="spacer" data-height="60"></div>
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <!-- contact info -->
+                                <div class="contact-info">
+                                    <h3 class="wow fadeInUp">Let's talk about everything!</h3>
+                                    <p class="wow fadeInUp">Don't like forms? Send me an <a
+                                            href="mailto:wahabinasrul@gmail.com">email</a>. 👋</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <!-- Contact Form -->
+                                <form id="contact-form" class="contact-form mt-6">
+
+                                    <div class="messages"></div>
+
+                                    <div class="row">
+                                        <div class="column col-md-6">
+                                            <!-- Name input -->
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="InputName" id="InputName"
+                                                    placeholder="Your name" required="required"
+                                                    data-error="Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column col-md-6">
+                                            <!-- Email input -->
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="InputEmail"
+                                                    name="InputEmail" placeholder="Email address" required="required"
+                                                    data-error="Email is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column col-md-12">
+                                            <!-- Subject input -->
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="InputSubject"
+                                                    name="InputSubject" placeholder="Subject" required="required"
+                                                    data-error="Subject is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column col-md-12">
+                                            <!-- Message textarea -->
+                                            <div class="form-group">
+                                                <textarea name="InputMessage" id="InputMessage" class="form-control"
+                                                    rows="5" placeholder="Message" required="required"
+                                                    data-error="Message is required."></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="column col-md-6">
-                                        <!-- Email input -->
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="InputEmail" name="InputEmail"
-                                                placeholder="Email address" required="required"
-                                                data-error="Email is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+                                    <!-- Send Button -->
+                                    <button id="submit" name="submit" value="Submit" class="btn btn-default">Send
+                                        Message</button>
 
-                                    <div class="column col-md-12">
-                                        <!-- Subject input -->
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="InputSubject"
-                                                name="InputSubject" placeholder="Subject" required="required"
-                                                data-error="Subject is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+                                </form>
+                                <!-- Contact Form end -->
+                            </div>
 
-                                    <div class="column col-md-12">
-                                        <!-- Message textarea -->
-                                        <div class="form-group">
-                                            <textarea name="InputMessage" id="InputMessage" class="form-control"
-                                                rows="5" placeholder="Message" required="required"
-                                                data-error="Message is required."></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Send Button -->
-                                <button id="submit" name="submit" value="Submit" class="btn btn-default">Send
-                                    Message</button>
-
-                            </form>
-                            <!-- Contact Form end -->
                         </div>
 
                     </div>
 
-                </div>
+                </section>
 
-            </section>
-
-            <div class="spacer" data-height="96"></div>
+                <div class="spacer" data-height="96"></div>
 
     </main>
 
@@ -1180,6 +1272,8 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/pagination-design.js"></script>
+    <script src="js/reinitiate-custom.js"></script>
 
 </body>
 

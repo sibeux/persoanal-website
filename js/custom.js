@@ -115,15 +115,28 @@ $(window).on("load", function () {
 				markup:
 					'<div class="mfp-iframe-scaler">' +
 					'<div class="mfp-close"></div>' +
-					'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+					'<iframe class="mfp-iframe" frameborder="0"' +
+					'allow="accelerometer; autoplay;" allowfullscreen></iframe>' +
 					"</div>",
 
 				patterns: {
 					youtube: {
 						index: "youtube.com/",
-
-						id: "v=",
-
+						id: function (url) {
+							var videoId = null;
+							if (url.includes("youtube.com/watch?v=")) {
+								var match = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+								if (match) {
+									videoId = match[1];
+								}
+							} else if (url.includes("youtube.com/shorts/")) {
+								var match = url.match(/shorts\/([a-zA-Z0-9_-]+)/);
+								if (match) {
+									videoId = match[1];
+								}
+							}
+							return videoId;
+						},
 						src: "https://www.youtube.com/embed/%id%?autoplay=1",
 					},
 					vimeo: {
@@ -134,10 +147,6 @@ $(window).on("load", function () {
 					gmaps: {
 						index: "//maps.google.",
 						src: "%id%&output=embed",
-					},
-					gdrive: {
-						index: "drive.google.com/",
-						src: "%id%", // This will be replaced dynamically
 					},
 				},
 

@@ -1,9 +1,10 @@
 <?php
 
 define('HOST', 'localhost');
-define('SIBEUX', '-');
-define('pass', '-');
-define('DB', '-');
+define('SIBEUX', 'root');
+define('pass', '');
+define('DB', 'web_porto');
+
 $db = new mysqli(HOST, SIBEUX, pass, DB);
 
 if($db->connect_errno){

@@ -898,23 +898,7 @@ include './database/db.php';
 
                 <div class="pagination p12">
                     <ul class="pag-p12">
-                        <?php if ($page > 1): ?>
-                        <a class="nav-is-active" href="?page=<?php echo $page - 1; ?>">
-                            <li>Previous</li>
-                        </a>
-                        <?php endif; ?>
-
-                        <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                        <a class="<?php echo ($i == $page) ? 'is-active' : ''; ?>" href="?page=<?php echo $i; ?>">
-                            <li> <?php echo $i; ?> </li>
-                        </a>
-                        <?php endfor; ?>
-
-                        <?php if ($page < $total_pages): ?>
-                        <a class="nav-is-active" href="?page=<?php echo $page + 1; ?>">
-                            <li>Next</li>
-                        </a>
-                        <?php endif; ?>
+                        <!-- Sial, ini cuma buat blueprint, full controll ada di javascript -->
                     </ul>
                 </div>
 

@@ -106,10 +106,10 @@ $(document).ready(function () {
 
 				// Update pagination
 				// var paginationWrapper = $(".pagination-wrapper");
-				var paginationp12 = $(".p12");
 				// paginationWrapper.empty();
-				paginationp12.empty();
 				// var paginationHtml = '<ul class="pagination">';
+				var paginationp12 = $(".p12");
+				paginationp12.empty();
 				var pagp12 = '<ul class="pag-p12">';
 
 				// if (response.current_page > 1) {
@@ -143,7 +143,6 @@ $(document).ready(function () {
 				var end_page = Math.min(response.total_pages, start_page + max_page - 1);
 				start_page = Math.max(1, end_page - max_page + 1);
 				end_page = Math.min(response.total_pages, end_page);
-
 
 				for (var i = start_page; i <= end_page; i++) {
 					pagp12 += `<a class="${

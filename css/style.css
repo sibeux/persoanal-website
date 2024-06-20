@@ -3222,3 +3222,18 @@ only screen and (min-device-pixel-ratio: 1.5) {
     cursor: default;
     color: #c1c1c2;
 }
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 991px) {
+  .pagination a {
+    padding: 8px 14px;
+    /* Adjust padding for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .pagination {
+    padding: 20px 0;
+    /* Adjust overall padding for smaller screens */
+  }
+}

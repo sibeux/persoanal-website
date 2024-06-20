@@ -133,7 +133,7 @@ include './database/db.php';
 
                     <!-- info -->
                     <h1 class="mb-2 mt-0">M. Nasrul Wahabi</h1>
-                    <span>I'm <span class="text-rotating">a Mobile Developer, a Graphic Designer, an Information Systems
+                    <span>I'm <span class="text-rotating">a Programmer, a Graphic Designer, an Information Systems
                             Student
                         </span></span>
 
@@ -899,7 +899,7 @@ include './database/db.php';
                 <div class="pagination p12">
                     <ul class="pag-p12">
                         <?php if ($page > 1): ?>
-                        <a class="is-active" href="?page=<?php echo $page - 1; ?>">
+                        <a class="nav-is-active" href="?page=<?php echo $page - 1; ?>">
                             <li>Previous</li>
                         </a>
                         <?php endif; ?>
@@ -911,7 +911,7 @@ include './database/db.php';
                         <?php endfor; ?>
 
                         <?php if ($page < $total_pages): ?>
-                        <a href="?page=<?php echo $page + 1; ?>">
+                        <a class="nav-is-active" href="?page=<?php echo $page + 1; ?>">
                             <li>Next</li>
                         </a>
                         <?php endif; ?>
@@ -920,7 +920,7 @@ include './database/db.php';
 
 
                 <!-- need more? -->
-                <div class="mt-5 text-center">
+                <div class="mt-1 text-center">
                     <p class="mb-0">Want to see more designs? View on <a href="https://bit.ly/Design-sibeux"
                             target="_blank">Drive</a> 🚀</p>
                 </div>

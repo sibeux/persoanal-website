@@ -119,7 +119,7 @@ $(document).ready(function () {
 				// }
 
 				if (response.current_page > 1) {
-					pagp12 += `<a class="is-active" href="#" data-page="${
+					pagp12 += `<a class="nav-is-active" href="#" data-page="${
 						response.current_page - 1
 					}">
                             <li>Previous</li>
@@ -127,7 +127,7 @@ $(document).ready(function () {
 				}
 
 				if (response.current_page == 1) {
-					pagp12 += `<a href="/" onclick="return false;">
+					pagp12 += `<a class="inactive" data-page="${response.current_page}">
                             <li>Previous</li>
                         </a>`;
 				}
@@ -138,7 +138,14 @@ $(document).ready(function () {
 				// 	}"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
 				// }
 
-				for (var i = 1; i <= response.total_pages; i++) {
+				var max_page = 5;
+				var start_page = Math.max(1, response.current_page - Math.floor(max_page / 2));
+				var end_page = Math.min(response.total_pages, start_page + max_page - 1);
+				start_page = Math.max(1, end_page - max_page + 1);
+				end_page = Math.min(response.total_pages, end_page);
+
+
+				for (var i = start_page; i <= end_page; i++) {
 					pagp12 += `<a class="${
 						i === response.current_page ? "is-active" : ""
 					}" href="#works" data-page="${i}">
@@ -152,6 +159,26 @@ $(document).ready(function () {
 				// 	}">Next</a></li>`;
 				// }
 
+				if (response.current_page < response.total_pages) {
+					pagp12 += `<a class="nav-is-active" href="#" data-page="${
+						response.current_page + 1
+					}">
+                            <li>Next</li>
+                        </a>`;
+				}
+
+				// if (response.current_page == response.total_pages) {
+				// 	pagp12 += `<a class="inactive">
+				//             <li>Next</li>
+				//         </a>`;
+				// }
+
+				if (response.current_page == response.total_pages) {
+					pagp12 += `<a class="inactive" data-page="${response.current_page}">
+                            <li>Next</li>
+                        </a>`;
+				}
+
 				// paginationHtml += "</ul>";
 				// paginationWrapper.append(paginationHtml);
 				pagp12 += "</ul>";
@@ -159,7 +186,7 @@ $(document).ready(function () {
 
 				// Inisialisasi ulang plugin animasi setelah memuat konten AJAX
 				initializePlugins();
-				$(".portfolio-wrapper").isotope("destroy"); 
+				$(".portfolio-wrapper").isotope("destroy");
 			},
 			error: function (error) {
 				console.log("Error loading portfolio items", error);
@@ -207,7 +234,7 @@ $(document).ready(function () {
 		return matches
 			? matches.map(function (match) {
 					return match.replace(/"/g, "");
-			})
+			  })
 			: [];
 	}
 });

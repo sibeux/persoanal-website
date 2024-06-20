@@ -3197,13 +3197,28 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* .p12 a:first-of-type,
 .p12 a:last-of-type, */
-.p12 .is-active {
+.p12 .is-active{
   background-color: #353353;
   color: #ffd059;
   font-weight: bold;
 }
 
+.p12 .nav-is-active{
+  background-color: #35335300;
+  color: #fe4d60;
+}
+
 .p12 a:hover{
-  background-color: #aacdb9;
-    color: #393939;
+  background-color: #fe4d60;
+    color: #fefffe;
+}
+
+/* .p12 .inactive{
+    color: #545454;
+} */
+
+.p12 .inactive:hover, .p12 .inactive{
+  background-color: #00000000;
+    cursor: default;
+    color: #c1c1c2;
 }

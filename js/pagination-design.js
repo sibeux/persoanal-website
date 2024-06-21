@@ -8,6 +8,7 @@ $(document).ready(function () {
 			success: function (response) {
 				var portfolioWrapper = $(".portfolio-wrapper");
 				portfolioWrapper.empty();
+				console.log(response);
 
 				response.items.forEach(function (item) {
 					var filterClass = getFilter(item.filter);

@@ -28,6 +28,21 @@ function getFilter($filter)
     }
 }
 
+// Get the Google Drive API key
+$gdrive_api_query = $db->query("SELECT gdrive_api FROM API");
+$gdrive_api_key = mysqli_fetch_assoc($gdrive_api_query);
+
+function checkUrlFromDrive(string $url_db, string $gdrive_api_key)
+{
+    if (strpos($url_db, "drive.google.com") !== false) {
+        preg_match('/\/d\/([a-zA-Z0-9_-]+)/', $url_db, $matches);
+        return "https://www.googleapis.com/drive/v3/files/{$matches[1]}?alt=media&key={$gdrive_api_key}";
+    } else {
+        return $url_db;
+    }
+    
+}
+
 // Function to extract links from the text
 function extractLinks($extra_asset)
 {
@@ -53,12 +68,13 @@ while ($row = mysqli_fetch_array($result)) {
         'title' => $row['title'],
         'filter' => $row['filter'],
         'type' => $row['type'],
-        'asset_link' => $row['asset_link'],
-        'thumb_link' => $row['thumb_link'],
+        'asset_link' => checkUrlFromDrive($row['asset_link'], $gdrive_api_key['gdrive_api']),
+        'thumb_link' => checkUrlFromDrive($row['thumb_link'], $gdrive_api_key['gdrive_api']),
         'extra_link' => $row['extra_link'],
         'p1_content' => $row['p1_content'],
         'p2_content' => $row['p2_content'],
-        'caption_content' => $row['caption_content']
+        'caption_content' => $row['caption_content'],
+        'gdrive_api' => $gdrive_api_key['gdrive_api']
     ];
 
     $portfolio_items[] = $item;

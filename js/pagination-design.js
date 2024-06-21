@@ -34,7 +34,10 @@ $(document).ready(function () {
 					} else if (item.type === "gallery-link") {
 						var galleryLinks = extractLinks(item.extra_link)
 							.map(function (link) {
-								return `<a href="${link}"></a>`;
+								return `<a href="${checkUrlFromDrive(
+									link,
+									item.gdrive_api
+								)}"></a>`;
 							})
 							.join("");
 
@@ -139,8 +142,14 @@ $(document).ready(function () {
 				// }
 
 				var max_page = 5;
-				var start_page = Math.max(1, response.current_page - Math.floor(max_page / 2));
-				var end_page = Math.min(response.total_pages, start_page + max_page - 1);
+				var start_page = Math.max(
+					1,
+					response.current_page - Math.floor(max_page / 2)
+				);
+				var end_page = Math.min(
+					response.total_pages,
+					start_page + max_page - 1
+				);
 				start_page = Math.max(1, end_page - max_page + 1);
 				end_page = Math.min(response.total_pages, end_page);
 
@@ -235,5 +244,16 @@ $(document).ready(function () {
 					return match.replace(/"/g, "");
 			  })
 			: [];
+	}
+
+	// get link from gdrive
+	function checkUrlFromDrive(url_db, gdrive_api_key) {
+		if (url_db.includes("drive.google.com")) {
+			const matches = url_db.match(/\/d\/([a-zA-Z0-9_-]+)/);
+			if (matches && matches[1]) {
+				return `https://www.googleapis.com/drive/v3/files/${matches[1]}?alt=media&key=${gdrive_api_key}`;
+			}
+		}
+		return url_db;
 	}
 });

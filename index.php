@@ -276,13 +276,12 @@ include './database/db.php';
                             <div class="row">
                                 <div class="col-md-6">
                                     <!-- about text -->
-                                    <p>I am M. Nasrul Wahabi, information systems student at the University of Jember.
-                                        I am active in campus organizations, namely BEM FASILKOM UNEJ as KOMINFO
-                                        staff. I'm currently
-                                        majoring in programming as a android developer and media editing
-                                        such as graphic design and videography. Besides that, I also often create
-                                        content
-                                        game which will later be uploaded on my personal youtube channel (Habiqi).
+                                    <p>I am an Information Systems student at the University of Jember with experience
+                                        in BEM as Multimedia Staff and Head of Multimedia Sub-Division. I specialize in
+                                        mobile development using Flutter and have intermediate skills in graphic design
+                                        and video editing. I also take on freelance projects to create simple website
+                                        applications, aiming to leverage my skills for innovative and impactful
+                                        projects.
                                     </p>
 
                                     <!-- CURRICULUM CITAE -->

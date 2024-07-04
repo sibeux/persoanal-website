@@ -46,11 +46,10 @@
 
                 if (referer !== window.location.href) {
                     // Buat deep link untuk aplikasi dengan nama direktori dan ID
-                    const appLink = `https://sibeux.my.id/cybeat/${directory}/${id}`;
+                    const appLink = `cybeat://sibeux.my.id/cybeat/${directory}/${id}`;
 
                     // Redirect ke aplikasi
-                    window.location.href = appLink;
-
+                    window.open = appLink;
                     // Jika aplikasi tidak terbuka dalam 2 detik, redirect ke fallback URL
                     setTimeout(() => {
                         window.location.href = `https://sibeux.my.id/cloud-music-player/`;

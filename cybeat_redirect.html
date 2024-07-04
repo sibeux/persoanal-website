@@ -11,11 +11,12 @@
         function redirect() {
             // Dapatkan URL saat ini
             const currentUrl = window.location.href;
+            console.log(currentUrl);
 
             // Cek apakah URL mengandung string tertentu
             if (currentUrl.includes("https://sibeux.my.id/cybeat/")) {
                 // Redirect ke YouTube
-                window.open = (currentUrl, '_system');
+                document.location.href = (currentUrl, '_system');
             }
         }
 

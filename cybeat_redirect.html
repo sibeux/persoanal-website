@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://sibeux.my.id/cloud-music-player/images/cybeat.png">
+    <title>Cybeat</title>
+    <script>
+        // Fungsi untuk melakukan redirect
+        function redirect() {
+            // Dapatkan URL saat ini
+            const currentUrl = window.location.href;
+
+            // Cek apakah URL mengandung string tertentu
+            if (currentUrl.includes("https://sibeux.my.id/cybeat/")) {
+                // Redirect ke YouTube
+                window.open = (currentUrl, '_system');
+            }
+        }
+
+        // Panggil fungsi redirect saat halaman dimuat
+        window.onload = redirect;
+    </script>
+    <style>
+        /* CSS untuk mempercantik tampilan halaman (opsional) */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Redirecting...</h1>
+</body>
+
+</html>

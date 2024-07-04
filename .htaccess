@@ -11,3 +11,7 @@ RewriteRule ^ %1 [R=302,L,NE]
 ## To internally redirect /dir/foo to /dir/foo.php
 RewriteCond %{REQUEST_FILENAME}.php -f [NC]
 RewriteRule ^ %{REQUEST_URI}.php [L]
+ 
+# To redirect cybeat apps
+RewriteCond %{REQUEST_URI} ^/cybeat/ [NC]
+RewriteRule ^(.*)$ /cybeat_redirect.html [L,R=302]

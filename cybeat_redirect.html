@@ -50,10 +50,11 @@
 
                     // Redirect ke aplikasi
                     window.open = appLink;
+                    
                     // Jika aplikasi tidak terbuka dalam 2 detik, redirect ke fallback URL
-                    setTimeout(() => {
-                        window.location.href = `https://sibeux.my.id/cloud-music-player/`;
-                    }, 2000);
+                    // setTimeout(() => {
+                    //     window.location.href = `https://sibeux.my.id/cloud-music-player/`;
+                    // }, 2000);
                 } else {
                     // Jika referer sama dengan current URL, lakukan fallback redirect
                     window.location.href = `https://sibeux.my.id/cloud-music-player/`;

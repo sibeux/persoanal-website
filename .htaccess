@@ -13,5 +13,6 @@ RewriteCond %{REQUEST_FILENAME}.php -f [NC]
 RewriteRule ^ %{REQUEST_URI}.php [L]
 
 # To redirect cybeat apps
+RewriteCond %{REQUEST_URI} !^/cybeat_redirect.html$
 RewriteCond %{REQUEST_URI} ^/cybeat/(album|playlist|category)/([^/]+)$ [NC]
 RewriteRule ^.*$ /cybeat_redirect.html?dir=%1&id=%2 [L,R=302]

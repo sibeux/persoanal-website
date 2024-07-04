@@ -11,21 +11,43 @@
         /* CSS untuk mempercantik tampilan halaman (opsional) */
         body {
             font-family: Arial, sans-serif;
-            display: flex;
+            display: list-item;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
         }
 
+        .container {
+            /* center x and y */
+            text-align: center;
+            margin: auto;
+        }
+
+        .click {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         h1 {
             color: #333;
+        }
+
+        .click {
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Redirecting...</h1>
+    <div class="container">
+        <h1>Redirecting...</h1>
+    </div>
+    <div id="click">
+
+    </div>
+        
+    <!-- new line -->
 </body>
 <script>
     // Fungsi untuk mendapatkan nilai query parameter dari URL
@@ -46,9 +68,11 @@
 
                 if (referer !== window.location.href) {
                     // Buat deep link untuk aplikasi dengan nama direktori dan ID
-                    // const appLink = `https://sibeux.my.id/cybeat/${directory}/${id}`;
-                    const appLink = `https://id.shp.ee/gNZrBCH`;
+                    const appLink = `https://sibeux.my.id/cybeat/${directory}/${id}`;
                     console.log(appLink);
+
+                    const div2 = document.getElementById('click');
+                    div2.innerHTML = `<p>Click <a href="${appLink}">here</a> if you are not redirected.</p>`;
 
                     // Redirect ke aplikasi
                     window.open = (appLink, '_system');

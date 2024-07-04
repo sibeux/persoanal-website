@@ -4,7 +4,7 @@
             "delegate_permission/common.handle_all_urls"
         ],
         "target": {
-            "namespace": "android_app",
+            "namespace": "cybeat",
             "package_name": "com.ryanheise.audioservice.AudioServiceActivity",
             "sha256_cert_fingerprints": [
                 "1E:AB:85:59:A3:D6:88:D7:5D:BB:EB:86:0D:FD:C0:5A:BB:9F:46:EA:D3:D4:A2:09:B4:F2:CF:53:5C:10:88:A6"

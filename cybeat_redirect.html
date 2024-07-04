@@ -36,24 +36,34 @@
 
     // Fungsi untuk melakukan redirect ke aplikasi
     function redirectToApp() {
-        // Dapatkan nama direktori dan ID dari query parameter
-        const directory = getQueryParameter('dir');
-        const id = getQueryParameter('id');
-        if (directory && id) {
-            // Buat deep link untuk aplikasi dengan nama direktori dan ID
-            const appLink = `https://sibeux.my.id/cybeat/${directory}/${id}`;
-            // Redirect ke aplikasi
-            window.location.href = appLink;
+            // Dapatkan nama direktori dan ID dari query parameter
+            const directory = getQueryParameter('dir');
+            const id = getQueryParameter('id');
 
-            // Jika aplikasi tidak terbuka dalam 2 detik, redirect ke fallback URL
-            setTimeout(() => {
-                window.location.href = `https://sibeux.my.id/cloud-music-player/`;
-            }, 2000);
-        } else {
-            // Jika parameter tidak ditemukan, redirect ke halaman beranda
-            window.location.href = `https://sibeux.my.id`;
+            if (directory && id) {
+                // Periksa referer URL
+                const referer = document.referrer;
+
+                if (referer !== window.location.href) {
+                    // Buat deep link untuk aplikasi dengan nama direktori dan ID
+                    const appLink = `cybeat://${directory}/${id}`;
+
+                    // Redirect ke aplikasi
+                    window.location.href = appLink;
+
+                    // Jika aplikasi tidak terbuka dalam 2 detik, redirect ke fallback URL
+                    setTimeout(() => {
+                        window.location.href = `https://sibeux.my.id/cloud-music-player/`;
+                    }, 2000);
+                } else {
+                    // Jika referer sama dengan current URL, lakukan fallback redirect
+                    window.location.href = `https://sibeux.my.id/cloud-music-player/`;
+                }
+            } else {
+                // Jika parameter tidak ditemukan, redirect ke halaman beranda
+                // window.location.href = `https://sibeux.my.id`;
+            }
         }
-    }
 
     // Panggil fungsi redirectToApp saat halaman dimuat
     window.onload = redirectToApp;

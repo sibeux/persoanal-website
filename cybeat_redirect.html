@@ -28,21 +28,35 @@
     <h1>Redirecting...</h1>
 </body>
 <script>
-    // Fungsi untuk melakukan redirect
-    function redirect() {
-        // Dapatkan URL saat ini
-        const currentUrl = window.location.href;
-        console.log('asu');
+    // Fungsi untuk mendapatkan nilai query parameter dari URL
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
 
-        // Cek apakah URL mengandung string tertentu
-        if (currentUrl.includes("https://sibeux.my.id/cybeat/")) {
-            // Redirect ke YouTube
-            document.location.href = ('https://www.youtube.com/channel/UC9Q6b9vz1JjJjJ9ZJL0j8jA');
+    // Fungsi untuk melakukan redirect ke aplikasi
+    function redirectToApp() {
+        // Dapatkan nama direktori dan ID dari query parameter
+        const directory = getQueryParameter('dir');
+        const id = getQueryParameter('id');
+        if (directory && id) {
+            // Buat deep link untuk aplikasi dengan nama direktori dan ID
+            const appLink = `https://sibeux.my.id/cybeat/${directory}/${id}`;
+            // Redirect ke aplikasi
+            window.location.href = appLink;
+
+            // Jika aplikasi tidak terbuka dalam 2 detik, redirect ke fallback URL
+            setTimeout(() => {
+                window.location.href = `https://sibeux.my.id/cloud-music-player/`;
+            }, 2000);
+        } else {
+            // Jika parameter tidak ditemukan, redirect ke halaman beranda
+            // window.location.href = `https://sibeux.my.id`;
         }
     }
 
-    // Panggil fungsi redirect saat halaman dimuat
-    window.onload = redirect;
+    // Panggil fungsi redirectToApp saat halaman dimuat
+    window.onload = redirectToApp;
 </script>
 
 </html>

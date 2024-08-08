@@ -6,9 +6,9 @@
 // define('DB', 'web_porto');
 
 define('HOST', 'localhost');
-define('SIBEUX', 'sibk1922_cbux');
+define('SIBEUX', 'sibe5579_cbux');
 define('pass', '1NvgEHFnwvDN96');
-define('DB', 'sibk1922_cloud_music');
+define('DB', 'sibe5579_cloud_music');
 
 $db = new mysqli(HOST, SIBEUX, pass, DB);
 

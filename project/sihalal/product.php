@@ -7,9 +7,13 @@ $sql = "";
 function getProductScrollLeft($sort)
 {
     global $sql;
-    
-    if ($sort == 'recent'){
-        $sql = "SELECT * FROM produk ORDER BY id_produk DESC LIMIT 50";
+
+    if ($sort == 'recent') {
+        $sql = "SELECT *, AVG(r.bintang_rating) as rating_produk 
+        FROM produk p 
+        left join rating r 
+        on p.id_produk = r.id_produk 
+        ORDER BY p.id_produk DESC LIMIT 50";
     }
 }
 
@@ -21,8 +25,6 @@ switch ($_GET['method']) {
         break;
 }
 
-// Query to retrieve data from MySQL
-// $sql = "SELECT * FROM music ORDER BY title ASC";
 $result = $db->query($sql);
 
 // Check if the query was successful

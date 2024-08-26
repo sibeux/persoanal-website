@@ -9,11 +9,13 @@ function getProductScrollLeft($sort)
     global $sql;
 
     if ($sort == 'recent') {
-        $sql = "SELECT *, AVG(r.bintang_rating) as rating_produk 
-        FROM produk p 
-        left join rating r 
-        on p.id_produk = r.id_produk 
-        ORDER BY p.id_produk DESC LIMIT 50";
+        $sql = "SELECT p.*, COALESCE(AVG(r.bintang_rating), 0) as rating_produk 
+	FROM produk p 
+	LEFT JOIN rating r 
+	ON p.id_produk = r.id_produk 
+	GROUP BY p.id_produk 
+	ORDER BY p.id_produk DESC 
+	LIMIT 50;";
     }
 }
 

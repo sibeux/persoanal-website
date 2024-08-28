@@ -70,19 +70,19 @@
     </audio>
 
     <script>
-        function playSong() {
+        async function playSong() {
             var url = document.getElementById('song-url').value;
             var audioPlayer = document.getElementById('audio-player');
 
             if (url) {
-                audioPlayer.src = checkUrlFromDrive(url);
+                audioPlayer.src = await checkUrlFromDrive(url);
                 audioPlayer.play();
             } else {
                 alert('Silakan masukkan URL lagu.');
             }
         }
 
-        async function checkUrlFromDrive(urlDb) {
+        function checkUrlFromDrive(urlDb) {
                 // Fetch the Google Drive API key
                 return fetch("https://sibeux.my.id/cloud-music-player/database/mobile-music-player/api/gdrive_api")
                     .then(response => response.json())

@@ -75,6 +75,10 @@
             var audioPlayer = document.getElementById('audio-player');
 
             if (url) {
+                /*** 
+                 * pokoknya kalau pakai method yang ada fetch gitu2,
+                 * harus pakai async await, karena fetch itu asynchronous
+                 ***/
                 audioPlayer.src = await checkUrlFromDrive(url);
                 audioPlayer.play();
             } else {

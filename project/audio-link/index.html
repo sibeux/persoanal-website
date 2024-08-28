@@ -75,12 +75,33 @@
             var audioPlayer = document.getElementById('audio-player');
 
             if (url) {
-                audioPlayer.src = url;
+                audioPlayer.src = checkUrlFromDrive(url);
                 audioPlayer.play();
             } else {
                 alert('Silakan masukkan URL lagu.');
             }
         }
+
+        function checkUrlFromDrive(urlDb) {
+                // Fetch the Google Drive API key
+                return fetch("https://sibeux.my.id/cloud-music-player/database/mobile-music-player/api/gdrive_api")
+                    .then(response => response.json())
+                    .then(apiData => {
+                        const gdriveApiKey = apiData[0].gdrive_api;
+
+                        if (urlDb.includes("drive.google.com")) {
+                            const matches = urlDb.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                            if (matches && matches[1]) {
+                                return `https://www.googleapis.com/drive/v3/files/${matches[1]}?alt=media&key=${gdriveApiKey}`;
+                            }
+                        }
+                        return urlDb;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching Google Drive API key:', error);
+                        return urlDb;
+                    });
+            }
     </script>
 </body>
 

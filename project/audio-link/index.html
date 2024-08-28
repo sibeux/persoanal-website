@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Musik Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Player Musik Sederhana</h1>
+    <label for="song-url">Masukkan URL lagu:</label>
+    <input type="text" id="song-url" placeholder="Masukkan URL lagu">
+    <button onclick="playSong()">Putar Lagu</button>
+
+    <audio id="audio-player" controls>
+        <p>Browser Anda tidak mendukung elemen audio.</p>
+    </audio>
+
+    <script>
+        function playSong() {
+            var url = document.getElementById('song-url').value;
+            var audioPlayer = document.getElementById('audio-player');
+
+            if (url) {
+                audioPlayer.src = url;
+                audioPlayer.play();
+            } else {
+                alert('Silakan masukkan URL lagu.');
+            }
+        }
+    </script>
+</body>
+
+</html>

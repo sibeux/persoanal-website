@@ -94,11 +94,19 @@
                         const gdriveApiKey = apiData[0].gdrive_api;
 
                         if (urlDb.includes("drive.google.com")) {
-                            const matches = urlDb.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                            const regExp = /\/d\/([a-zA-Z0-9_-]+)/;
+                            const matches = urlDb.match(regExp);
+                            if (matches && matches[1]) {
+                                return `https://www.googleapis.com/drive/v3/files/${matches[1]}?alt=media&key=${gdriveApiKey}`;
+                            }
+                        } else if (urlDb.includes("www.googleapis.com")) {
+                            const regExp = /files\/([a-zA-Z0-9_-]+)\?/;
+                            const matches = urlDb.match(regExp);
                             if (matches && matches[1]) {
                                 return `https://www.googleapis.com/drive/v3/files/${matches[1]}?alt=media&key=${gdriveApiKey}`;
                             }
                         }
+
                         return urlDb;
                     })
                     .catch(error => {
@@ -106,6 +114,7 @@
                         return urlDb;
                     });
             }
+
     </script>
 </body>
 

@@ -82,7 +82,7 @@
             }
         }
 
-        function checkUrlFromDrive(urlDb) {
+        async function checkUrlFromDrive(urlDb) {
                 // Fetch the Google Drive API key
                 return fetch("https://sibeux.my.id/cloud-music-player/database/mobile-music-player/api/gdrive_api")
                     .then(response => response.json())

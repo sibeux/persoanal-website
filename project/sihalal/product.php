@@ -22,9 +22,18 @@ function getProductScrollLeft($sort)
     }
 }
 
+function getUlasanProduct($id_produk){
+    global $sql;
+
+    $sql = "SELECT * FROM rating r where r.id_produk = $id_produk;";
+}
+
 switch ($_GET['method']) {
     case 'scroll_left':
         getProductScrollLeft($_GET['sort']);
+        break;
+    case 'get_ulasan':
+        getUlasanProduct($_GET['id_produk']);
         break;
     default:
         break;

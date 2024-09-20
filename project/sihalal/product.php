@@ -9,7 +9,10 @@ function getProductScrollLeft($sort)
     global $sql;
 
     if ($sort == 'recent') {
-        $sql = "SELECT p.*, COALESCE(AVG(r.bintang_rating), 0) as rating_produk, SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan
+        $sql = "SELECT p.*, 
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        count(r.id_produk) as jumlah_rating
 	FROM produk p 
 	LEFT JOIN rating r 
 	ON p.id_produk = r.id_produk 

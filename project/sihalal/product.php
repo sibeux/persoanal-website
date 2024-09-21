@@ -30,12 +30,26 @@ function getUlasanProduct($id_produk){
     where r.id_produk = $id_produk;";
 }
 
+function getShopInfo($id_produk)
+{
+    global $sql;
+
+    $sql = "SELECT user.*, alamat.kota, alamat.provinsi
+FROM user 
+join alamat ON alamat.id_user = user.id_user
+JOIN produk ON produk.id_user = user.id_user
+WHERE produk.id_produk = $id_produk;";
+}
+
 switch ($_GET['method']) {
     case 'scroll_left':
         getProductScrollLeft($_GET['sort']);
         break;
     case 'get_ulasan':
         getUlasanProduct($_GET['id_produk']);
+        break;
+    case 'shop_info':
+        getShopInfo($_GET['id_produk']);
         break;
     default:
         break;

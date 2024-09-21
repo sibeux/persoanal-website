@@ -22,7 +22,8 @@ function getProductScrollLeft($sort)
     }
 }
 
-function getUlasanProduct($id_produk){
+function getUlasanProduct($id_produk)
+{
     global $sql;
 
     $sql = "SELECT * FROM rating r 
@@ -34,11 +35,13 @@ function getShopInfo($id_produk)
 {
     global $sql;
 
-    $sql = "SELECT user.*, alamat.kota, alamat.provinsi
-FROM user 
-join alamat ON alamat.id_user = user.id_user
+    $sql = "SELECT user.*, alamat.kota, alamat.provinsi,
+    (SELECT COUNT(*) FROM produk WHERE produk.id_user = user.id_user) AS total_produk,
+    (SELECT AVG(rating.bintang_rating) FROM rating WHERE rating.id_user = user.id_user) AS rata_rata_rating
+FROM user
+JOIN alamat ON alamat.id_user = user.id_user
 JOIN produk ON produk.id_user = user.id_user
-WHERE produk.id_produk = $id_produk;";
+WHERE produk.id_produk = 1;";
 }
 
 switch ($_GET['method']) {

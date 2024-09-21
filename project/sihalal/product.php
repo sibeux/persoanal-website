@@ -29,9 +29,10 @@ function getUlasanProduct($id_produk)
     global $sql;
 
     $sql = "SELECT r.*, user.nama_user, user.foto_user
-FROM rating r 
+    FROM rating r 
     left join user on r.id_user = user.id_user
-    where r.id_produk = $id_produk AND pesan_rating is NOT NULL;";
+    where r.id_produk = $id_produk AND pesan_rating is NOT NULL 
+    ORDER BY r.tanggal_rating DESC;";
 }
 
 function getShopInfo($id_produk)

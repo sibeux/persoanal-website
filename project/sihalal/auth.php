@@ -26,8 +26,8 @@ function getEmailCheck($db)
 function createUser($db)
 {
     if (
-        $stmt = $db->prepare('INSERT INTO user (id_user, email_user, nama_user, pass_user, nama_toko, deskripsi_toko, foto_user) 
-        VALUES (NULL, ?, ?, ?, NULL, NULL, NULL)')
+        $stmt = $db->prepare('INSERT INTO `user` (`id_user`, `email_user`, `nama_user`, `pass_user`, `nama_toko`, `deskripsi_toko`, `foto_user`) 
+        VALUES (NULL, ?, ?, ?, NULL, NULL, NULL);')
     ) {
         // encrypt the password
         $email = $_POST['email'];

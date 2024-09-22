@@ -2,7 +2,7 @@
 
 include './database/db.php';
 function getEmailCheck($db){
-    if ($stmt = $db->prepare('SELECT email FROM user WHERE email = ?')) {
+    if ($stmt = $db->prepare('SELECT user.email_user FROM user WHERE user.email_user = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc)
         $stmt->bind_param('s', $_POST['email']);
         $stmt->execute();

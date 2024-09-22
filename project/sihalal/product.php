@@ -66,7 +66,7 @@ $result = $db->query($sql);
 
 // Check if the query was successful
 if (!$result) {
-    die("Query failed: " . $db->error);
+    die("Query failed: " . (is_object($db) ? $db->error : 'Database connection error'));
 }
 
 // Create an array to store the data

@@ -34,7 +34,7 @@ function createUser($db)
         $name = $_POST['name'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         
-        $stmt->bind_param('sss', $email, $name, $password, );
+        $stmt->bind_param('sss', $email, $name, $password);
         $stmt->execute();
 
         // registration successful

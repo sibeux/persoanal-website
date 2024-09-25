@@ -8,7 +8,7 @@ function getUserData($email)
 {
     global $sql;
 
-    $sql = "SELECT * FROM user WHERE email = '" . $email . "'";
+    $sql = "SELECT * FROM user WHERE email_user = '" . $email . "'";
 }
 
 switch ($_GET['method']) {

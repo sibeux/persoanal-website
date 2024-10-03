@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $requestUri = $_SERVER['REQUEST_URI'];
 $parts = explode('/', trim($requestUri, '/'));
 $shortCode = end($parts); // Ambil bagian terakhir dari URL
+error_log("Request URI: " . $requestUri);
 
 // Redirect jika short code ada di URL
 if (!empty($shortCode) && strlen($shortCode) === 6) {

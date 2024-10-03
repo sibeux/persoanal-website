@@ -49,7 +49,10 @@ if (!empty($shortCode)) {
     if ($stmt->fetch()) {
         header("Location: $longUrl");
 
-        echo "<script>console.log('{$shortCode}')</script>";
+        echo "<script>console.log('okejek')</script>";
+        echo "<script type='text/javascript'>
+                window.location.href = '$longUrl';
+            </script>";
         exit();
     } else {
         echo "URL not found";

@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ss", $longUrl, $shortCode);
     $stmt->execute();
 
-    echo "Shortened URL: <a href='https://sibeux.my.id/shorten/index.php/$shortCode'>https://sibeux.my.id/shorten/index/php/$shortCode</a>";
+    echo "Shortened URL: <a href='https://sibeux.my.id/shorten/index.php/$shortCode'>https://sibeux.my.id/shorten/index.php/$shortCode</a>";
     $stmt->close();
 }
 

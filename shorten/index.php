@@ -7,7 +7,8 @@ if ($db->connect_error) {
 }
 
 // Fungsi untuk menghasilkan kode pendek
-function generateShortCode($length = 6) {
+function generateShortCode($length = 6)
+{
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $shortCode = '';
     for ($i = 0; $i < $length; $i++) {
@@ -26,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ss", $longUrl, $shortCode);
     $stmt->execute();
 
-    echo "Shortened URL: <a href='https://sibeux.my.id/shorten/$shortCode'>https://sibeux.my.id/shorten/$shortCode</a>";
+    echo "Shortened URL: <a href='https://sibeux.my.id/shorten/index.php/$shortCode'>https://sibeux.my.id/shorten/index.php/$shortCode</a>";
     $stmt->close();
 }
 

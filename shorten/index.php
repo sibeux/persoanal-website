@@ -37,9 +37,10 @@ $parts = explode('/', trim($requestUri, '/'));
 $shortCode = end($parts); // Ambil bagian terakhir dari URL
 error_log("Request URI: " . $requestUri);
 echo "<script>console.log('{$requestUri}')</script>";
+echo "<script>console.log('{$shortCode}')</script>";
 
 // Redirect jika short code ada di URL
-if (!empty($shortCode) && strlen($shortCode) === 6) {
+if (!empty($shortCode)) {
     $stmt = $db->prepare("SELECT long_url FROM shorten_urls WHERE short_code = ?");
     $stmt->bind_param("s", $shortCode);
     $stmt->execute();

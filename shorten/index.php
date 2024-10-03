@@ -45,6 +45,7 @@ if (!empty($shortCode)) {
     $stmt->bind_param("s", $shortCode);
     $stmt->execute();
     $stmt->bind_result($longUrl);
+    echo "<script>console.log('{$longUrl}')</script>";
 
     if ($stmt->fetch()) {
         header("Location: $longUrl");

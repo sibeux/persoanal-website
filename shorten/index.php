@@ -7,7 +7,8 @@ if ($db->connect_error) {
 }
 
 // Fungsi untuk menghasilkan kode pendek
-function generateShortCode($length = 6) {
+function generateShortCode($length = 6)
+{
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $shortCode = '';
     for ($i = 0; $i < $length; $i++) {
@@ -37,7 +38,6 @@ $parts = explode('/', trim($requestUri, '/'));
 $shortCode = end($parts); // Ambil bagian terakhir dari URL
 error_log("Request URI: " . $requestUri);
 echo "<script>console.log('{$requestUri}')</script>";
-echo "<script>console.log('{$shortCode}')</script>";
 
 // Redirect jika short code ada di URL
 if (!empty($shortCode)) {
@@ -48,6 +48,8 @@ if (!empty($shortCode)) {
 
     if ($stmt->fetch()) {
         header("Location: $longUrl");
+
+        echo "<script>console.log('{$shortCode}')</script>";
         exit();
     } else {
         echo "URL not found";

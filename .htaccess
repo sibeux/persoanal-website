@@ -2,6 +2,10 @@ Options +FollowSymLinks -MultiViews
 # Turn mod_rewrite on
 RewriteEngine On
 RewriteBase /
+RewriteBase /shorten/
+
+# Rule untuk mengarahkan URL pendek ke index.php
+RewriteRule ^([a-zA-Z0-9]{6})$ index.php [QSA,L]
 
 # To externally redirect /dir/foo.php to /dir/foo
 RewriteCond %{REQUEST_METHOD} !POST

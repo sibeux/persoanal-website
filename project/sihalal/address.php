@@ -2,21 +2,24 @@
 
 include './database/db.php';
 
+// Mendapatkan data JSON dari body request
+$input = file_get_contents('php://input');
+
+echo $input;
+
+// Mengubah JSON menjadi array PHP
+$data = json_decode($input, true);
+
+// Cek apakah data berhasil di-decode
+if ($data === null) {
+    // Jika gagal decode JSON, tangani error
+    http_response_code(400); // Bad Request
+    echo json_encode(['message' => 'Invalid JSON data']);
+    exit;
+}
+
 function sendUserAddress($db)
 {
-    // Mendapatkan data JSON dari body request
-    $input = file_get_contents('php://input');
-
-    // Mengubah JSON menjadi array PHP
-    $data = json_decode($input, true);
-
-    // Cek apakah data berhasil di-decode
-    if ($data === null) {
-        // Jika gagal decode JSON, tangani error
-        http_response_code(400); // Bad Request
-        echo json_encode(['message' => 'Invalid JSON data']);
-        exit;
-    }
 
     if (
         $stmt = $db->prepare('INSERT INTO `alamat` (id_alamat, id_user, nama_penerima, 
@@ -70,7 +73,7 @@ function sendUserAddress($db)
     }
 }
 
-switch ($_POST['method']) {
+switch ($data['method']) {
     case 'send_user_address':
         sendUserAddress($db);
         break;

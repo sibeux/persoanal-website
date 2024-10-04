@@ -23,12 +23,12 @@ function sendUserAddress($db)
     $address = $data['address'] ?? [];
 
     if (
-        $stmt = $db->prepare('INSERT INTO `alamat` (id_alamat, id_user, nama_penerima, 
+        $stmt = $db->prepare('INSERT INTO alamat (id_alamat, id_user, nama_penerima, 
     nomor_penerima, label_alamat, provinsi, id_provinsi, kota, id_kota, kode_pos, 
     detail_alamat, jalan_alamat, pinpoint_alamat, is_utama, is_toko) 
-        VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);')
+        VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);')
     ) {
-        // Mengakses data yang dikirim (misalnya, 'name', 'email', dan 'age')
+        // Mengakses data yang dikirim
         $id_user = $address['id_user'] ?? '';
         $receipt_name = $address['receipt_name'] ?? '';
         $receipt_phone = $address['receipt_phone'] ?? '';
@@ -71,7 +71,6 @@ function sendUserAddress($db)
     } else {
         $response = ["status" => "failed"];
         echo json_encode($response);
-        echo 'Could not prepare statement!';
     }
 }
 

@@ -45,7 +45,7 @@ function sendUserAddress($email, $address)
     $is_primary_address = $data['is_primary_address'] ?? '';
     $is_store_address = $data['is_store_address'] ?? '';
 
-    $sql = "INSERT INTO address (id_alamat, id_user, nama_penerima, 
+    $sql = "INSERT INTO alamat (id_alamat, id_user, nama_penerima, 
     nomor_penerima, label_alamat, provinsi, id_provinsi, kota, id_kota, kode_pos, 
     detail_alamat, jalan_alamat, pinpoint_alamat, is_utama, is_toko) 
     VALUES (NULL, '$id_user', '$receipt_name', '$receipt_phone', '$label_address', '$province', 

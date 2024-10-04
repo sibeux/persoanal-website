@@ -2,7 +2,7 @@
 
 include './database/db.php';
 
-function sendUserAddress($db, $address)
+function sendUserAddress($db)
 {
     // Mendapatkan data JSON dari body request
     $input = file_get_contents('php://input');
@@ -72,7 +72,7 @@ function sendUserAddress($db, $address)
 
 switch ($_POST['method']) {
     case 'send_user_address':
-        sendUserAddress($db, $_POST['address']);
+        sendUserAddress($db);
         break;
     default:
         break;

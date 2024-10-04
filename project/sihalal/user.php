@@ -74,6 +74,7 @@ $result = $db->query($sql);
 
 // Check if the query was successful
 if (!$result) {
+    http_response_code(400); // Bad Request
     die("Query failed: " . (is_object($db) ? $db->error : 'Database connection error'));
 }
 

@@ -27,6 +27,8 @@ if ($data === null) {
     http_response_code(400); // Bad Request
     echo json_encode(['message' => 'Invalid JSON data']);
     exit;
+} else {
+    echo json_encode(['message' => 'Data berhasil di-decode']);
 }
 
 // Mengakses data yang dikirim (misalnya, 'name', 'email', dan 'age')
@@ -41,7 +43,6 @@ echo json_encode(
         'receipt_phone' => $receipt_phone,
     ]
 );
-
 
 $sql = "";
 }

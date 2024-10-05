@@ -40,13 +40,26 @@ function getShopInfo($id_produk)
 {
     global $sql;
 
-    $sql = "SELECT user.*, alamat.kota, alamat.provinsi,
+    $sql = "SELECT 
+    user.*, 
+    alamat.kota, 
+    alamat.provinsi,
+    -- Menghitung total produk milik user
     (SELECT COUNT(*) FROM produk WHERE produk.id_user = user.id_user) AS total_produk,
-    (SELECT AVG(rating.bintang_rating) FROM rating WHERE rating.id_user = user.id_user) AS rata_rata_rating
-FROM user
-JOIN alamat ON alamat.id_user = user.id_user
-JOIN produk ON produk.id_user = user.id_user
-WHERE produk.id_produk = 1;";
+    -- Menghitung rata-rata rating hanya untuk semua produk milik user
+    (SELECT AVG(rating.bintang_rating) 
+    FROM rating 
+    JOIN produk ON rating.id_produk = produk.id_produk 
+    WHERE produk.id_user = user.id_user) AS rata_rata_rating
+FROM 
+    produk 
+JOIN 
+    user ON produk.id_user = user.id_user
+JOIN 
+    alamat ON alamat.id_user = user.id_user
+WHERE 
+    produk.id_produk = $id_produk
+    AND alamat.is_toko = 'true';";
 }
 
 switch ($_GET['method']) {

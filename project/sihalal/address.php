@@ -66,7 +66,7 @@ function sendUserAddress($db)
         $stmt->execute();
 
         // registration successful
-        $response = ["status" => "success", 'name' => $receipt_name];
+        $response = ["status" => "success", 'name' => $address];
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];

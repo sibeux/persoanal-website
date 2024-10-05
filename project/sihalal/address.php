@@ -18,7 +18,7 @@ if ($data === null) {
     exit;
 }
 
-function sendUserAddress($db)
+function sendUserAddress($db, $data)
 {
     $address = $data['address'] ?? [];
 
@@ -66,7 +66,7 @@ function sendUserAddress($db)
         $stmt->execute();
 
         // registration successful
-        $response = ["status" => "success", 'name' => $address];
+        $response = ["status" => "success", 'name' => $data['address']];
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];
@@ -76,7 +76,7 @@ function sendUserAddress($db)
 
 switch ($method) {
     case 'send_user_address':
-        sendUserAddress($db);
+        sendUserAddress($db, $data);
         break;
     default:
         break;

@@ -42,14 +42,14 @@ function sendUserAddress($db, $data)
     global $id_store;
 
     if ($id_primary != ''){
-        if ($stmt = $db->prepare('UPDATE alamat SET is_utama = "false" WHERE id_user = ?;')) {
+        if ($stmt = $db->prepare('UPDATE alamat SET is_utama = "false" WHERE id_alamat = ?;')) {
             $stmt->bind_param('s', $id_primary);
             $stmt->execute();
         }
     }
 
     if ($id_store != ''){
-        if ($stmt = $db->prepare('UPDATE alamat SET is_toko = "false" WHERE id_user = ?;')) {
+        if ($stmt = $db->prepare('UPDATE alamat SET is_toko = "false" WHERE id_alamat = ?;')) {
             $stmt->bind_param('s', $id_store);
             $stmt->execute();
         }

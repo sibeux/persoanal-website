@@ -9,6 +9,8 @@ $sql = '';
 
 $id_primary = '';
 $id_store = '';
+$reset_primary = 'false';
+$reset_store = 'false';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Mendapatkan data JSON dari body request
@@ -28,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $method = $data['method'] ?? '';
     $id_primary = $data['id_primary'] ?? '';
     $id_store = $data['id_store'] ?? '';
+    $reset_primary = $data['reset_primary'] ?? 'false';
+    $reset_store = $data['reset_store'] ?? 'false';
 } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $method = $_GET['method'] ?? '';
     $id_user = $_GET['id_user'] ?? '';
@@ -40,15 +44,17 @@ function sendUserAddress($db, $data)
     $address = $data['address'] ?? [];
     global $id_primary;
     global $id_store;
+    global $reset_primary;
+    global $reset_store;
 
-    if ($id_primary != ''){
+    if ($id_primary != '' && $reset_primary == 'true'){
         if ($stmt = $db->prepare('UPDATE alamat SET is_utama = "false" WHERE id_alamat = ?;')) {
             $stmt->bind_param('s', $id_primary);
             $stmt->execute();
         }
     }
 
-    if ($id_store != ''){
+    if ($id_store != '' && $reset_store == 'true'){
         if ($stmt = $db->prepare('UPDATE alamat SET is_toko = "false" WHERE id_alamat = ?;')) {
             $stmt->bind_param('s', $id_store);
             $stmt->execute();

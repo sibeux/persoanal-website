@@ -7,6 +7,9 @@ $data = [];
 $id_user = '';
 $sql = '';
 
+$id_primary = '';
+$id_store = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Mendapatkan data JSON dari body request
     $input = file_get_contents('php://input');
@@ -23,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $method = $data['method'] ?? '';
+    $id_primary = $data['id_primary'] ?? '';
+    $id_store = $data['id_store'] ?? '';
 } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $method = $_GET['method'] ?? '';
     $id_user = $_GET['id_user'] ?? '';
@@ -33,6 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function sendUserAddress($db, $data)
 {
     $address = $data['address'] ?? [];
+    global $id_primary;
+    global $id_store;
+
+    if ($id_primary != ''){
+        if ($stmt = $db->prepare('UPDATE alamat SET is_utama = "false" WHERE id_user = ?;')) {
+            $stmt->bind_param('s', $id_primary);
+            $stmt->execute();
+        }
+    }
+
+    if ($id_store != ''){
+        if ($stmt = $db->prepare('UPDATE alamat SET is_toko = "false" WHERE id_user = ?;')) {
+            $stmt->bind_param('s', $id_store);
+            $stmt->execute();
+        }
+    }
 
     if (
         $stmt = $db->prepare('INSERT INTO alamat (id_alamat, id_user, nama_penerima, 
@@ -86,7 +107,7 @@ function sendUserAddress($db, $data)
     }
 }
 
-function getUserAddress($db, $id_user){
+function getUserAddress($id_user){
     global $sql;
 
     $sql = "SELECT * FROM alamat WHERE id_user = $id_user";
@@ -97,7 +118,7 @@ switch ($method) {
         sendUserAddress($db, $data);
         break;
     case 'get_user_address':
-        getUserAddress($db, $id_user);
+        getUserAddress($id_user);
         break;
     default:
         break;

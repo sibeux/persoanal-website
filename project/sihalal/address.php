@@ -171,8 +171,6 @@ function updateUserAddress($db, $data)
         $is_primary_address = $address['is_primary_address'] ?? '';
         $is_store_address = $address['is_store_address'] ?? '';
 
-        $id_address = $address['id_address'] ?? '';
-
         // hati-hati sama koma di bind_param terakhir, njir.
         $stmt->bind_param(
             'ssssssssssssss',

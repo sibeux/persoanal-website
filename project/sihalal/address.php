@@ -201,6 +201,30 @@ function updateUserAddress($db, $data)
     }
 }
 
+function deleteUserAddress($db, $data)
+{
+    global $id_address;
+
+    if (
+        $stmt = $db->prepare('DELETE FROM alamat WHERE id_alamat = ?;')
+    ) {
+        // hati-hati sama koma di bind_param terakhir, njir.
+        $stmt->bind_param(
+            's',
+            $id_address
+        );
+
+        $stmt->execute();
+
+        // registration successful
+        $response = ["status" => "success"];
+        echo json_encode($response);
+    } else {
+        $response = ["status" => "failed"];
+        echo json_encode($response);
+    }
+}
+
 function getUserAddress($id_user)
 {
     global $sql;
@@ -214,6 +238,9 @@ switch ($method) {
         break;
     case 'update_user_address':
         updateUserAddress($db, $data);
+        break;
+    case 'delete_user_address':
+        deleteUserAddress($db, $data);
         break;
     case 'get_user_address':
         getUserAddress($id_user);

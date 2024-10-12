@@ -68,7 +68,7 @@ function getUserProduct($email)
 
     $sql = "SELECT produk.* FROM produk
             JOIN user on produk.id_user = user.id_user
-            where user.email_user = $email;";
+            where user.email_user = '". $email ."';";
 }
 
 switch ($_GET['method']) {

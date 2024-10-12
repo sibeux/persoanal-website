@@ -62,6 +62,15 @@ WHERE
     AND alamat.is_toko = 'true';";
 }
 
+function getUserProduct($email)
+{
+    global $sql;
+
+    $sql = "SELECT produk.* FROM produk
+            JOIN user on produk.id_user = user.id_user
+            where user.email_user = $email;";
+}
+
 switch ($_GET['method']) {
     case 'scroll_left':
         getProductScrollLeft($_GET['sort']);
@@ -71,6 +80,9 @@ switch ($_GET['method']) {
         break;
     case 'shop_info':
         getShopInfo($_GET['id_produk']);
+        break;
+    case 'user_product':
+        getUserProduct($_GET['email']);
         break;
     default:
         break;

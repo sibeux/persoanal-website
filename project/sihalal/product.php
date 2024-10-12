@@ -66,9 +66,15 @@ function getUserProduct($email)
 {
     global $sql;
 
-    $sql = "SELECT produk.* FROM produk
+    $sql = "SELECT produk.*,
+SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan
+FROM produk
+LEFT JOIN rating r 
+	ON produk.id_produk = r.id_produk
             JOIN user on produk.id_user = user.id_user
-            where user.email_user = '" . $email . "';";
+            where user.email_user = '$email'
+            GROUP BY produk.id_produk 
+	ORDER BY produk.id_produk DESC;";
 }
 
 switch ($_GET['method']) {

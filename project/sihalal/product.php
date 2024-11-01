@@ -77,6 +77,13 @@ LEFT JOIN rating r
 	ORDER BY produk.id_produk DESC;";
 }
 
+function getMerkshProduct($category)
+{
+    global $sql;
+
+    $sql = "SELECT * FROM shhalal WHERE kategori_shhalal = '$category' ORDER BY merek_shhalal ASC;";
+}
+
 switch ($_GET['method']) {
     case 'scroll_left':
         getProductScrollLeft($_GET['sort']);
@@ -89,6 +96,9 @@ switch ($_GET['method']) {
         break;
     case 'user_product':
         getUserProduct($_GET['email']);
+        break;
+    case 'merksh':
+        getMerkshProduct($_GET['category']);
         break;
     default:
         break;

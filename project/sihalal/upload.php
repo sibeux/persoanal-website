@@ -1,7 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["file"]["name"]);
+    $target_file = $target_dir . basename($name);
 
     // Periksa jika file sudah ada
     if (file_exists($target_file)) {
@@ -10,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Periksa ukuran file
-    if ($_FILES["file"]["size"] > 5000000) { // Maksimal 5MB
+    if ($_FILES["file"]["size"] > 2000000) { // Maksimal 2MB
         echo json_encode(["status" => "error", "message" => "File is too large."]);
         exit();
     }

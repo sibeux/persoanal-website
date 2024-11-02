@@ -1,8 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($name);
+    $target_file = $target_dir . basename($_FILES["file"]["name"]);
 
     // Periksa jika file sudah ada
     if (file_exists($target_file)) {

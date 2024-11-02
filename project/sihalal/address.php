@@ -106,7 +106,6 @@ function sendUserAddress($db, $data)
 
         $stmt->execute();
 
-        // registration successful
         $response = ["status" => "success"];
         echo json_encode($response);
     } else {
@@ -192,7 +191,6 @@ function updateUserAddress($db, $data)
 
         $stmt->execute();
 
-        // registration successful
         $response = ["status" => "success"];
         echo json_encode($response);
     } else {
@@ -215,8 +213,7 @@ function deleteUserAddress($db, $data)
         );
 
         $stmt->execute();
-
-        // registration successful
+        
         $response = ["status" => "success"];
         echo json_encode($response);
     } else {

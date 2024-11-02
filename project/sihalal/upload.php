@@ -1,32 +1,39 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["file"]["name"]);
+    $uploaded_files = [];
+    $errors = [];
 
-    // Periksa jika file sudah ada
-    if (file_exists($target_file)) {
-        echo json_encode(["status" => "error", "message" => "File already exists."]);
-        exit();
+    foreach ($_FILES['file']['name'] as $key => $name) {
+        $target_file = $target_dir . basename($name);
+        $file_size = $_FILES['file']['size'][$key];
+        $file_tmp = $_FILES['file']['tmp_name'][$key];
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        if (file_exists($target_file)) {
+            $errors[] = ["status" => "error", "message" => "File '$name' already exists."];
+            continue;
+        }
+
+        if ($file_size > 2000000) { // Maksimal 2MB
+            $errors[] = ["status" => "error", "message" => "File '$name' is too large."];
+            continue;
+        }
+
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+            $errors[] = ["status" => "error", "message" => "File '$name' is not a valid image format."];
+            continue;
+        }
+
+        // Pindahkan file ke folder tujuan
+        if (move_uploaded_file($file_tmp, $target_file)) {
+            $uploaded_files[] = ["status" => "success", "message" => "File '$name' uploaded successfully.", "url" => $target_file];
+        } else {
+            $errors[] = ["status" => "error", "message" => "There was an error uploading file '$name'."];
+        }
     }
 
-    // Periksa ukuran file
-    if ($_FILES["file"]["size"] > 2000000) { // Maksimal 2MB
-        echo json_encode(["status" => "error", "message" => "File is too large."]);
-        exit();
-    }
-
-    // Hanya izinkan jenis file tertentu
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-        echo json_encode(["status" => "error", "message" => "Only JPG, JPEG, PNG files are allowed."]);
-        exit();
-    }
-
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-        echo json_encode(["status" => "success", "message" => "File uploaded successfully.", "url" => $target_file]);
-    } else {
-        echo json_encode(["status" => "error", "message" => "There was an error uploading the file."]);
-    }
+    echo json_encode(["uploaded_files" => $uploaded_files, "errors" => $errors]);
 } else {
     echo json_encode(["status" => "error", "message" => "Invalid request."]);
 }

@@ -6,7 +6,7 @@ function addNewProduct($db)
 {
     if (
         $stmt = $db->prepare('INSERT INTO `produk` (`id_produk`, `id_user`, `id_shhalal`, `foto_produk_1`, `foto_produk_2`, `foto_produk_3`, `nama_produk`, `deskripsi_produk`, `harga_produk`, `berat_produk`, `stok_produk`, `is_ditampilkan`)
-        VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ')
+        VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "false");')
     ) {
         $id_user = $_POST['id_user'];
         $id_shhalal = $_POST['id_shhalal'];
@@ -21,7 +21,7 @@ function addNewProduct($db)
 
         // hati-hati sama koma di bind_param terakhir.
         $stmt->bind_param(
-            'iisssssiiis',
+            'iisssssiii',
             $id_user,
             $id_shhalal,
             $foto_produk_1,
@@ -31,8 +31,7 @@ function addNewProduct($db)
             $deskripsi_produk,
             $harga_produk,
             $stok_produk,
-            $berat_produk,
-            'false'
+            $berat_produk
         );
         $stmt->execute();
 

@@ -63,6 +63,27 @@ function deleteProduct($db){
     }
 }
 
+function changeViewProduct($db)
+{
+    if (
+        $stmt = $db->prepare('UPDATE produk SET is_ditampilkan = ? WHERE id_produk = ?;')
+    ) {
+        $stmt->bind_param(
+            'ss',
+            $_POST['is_ditampilkan'],
+            $_POST['id_produk']
+        );
+
+        $stmt->execute();
+
+        $response = ["status" => "success"];
+        echo json_encode($response);
+    } else {
+        $response = ["status" => "failed"];
+        echo json_encode($response);
+    }
+}
+
 switch ($_POST['method']) {
     case 'new':
         addNewProduct($db);
@@ -70,6 +91,9 @@ switch ($_POST['method']) {
     case 'delete':
         deleteProduct($db);
         break;
+    case 'view':
+        changeViewProduct($db);
+        break; 
     default:
         break;
 }

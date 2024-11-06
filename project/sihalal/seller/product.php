@@ -56,8 +56,7 @@ function updateProduct($db)
             deskripsi_produk = ?, 
             harga_produk = ?, 
             berat_produk = ?, 
-            stok_produk = ?, 
-            is_ditampilkan = ?
+            stok_produk = ?
         WHERE id_produk = ?;')
     ) {
         $id_produk = $_POST['id_produk'];
@@ -70,11 +69,10 @@ function updateProduct($db)
         $harga_produk = $_POST['harga_produk'];
         $stok_produk = $_POST['stok_produk'];
         $berat_produk = $_POST['berat_produk'];
-        $is_ditampilkan = $_POST['is_ditampilkan'];
 
         // hati-hati sama koma di bind_param terakhir.
         $stmt->bind_param(
-            'isssssiiisi',
+            'isssssiiii',
             $id_shhalal,
             $foto_produk_1,
             $foto_produk_2,
@@ -84,7 +82,6 @@ function updateProduct($db)
             $harga_produk,
             $berat_produk,
             $stok_produk,
-            $is_ditampilkan,
             $id_produk
         );
         $stmt->execute();

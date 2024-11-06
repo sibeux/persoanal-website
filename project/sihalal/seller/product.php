@@ -30,8 +30,8 @@ function addNewProduct($db)
             $nama_produk,
             $deskripsi_produk,
             $harga_produk,
-            $stok_produk,
-            $berat_produk
+            $berat_produk,
+            $stok_produk
         );
         $stmt->execute();
 

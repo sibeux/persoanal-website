@@ -44,9 +44,31 @@ function addNewProduct($db)
     }
 }
 
+function deleteProduct($db){
+    if (
+        $stmt = $db->prepare('DELETE FROM produk WHERE id_produk = ?;')
+    ) {
+        $stmt->bind_param(
+            's',
+            $_POST['id_produk']
+        );
+
+        $stmt->execute();
+
+        $response = ["status" => "success"];
+        echo json_encode($response);
+    } else {
+        $response = ["status" => "failed"];
+        echo json_encode($response);
+    }
+}
+
 switch ($_POST['method']) {
     case 'new':
         addNewProduct($db);
+        break;
+    case 'delete':
+        deleteProduct($db);
         break;
     default:
         break;

@@ -45,7 +45,7 @@ function getShopInfo($id_produk)
     alamat.kota, 
     alamat.provinsi,
     -- Menghitung total produk milik user
-    (SELECT COUNT(*) FROM produk WHERE produk.id_user = user.id_user) AS total_produk,
+    (SELECT COUNT(*) FROM produk WHERE produk.id_user = user.id_user AND is_ditampilkan = 'true') AS total_produk,
     -- Menghitung rata-rata rating hanya untuk semua produk milik user
     (SELECT AVG(rating.bintang_rating) 
     FROM rating 

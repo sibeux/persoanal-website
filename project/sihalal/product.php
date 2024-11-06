@@ -66,9 +66,12 @@ function getUserProduct($email)
 {
     global $sql;
 
-    $sql = "SELECT produk.*,
+    $sql = "SELECT produk.*, , shhalal.*,
 SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan
 FROM produk
+-- USING biar tidak ada duplikasi kolom
+-- tapi percuma jika diginiin = shhalal.*
+JOIN shhalal USING (id_shhalal) 
 LEFT JOIN rating r 
 	ON produk.id_produk = r.id_produk
             JOIN user on produk.id_user = user.id_user

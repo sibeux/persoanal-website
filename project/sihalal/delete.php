@@ -1,11 +1,15 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['filenames']) && is_array($_POST['filenames'])) {
+    // Mendapatkan input JSON dari Flutter
+    $input = file_get_contents('php://input');
+    $data = json_decode($input, true);
+
+    if (isset($data['filenames']) && is_array($data['filenames'])) {
         $target_dir = "uploads/";
         $deleted_files = [];
         $errors = [];
 
-        foreach ($_POST['filenames'] as $filename) {
+        foreach ($data['filenames'] as $filename) {
             $filename = basename($filename);
             $target_file = $target_dir . $filename;
 

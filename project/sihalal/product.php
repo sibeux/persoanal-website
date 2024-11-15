@@ -9,11 +9,12 @@ function getProductScrollLeft($sort)
     global $sql;
 
     if ($sort == 'recent') {
-        $sql = "SELECT p.*, alamat.kota,
+        $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
         count(r.id_produk) as jumlah_rating
 	FROM produk p 
+    join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 
 	ON p.id_produk = r.id_produk 
     join alamat 
@@ -21,7 +22,7 @@ function getProductScrollLeft($sort)
     WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
 	GROUP BY p.id_produk 
 	ORDER BY p.id_produk DESC 
-	LIMIT 50;";
+	LIMIT 10;";
     }
 }
 

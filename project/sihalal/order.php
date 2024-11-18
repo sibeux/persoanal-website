@@ -5,7 +5,7 @@ include './database/db.php';
 $method = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
+    $method = $_POST['method'] ?? '';
 } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $method = $_GET['method'] ?? '';
 }

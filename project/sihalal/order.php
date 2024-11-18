@@ -41,8 +41,7 @@ function createOrder($db)
         $status_pesanan = $_POST['status_pesanan'];
 
         $stmt->bind_param(
-            'isiiisssiiiss',
-            $id_pesanan,
+            'siiisssiiiss',
             $no_pesanan,
             $id_user,
             $id_produk,

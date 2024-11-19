@@ -33,9 +33,18 @@ function addNewProduct($db)
             $berat_produk,
             $stok_produk
         );
-        $stmt->execute();
+        
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
 
-        $response = ["status" => "success"];
+        $stmt->close();
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];
@@ -84,9 +93,18 @@ function updateProduct($db)
             $stok_produk,
             $id_produk
         );
-        $stmt->execute();
+        
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
 
-        $response = ["status" => "success"];
+        $stmt->close();
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];
@@ -105,9 +123,17 @@ function deleteProduct($db)
             $_POST['id_produk']
         );
 
-        $stmt->execute();
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
 
-        $response = ["status" => "success"];
+        $stmt->close();
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];
@@ -126,9 +152,17 @@ function changeViewProduct($db)
             $_POST['id_produk']
         );
 
-        $stmt->execute();
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
 
-        $response = ["status" => "success"];
+        $stmt->close();
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];

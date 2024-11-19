@@ -55,9 +55,18 @@ function createOrder($db)
             $tanggal_pesanan,
             $status_pesanan
         );
-        $stmt->execute();
+        
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
 
-        $response = ["status" => "success"];
+        $stmt->close();
         echo json_encode($response);
     } else {
         $response = ["status" => "failed"];

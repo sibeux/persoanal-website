@@ -23,6 +23,13 @@ function getOrderHistory($id_user)
             ORDER BY pesanan.tanggal_pesanan DESC;";
 }
 
+function getOrderHistoryCount($id_user)
+{
+    global $sql;
+
+    $sql = "SELECT count(*) as jumlah_pesanan FROM `pesanan` where id_user = $id_user;";
+}
+
 function createOrder($db)
 {
     if (
@@ -141,6 +148,9 @@ function changeOrderStatus($db)
 switch ($method) {
     case 'get_order_history':
         getOrderHistory($_GET['id_user']);
+        break;
+    case 'get_order_history_count':
+        getOrderHistoryCount($_GET['id_user']);
         break;
     case 'create_order':
         createOrder($db);

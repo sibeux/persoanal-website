@@ -27,7 +27,10 @@ function getOrderHistoryCount($id_user)
 {
     global $sql;
 
-    $sql = "SELECT count(*) as jumlah_pesanan FROM `pesanan` where id_user = $id_user;";
+    $sql = "SELECT count(*) as jumlah_pesanan 
+    FROM `pesanan`
+    where id_user = $id_user and not status_pesanan = 'selesai' 
+    and not status_pesanan = 'batal';";
 }
 
 function createOrder($db)

@@ -1,6 +1,6 @@
 <?php
 
-include './database/db.php';    
+include './database/db.php';
 
 $method = '';
 $sql = '';
@@ -19,7 +19,8 @@ function getOrderHistory($id_user)
             FROM `pesanan`
             join produk USING(id_produk)
             join user on user.id_user = produk.id_user
-            where pesanan.id_user = $id_user;";
+            where pesanan.id_user = $id_user 
+            ORDER BY pesanan.tanggal_pesanan DESC;";
 }
 
 function createOrder($db)
@@ -59,7 +60,63 @@ function createOrder($db)
             $tanggal_pesanan,
             $status_pesanan
         );
-        
+
+        // kurangi stok produk
+        if ($stmt->execute()) {
+            if (
+                $stmt = $db->prepare('UPDATE `produk` SET `stok_produk` = `stok_produk` - ? WHERE `id_produk` = ?;')
+            ) {
+                $stmt->bind_param(
+                    'ii',
+                    $jumlah,
+                    $id_produk
+                );
+
+                if ($stmt->execute()) {
+                    $response = ["status" => "success"];
+                } else {
+                    $response = [
+                        "status" => "error",
+                        "message" => "Failed to execute the query.",
+                        "error" => $stmt->error // Pesan error untuk debugging
+                    ];
+                }
+            } else {
+                $response = ["status" => "failed"];
+                echo json_encode($response);
+                echo 'Could not prepare statement!';
+            }
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
+
+        $stmt->close();
+        echo json_encode($response);
+    } else {
+        $response = ["status" => "failed"];
+        echo json_encode($response);
+        echo 'Could not prepare statement!';
+    }
+}
+
+function changeOrderStatus($db)
+{
+    if (
+        $stmt = $db->prepare('UPDATE `pesanan` SET `status_pesanan` = ? WHERE `id_pesanan` = ?;')
+    ) {
+        $status_pesanan = $_POST['status_pesanan'];
+        $id_pesanan = $_POST['id_pesanan'];
+
+        $stmt->bind_param(
+            'si',
+            $status_pesanan,
+            $id_pesanan
+        );
+
         if ($stmt->execute()) {
             $response = ["status" => "success"];
         } else {
@@ -87,6 +144,9 @@ switch ($method) {
         break;
     case 'create_order':
         createOrder($db);
+        break;
+    case 'change_order_status':
+        changeOrderStatus($db);
         break;
     default:
         break;

@@ -3,6 +3,7 @@
 include './database/db.php';    
 
 $method = '';
+$sql = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $method = $_POST['method'] ?? '';
@@ -30,7 +31,6 @@ function createOrder($db)
         `total_pembayaran`, `tanggal_pesanan`, `status_pesanan`)
         VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);')
     ) {
-        $id_pesanan = $_POST['id_pesanan'];
         $no_pesanan = $_POST['no_pesanan'];
         $id_user = $_POST['id_user'];
         $id_produk = $_POST['id_produk'];
@@ -83,7 +83,7 @@ function createOrder($db)
 
 switch ($method) {
     case 'get_order_history':
-        getOrderHistory($id_user);
+        getOrderHistory($_GET['id_user']);
         break;
     case 'create_order':
         createOrder($db);

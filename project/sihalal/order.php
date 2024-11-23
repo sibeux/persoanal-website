@@ -15,7 +15,7 @@ function getOrderHistory($id_user)
 {
     global $sql;
 
-    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, user.nama_toko, produk.nama_produk, produk.foto_produk_1
+    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, user.nama_user, user.nama_toko, produk.nama_produk, produk.foto_produk_1
             FROM `pesanan`
             join produk USING(id_produk)
             join user on user.id_user = produk.id_user

@@ -18,7 +18,8 @@ function getOrder($id_user){
 FROM pesanan
 join produk on produk.id_produk = pesanan.id_produk
 JOIN user on produk.id_user = user.id_user
-WHERE user.id_user = $id_user;";
+WHERE user.id_user = $id_user 
+ORDER BY pesanan.tanggal_pesanan DESC;";
 }
 
 

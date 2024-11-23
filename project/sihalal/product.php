@@ -113,7 +113,7 @@ switch ($_GET['method']) {
         getUlasanProduct($_GET['id_produk']);
         break;
     case 'get_product_detail':
-        getUlasanProduct($_GET['id_produk']);
+        getProductDetail($_GET['id_produk']);
         break;
     case 'shop_info':
         getShopInfo($_GET['id_produk']);

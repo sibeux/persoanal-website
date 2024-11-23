@@ -37,6 +37,23 @@ function getUlasanProduct($id_produk)
     ORDER BY r.tanggal_rating DESC;";
 }
 
+function getProductDetail($id_produk)
+{
+    global $sql;
+
+    $sql = "SELECT p.*, alamat.kota, shhalal.*,
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        count(r.id_produk) as jumlah_rating
+	FROM produk p 
+    join shhalal USING(id_shhalal)
+	LEFT JOIN rating r 
+	ON p.id_produk = r.id_produk 
+    join alamat 
+    on alamat.id_user = p.id_user
+    WHERE p.id_produk = $id_produk;";
+}
+
 function getShopInfo($id_produk)
 {
     global $sql;
@@ -93,6 +110,9 @@ switch ($_GET['method']) {
         getProductScrollLeft($_GET['sort']);
         break;
     case 'get_ulasan':
+        getUlasanProduct($_GET['id_produk']);
+        break;
+    case 'get_product_detail':
         getUlasanProduct($_GET['id_produk']);
         break;
     case 'shop_info':

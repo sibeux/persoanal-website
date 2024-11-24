@@ -43,8 +43,8 @@ function getProductDetail($id_produk)
 
     $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
-        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        count(r.id_produk) as jumlah_rating
+        (SELECT count(*) from rating r WHERE r.id_produk = $id_produk and r.pesan_rating != '') as jumlah_ulasan, 
+        (SELECT count(*) from rating r WHERE r.id_produk = $id_produk) as jumlah_rating
 	FROM produk p 
     join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 

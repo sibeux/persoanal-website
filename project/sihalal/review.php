@@ -16,7 +16,7 @@ function createReview($db)
     if (
         $stmt = $db->prepare('INSERT INTO `rating` (`id_rating`, `id_produk`, 
         `id_user`, `id_pesanan`, `bintang_rating`, `pesan_rating`, `tanggal_rating`)
-        VALUES(NULL, ?, ?, ?, ?, ?, NOW);')
+        VALUES(NULL, ?, ?, ?, ?, ?, NOW());')
     ) {
         $id_produk = $_POST['id_produk'];
         $id_user = $_POST['id_user'];

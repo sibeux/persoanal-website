@@ -25,7 +25,7 @@ function createReview($db)
         $pesan_rating = $_POST['pesan_rating'];
 
         $stmt->bind_param(
-            'iiis',
+            'iiiis',
             $id_produk,
             $id_user,
             $id_pesanan,

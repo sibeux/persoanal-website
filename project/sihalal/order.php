@@ -153,8 +153,6 @@ function changeOrderStatus($db)
     }
 }
 
-
-
 switch ($method) {
     case 'get_order_history':
         getOrderHistory($_GET['id_user']);

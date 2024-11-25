@@ -52,9 +52,22 @@ function createReview($db)
     }
 }
 
+function fetchReview($id_user)
+{
+    global $sql;
+
+    $sql = "SELECT rating.*, produk.nama_produk 
+    FROM `rating` 
+    join produk USING(id_produk) 
+    where rating.id_user = $id_user;";
+}
+
 switch ($method) {
     case 'create_review':
         createReview($db);
+        break;
+    case 'fetch_review':
+        fetchReview($_GET['id_user']);
         break;
     default:
         break;

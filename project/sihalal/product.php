@@ -95,7 +95,7 @@ LEFT JOIN rating r
 	ON produk.id_produk = r.id_produk
             JOIN user on produk.id_user = user.id_user
             left JOIN pesanan on pesanan.id_produk = produk.id_produk
-            where user.email_user = $email
+            where user.email_user = '$email'
             GROUP BY produk.id_produk
 	ORDER BY produk.id_produk DESC;";
 }

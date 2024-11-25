@@ -85,7 +85,8 @@ function getUserProduct($email)
     global $sql;
 
     $sql = "SELECT produk.*, shhalal.*,
-SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan
+COUNT(DISTINCT CASE WHEN r.pesan_rating is not null and r.pesan_rating != '' THEN r.id_rating ELSE NULL END) as jumlah_ulasan,
+COUNT(DISTINCT CASE WHEN pesanan.status_pesanan = 'ulas' THEN pesanan.id_pesanan ELSE NULL END) AS jumlah_terjual
 FROM produk
 -- USING biar tidak ada duplikasi kolom
 -- tapi percuma jika diginiin = shhalal.*
@@ -93,8 +94,9 @@ JOIN shhalal USING (id_shhalal)
 LEFT JOIN rating r 
 	ON produk.id_produk = r.id_produk
             JOIN user on produk.id_user = user.id_user
-            where user.email_user = '$email'
-            GROUP BY produk.id_produk 
+            left JOIN pesanan on pesanan.id_produk = produk.id_produk
+            where user.email_user = $email
+            GROUP BY produk.id_produk
 	ORDER BY produk.id_produk DESC;";
 }
 

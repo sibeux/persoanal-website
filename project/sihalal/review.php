@@ -59,7 +59,7 @@ function fetchReview($id_user)
     $sql = "SELECT rating.*, produk.nama_produk 
     FROM `rating` 
     join produk USING(id_produk) 
-    where rating.id_user = $id_user;";
+    where rating.id_user = $id_user ORDER BY rating.id_rating DESC;";
 }
 
 switch ($method) {

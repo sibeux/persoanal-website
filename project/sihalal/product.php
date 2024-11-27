@@ -23,6 +23,21 @@ function getProductScrollLeft($sort)
 	GROUP BY p.id_produk 
 	ORDER BY p.id_produk DESC 
 	LIMIT 10;";
+    } else if ($sort == 'random'){
+        $sql = "SELECT p.*, alamat.kota, shhalal.*,
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        COUNT(r.id_produk) as jumlah_rating
+FROM produk p 
+JOIN shhalal USING(id_shhalal)
+LEFT JOIN rating r 
+ON p.id_produk = r.id_produk 
+JOIN alamat 
+ON alamat.id_user = p.id_user
+WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
+GROUP BY p.id_produk 
+ORDER BY RAND() 
+LIMIT 10;";
     }
 }
 

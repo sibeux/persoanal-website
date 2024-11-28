@@ -21,7 +21,7 @@ function getProductScrollLeft($sort)
 	ON p.id_produk = r.id_produk 
     join alamat 
     on alamat.id_user = p.id_user
-    WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
+    WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' and p.stok_produk != 0
 	GROUP BY p.id_produk 
 	ORDER BY p.id_produk DESC 
 	LIMIT 10 OFFSET $offset;";
@@ -36,7 +36,7 @@ LEFT JOIN rating r
 ON p.id_produk = r.id_produk 
 JOIN alamat 
 ON alamat.id_user = p.id_user
-WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
+WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' and p.stok_produk != 0
 GROUP BY p.id_produk 
 ORDER BY RAND() 
 LIMIT 10 OFFSET $offset;";

@@ -8,6 +8,8 @@ function getProductScrollLeft($sort)
 {
     global $sql;
 
+    $offset = $_GET['offset'];
+
     if ($sort == 'recent') {
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
@@ -22,7 +24,7 @@ function getProductScrollLeft($sort)
     WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
 	GROUP BY p.id_produk 
 	ORDER BY p.id_produk DESC 
-	LIMIT 10;";
+	LIMIT 10 OFFSET $offset;";
     } else if ($sort == 'random'){
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
@@ -37,7 +39,7 @@ ON alamat.id_user = p.id_user
 WHERE alamat.is_toko = 'true' AND p.is_ditampilkan = 'true'
 GROUP BY p.id_produk 
 ORDER BY RAND() 
-LIMIT 10;";
+LIMIT 10 OFFSET $offset;";
     }
 }
 

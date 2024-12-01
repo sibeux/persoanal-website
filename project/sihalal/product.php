@@ -125,6 +125,27 @@ function getMerkshProduct($category)
     $sql = "SELECT * FROM shhalal WHERE kategori_shhalal = '$category' ORDER BY merek_shhalal ASC;";
 }
 
+function getShopDashboardProduct($method, $id_user){
+    global $sql;
+
+    if ($method == 'most_sold') {
+        $sql = "SELECT p.*, alamat.kota, shhalal.*,
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        count(r.id_produk) as jumlah_rating
+	FROM produk p 
+    join shhalal USING(id_shhalal)
+	LEFT JOIN rating r 
+	ON p.id_produk = r.id_produk 
+    join alamat 
+    on alamat.id_user = p.id_user
+    WHERE alamat.is_toko = 'true' and p.id_user = $id_user
+	GROUP BY p.id_produk 
+	ORDER BY p.id_produk DESC 
+	LIMIT 10;";
+    }
+}
+
 switch ($_GET['method']) {
     case 'scroll_left':
         getProductScrollLeft($_GET['sort']);
@@ -143,6 +164,9 @@ switch ($_GET['method']) {
         break;
     case 'merksh':
         getMerkshProduct($_GET['category']);
+        break;
+    case 'most_sold':
+        getShopDashboardProduct($_GET['method'], $_GET['id_user']);
         break;
     default:
         break;

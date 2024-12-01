@@ -195,7 +195,7 @@ switch ($_GET['method']) {
     case 'most_sold':
         getShopDashboardProduct($_GET['method'], $_GET['id_user']);
         break;
-    case 'most_soldall_product_shop_dashboard':
+    case 'all_product_shop_dashboard':
         getShopDashboardProduct($_GET['method'], $_GET['id_user']);
         break;
     default:

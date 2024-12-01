@@ -132,7 +132,13 @@ function getShopDashboardProduct($method, $id_user){
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        count(r.id_produk) as jumlah_rating
+        count(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) 
+        FROM pesanan 
+        WHERE pesanan.id_produk = p.id_produk
+        AND (pesanan.status_pesanan = 'selesai' OR pesanan.status_pesanan = 'ulas')
+        ) AS jumlah_terjual
+        
 	FROM produk p 
     join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 
@@ -141,8 +147,7 @@ function getShopDashboardProduct($method, $id_user){
     on alamat.id_user = p.id_user
     WHERE alamat.is_toko = 'true' and p.id_user = $id_user
 	GROUP BY p.id_produk 
-	ORDER BY p.id_produk DESC 
-	LIMIT 10;";
+ORDER BY `jumlah_terjual` DESC LIMIT 10";
     }
 }
 

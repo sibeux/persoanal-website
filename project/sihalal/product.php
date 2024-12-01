@@ -150,6 +150,26 @@ function getShopDashboardProduct($method, $id_user){
     WHERE alamat.is_toko = 'true' and p.id_user = $id_user
 	GROUP BY p.id_produk 
 ORDER BY `jumlah_terjual` DESC LIMIT 10";
+    } else if ($method == 'all_product_shop_dashboard'){
+        $sql = "SELECT p.*, alamat.kota, shhalal.*,
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        count(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) 
+        FROM pesanan 
+        WHERE pesanan.id_produk = p.id_produk
+        AND (pesanan.status_pesanan = 'selesai' OR pesanan.status_pesanan = 'ulas')
+        ) AS jumlah_terjual
+        
+	FROM produk p 
+    join shhalal USING(id_shhalal)
+	LEFT JOIN rating r 
+	ON p.id_produk = r.id_produk 
+    join alamat 
+    on alamat.id_user = p.id_user
+    WHERE alamat.is_toko = 'true' and p.id_user = $id_user
+	GROUP BY p.id_produk 
+ORDER BY p.id_produk DESC;";
     }
 }
 
@@ -173,6 +193,9 @@ switch ($_GET['method']) {
         getMerkshProduct($_GET['category']);
         break;
     case 'most_sold':
+        getShopDashboardProduct($_GET['method'], $_GET['id_user']);
+        break;
+    case 'most_soldall_product_shop_dashboard':
         getShopDashboardProduct($_GET['method'], $_GET['id_user']);
         break;
     default:

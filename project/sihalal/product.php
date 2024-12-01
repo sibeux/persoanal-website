@@ -85,7 +85,8 @@ function getShopInfo($id_produk)
     (SELECT AVG(rating.bintang_rating) 
     FROM rating 
     JOIN produk ON rating.id_produk = produk.id_produk 
-    WHERE produk.id_user = user.id_user) AS rata_rata_rating
+    WHERE produk.id_user = user.id_user) AS rata_rata_rating,
+    (SELECT COUNT(*) FROM rating WHERE rating.id_produk = produk.id_produk) AS jumlah_rating
 FROM 
     produk 
 JOIN 

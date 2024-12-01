@@ -86,7 +86,9 @@ function getShopInfo($id_produk)
     FROM rating 
     JOIN produk ON rating.id_produk = produk.id_produk 
     WHERE produk.id_user = user.id_user) AS rata_rata_rating,
-    (SELECT COUNT(*) FROM rating WHERE rating.id_produk = produk.id_produk) AS jumlah_rating
+    (SELECT COUNT(*) FROM rating 
+    JOIN produk on rating.id_produk = produk.id_produk 
+    WHERE produk.id_user = user.id_user) AS jumlah_rating
 FROM 
     produk 
 JOIN 

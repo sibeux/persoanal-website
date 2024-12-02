@@ -44,9 +44,45 @@ function addFavorite($db)
     }
 }
 
+function deleteFavorite($db)
+{
+    if (
+        $stmt = $db->prepare('DELETE FROM `favorite` WHERE `id_produk` = ? AND `id_user` = ?;')
+    ) {
+        $id_produk = $_POST['id_produk'];
+        $id_user = $_POST['id_user'];
+
+        $stmt->bind_param(
+            'ii',
+            $id_produk,
+            $id_user
+        );
+
+        if ($stmt->execute()) {
+            $response = ["status" => "success"];
+        } else {
+            $response = [
+                "status" => "error",
+                "message" => "Failed to execute the query.",
+                "error" => $stmt->error // Pesan error untuk debugging
+            ];
+        }
+
+        $stmt->close();
+        echo json_encode($response);
+    } else {
+        $response = ["status" => "failed"];
+        echo json_encode($response);
+        echo 'Could not prepare statement!';
+    }
+}
+
 switch ($method) {
     case 'add':
         addFavorite($db);
+        break;
+    case 'delet':
+        deleteFavorite($db);
         break;
     default:
         break;

@@ -9,12 +9,14 @@ function getProductScrollLeft($sort)
     global $sql;
 
     $offset = $_GET['offset'];
+    $id_user = $_GET['id_user'];
 
     if ($sort == 'recent') {
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        count(r.id_produk) as jumlah_rating
+        count(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite,
 	FROM produk p 
     join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 
@@ -58,10 +60,13 @@ function getProductDetail($id_produk)
 {
     global $sql;
 
+    $id_user = $_GET['id_user'];
+
     $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         (SELECT count(*) from rating r WHERE r.id_produk = $id_produk and r.pesan_rating != '') as jumlah_ulasan, 
-        (SELECT count(*) from rating r WHERE r.id_produk = $id_produk) as jumlah_rating
+        (SELECT count(*) from rating r WHERE r.id_produk = $id_produk) as jumlah_rating,
+        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite
 	FROM produk p 
     join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 
@@ -135,6 +140,7 @@ function getShopDashboardProduct($method, $id_user){
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
         count(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite,
         (SELECT COUNT(*) 
         FROM pesanan 
         WHERE pesanan.id_produk = p.id_produk
@@ -154,7 +160,8 @@ ORDER BY `jumlah_terjual` DESC LIMIT 10";
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        count(r.id_produk) as jumlah_rating,
+        count(r.id_produk) as jumlah_rating,,
+        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite,
         (SELECT COUNT(*) 
         FROM pesanan 
         WHERE pesanan.id_produk = p.id_produk

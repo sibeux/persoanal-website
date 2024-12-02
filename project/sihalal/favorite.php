@@ -77,12 +77,41 @@ function deleteFavorite($db)
     }
 }
 
+function readFavorite()
+{
+    global $sql;
+    $id_user = $_GET['id_user'];
+
+    $sql = "SELECT p.*, alamat.kota, shhalal.*,
+        COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
+        SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
+        count(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) 
+        FROM pesanan 
+        WHERE pesanan.id_produk = p.id_produk
+        AND (pesanan.status_pesanan = 'selesai' OR pesanan.status_pesanan = 'ulas')
+        ) AS jumlah_terjual
+	FROM favorite
+    JOIN produk p ON p.id_produk = favorite.id_produk
+    join shhalal USING(id_shhalal)
+	LEFT JOIN rating r 
+	ON p.id_produk = r.id_produk
+    join alamat 
+    on alamat.id_user = p.id_user
+    WHERE favorite.id_user = $id_user
+	GROUP BY p.id_produk 
+ORDER BY favorite.id_favorite DESC;";
+}
+
 switch ($method) {
     case 'add':
         addFavorite($db);
         break;
     case 'delete':
         deleteFavorite($db);
+        break;
+    case 'read':
+        readFavorite();
         break;
     default:
         break;

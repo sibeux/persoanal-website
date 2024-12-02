@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function getOrder($id_user){
     global $sql;
 
-    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, produk.*, user.*  
+    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, produk.*, user.*,
+    (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = pesanan.id_produk and favorite.id_user = $id_user) as is_favorite
 FROM pesanan
 join produk on produk.id_produk = pesanan.id_produk
 JOIN user on produk.id_user = user.id_user

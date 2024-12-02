@@ -15,7 +15,8 @@ function getOrderHistory($id_user)
 {
     global $sql;
 
-    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, user.nama_user, user.nama_toko, produk.nama_produk, produk.foto_produk_1
+    $sql = "SELECT pesanan.*, produk.id_user as id_user_toko, user.nama_user, user.nama_toko, produk.nama_produk, produk.foto_produk_1,
+    (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = produk.id_produk and favorite.id_user = $id_user) as is_favorite
             FROM `pesanan`
             join produk USING(id_produk)
             join user on user.id_user = produk.id_user

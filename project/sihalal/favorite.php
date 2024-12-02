@@ -81,7 +81,7 @@ switch ($method) {
     case 'add':
         addFavorite($db);
         break;
-    case 'delet':
+    case 'delete':
         deleteFavorite($db);
         break;
     default:

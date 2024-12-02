@@ -31,7 +31,8 @@ function getProductScrollLeft($sort)
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        COUNT(r.id_produk) as jumlah_rating
+        COUNT(r.id_produk) as jumlah_rating,
+        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite
 FROM produk p 
 JOIN shhalal USING(id_shhalal)
 LEFT JOIN rating r 

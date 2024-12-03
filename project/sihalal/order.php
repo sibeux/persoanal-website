@@ -82,7 +82,9 @@ function createOrder($db)
         // kurangi stok produk
         if ($stmt->execute()) {
             if (
-                $stmt = $db->prepare('UPDATE `produk` SET `stok_produk` = `stok_produk` - ? WHERE `id_produk` = ?;')
+                $stmt = $db->prepare('UPDATE `produk` 
+        SET `stok_produk` = GREATEST(`stok_produk` - ?, 0) 
+        WHERE `id_produk` = ?;')
             ) {
                 $stmt->bind_param(
                     'ii',

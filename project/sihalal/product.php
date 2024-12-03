@@ -9,14 +9,12 @@ function getProductScrollLeft($sort)
     global $sql;
 
     $offset = $_GET['offset'];
-    $id_user = $_GET['id_user'];
 
     if ($sort == 'recent') {
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        count(r.id_produk) as jumlah_rating,
-        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite
+        count(r.id_produk) as jumlah_rating
 	FROM produk p 
     join shhalal USING(id_shhalal)
 	LEFT JOIN rating r 
@@ -31,8 +29,7 @@ function getProductScrollLeft($sort)
         $sql = "SELECT p.*, alamat.kota, shhalal.*,
         COALESCE(AVG(r.bintang_rating), 0) as rating_produk, 
         SUM(r.pesan_rating is NOT NULL) as jumlah_ulasan, 
-        COUNT(r.id_produk) as jumlah_rating,
-        (SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = p.id_produk and favorite.id_user = $id_user) as is_favorite
+        COUNT(r.id_produk) as jumlah_rating
 FROM produk p 
 JOIN shhalal USING(id_shhalal)
 LEFT JOIN rating r 

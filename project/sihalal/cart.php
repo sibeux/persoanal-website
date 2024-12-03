@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function addCart($db)
 {
     if (
-        $stmt = $db->prepare('INSERT INTO `cart` (`id_favorite`, `id_produk`, `id_user`) VALUES (NULL, ?, ?);')
+        $stmt = $db->prepare('INSERT INTO `cart` (`id_keranjang`, `id_produk`, `id_user`) VALUES (NULL, ?, ?);')
     ) {
         $id_produk = $_POST['id_produk'];
         $id_user = $_POST['id_user'];

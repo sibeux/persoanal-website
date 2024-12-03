@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function addCart($db)
 {
     if (
-        $stmt = $db->prepare('INSERT INTO `cart` (`id_keranjang`, `id_produk`, `id_user`) VALUES (NULL, ?, ?);')
+        $stmt = $db->prepare('INSERT INTO `keranjang` (`id_keranjang`, `id_produk`, `id_user`) VALUES (NULL, ?, ?);')
     ) {
         $id_produk = $_POST['id_produk'];
         $id_user = $_POST['id_user'];
@@ -47,7 +47,7 @@ function addCart($db)
 function deleteCart($db)
 {
     if (
-        $stmt = $db->prepare('DELETE FROM `cart` WHERE `id_produk` = ? AND `id_user` = ?;')
+        $stmt = $db->prepare('DELETE FROM `keranjang` WHERE `id_produk` = ? AND `id_user` = ?;')
     ) {
         $id_produk = $_POST['id_produk'];
         $id_user = $_POST['id_user'];

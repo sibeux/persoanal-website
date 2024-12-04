@@ -80,6 +80,8 @@ function createOrder($db)
         );
 
         // kurangi stok produk
+        // ** harusnya ini setelah seller mengonfirmasi pesanan
+        // ** karena ada kemungkinan pembeli membatalkan pesanan
         if ($stmt->execute()) {
             if (
                 $stmt = $db->prepare('UPDATE `produk` 

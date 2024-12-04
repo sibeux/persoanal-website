@@ -47,15 +47,13 @@ function addCart($db)
 function deleteCart($db)
 {
     if (
-        $stmt = $db->prepare('DELETE FROM `keranjang` WHERE `id_produk` = ? AND `id_user` = ?;')
+        $stmt = $db->prepare('DELETE FROM `keranjang` WHERE `id_keranjang` = ?;')
     ) {
-        $id_produk = $_POST['id_produk'];
-        $id_user = $_POST['id_user'];
+        $id_keranjang = $_POST['id_cart'];
 
         $stmt->bind_param(
-            'ii',
-            $id_produk,
-            $id_user
+            'i',
+            $id_keranjang
         );
 
         if ($stmt->execute()) {

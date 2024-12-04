@@ -109,7 +109,8 @@ function getUserProduct($email)
 
     $sql = "SELECT produk.*, shhalal.*,
 COUNT(DISTINCT CASE WHEN r.pesan_rating is not null and r.pesan_rating != '' THEN r.id_rating ELSE NULL END) as jumlah_ulasan,
-COUNT(DISTINCT CASE WHEN pesanan.status_pesanan = 'ulas' OR pesanan.status_pesanan = 'selesai' THEN pesanan.id_pesanan ELSE NULL END) AS jumlah_terjual
+COUNT(DISTINCT CASE WHEN pesanan.status_pesanan = 'ulas' OR pesanan.status_pesanan = 'selesai' THEN pesanan.id_pesanan ELSE NULL END) AS jumlah_terjual,
+(SELECT COUNT(*) FROM favorite WHERE favorite.id_produk = produk.id_produk) AS jumlah_favorite
 FROM produk
 -- USING biar tidak ada duplikasi kolom
 -- tapi percuma jika diginiin = shhalal.*

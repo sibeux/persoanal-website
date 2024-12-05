@@ -3,6 +3,8 @@
 // bikin indeks FULLTEXT pakai ini
 // * ALTER TABLE produk ADD FULLTEXT(nama_produk, deskripsi_produk);
 
+include './database/db.php';
+
 $method = '';
 $sql = '';
 

@@ -44,9 +44,7 @@ function searchProduct()
     $levenshtein_query = implode(" OR ", $levenshtein_conditions);
 
     // Bangun query SQL dinamis
-    $sql = "SELECT 
-    p.*, 
-    s.kategori_shhalal,
+    $sql = "SELECT p.*, alamat.kota, shhalal.*,
     MATCH(p.nama_produk, p.deskripsi_produk) AGAINST ('$search_terms' IN NATURAL LANGUAGE MODE) AS relevance,
     (
         " . implode(" + ", array_map(function ($keyword) {

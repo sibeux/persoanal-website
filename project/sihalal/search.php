@@ -109,7 +109,7 @@ function sortCategoryProduct(){
     // Logika untuk menangani string kosong
     if ($kategori === '') {
         // Jika string kosong, abaikan kondisi LIKE
-        $whereCondition = "1=1"; // Semua data akan diambil
+        $whereCondition = "true"; // Semua data akan diambil
     } else {
         // Jika ada kata kunci, gunakan kondisi LIKE
         $whereCondition = "s.kategori_shhalal LIKE '$searchKeywordLike'";

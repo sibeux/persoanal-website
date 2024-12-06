@@ -105,6 +105,15 @@ function sortCategoryProduct(){
     $offset = $_GET['offset'];
     $kategori = $_GET['kategori'];
     $searchKeywordLike = "%$kategori%";
+
+    // Logika untuk menangani string kosong
+    if ($kategori === '') {
+        // Jika string kosong, abaikan kondisi LIKE
+        $whereCondition = "1=1"; // Semua data akan diambil
+    } else {
+        // Jika ada kata kunci, gunakan kondisi LIKE
+        $whereCondition = "s.kategori_shhalal LIKE '$searchKeywordLike'";
+    }
     
     $sql = "SELECT p.*, alamat.kota, s.*,
     IFNULL(ulasan.jumlah_ulasan, 0) AS jumlah_ulasan, 
@@ -134,7 +143,7 @@ LEFT JOIN (
         r.id_produk
 ) AS rating_avg ON p.id_produk = rating_avg.id_produk
 JOIN alamat ON alamat.id_user = p.id_user
-WHERE s.kategori_shhalal like '$searchKeywordLike' AND
+WHERE $whereCondition AND
     (alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' AND p.stok_produk != 0)
 ORDER BY 
     p.id_produk DESC

@@ -94,8 +94,8 @@ WHERE
     AND (alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' AND p.stok_produk != 0)
 ORDER BY 
     kategori_relevance DESC, 
-    kategori_distance,
     relevance DESC, 
+    kategori_distance,
     typo_distance
 LIMIT 10 OFFSET $offset;";
 }

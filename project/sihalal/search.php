@@ -107,7 +107,7 @@ function sortCategoryProduct(){
     $searchKeywordLike = "%$kategori%";
 
     // Logika untuk menangani string kosong
-    if ($kategori === '') {
+    if ($kategori === 'Semua') {
         // Jika string kosong, abaikan kondisi LIKE
         $whereCondition = "true"; // Semua data akan diambil
     } else {

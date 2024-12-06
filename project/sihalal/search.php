@@ -106,9 +106,7 @@ function sortCategoryProduct(){
     $kategori = $_GET['kategori'];
     $searchKeywordLike = "%$kategori%";
     
-    $sql = "SELECT 
-    p.*,
-    s.kategori_shhalal,
+    $sql = "SELECT p.*, alamat.kota, s.*,
     IFNULL(ulasan.jumlah_ulasan, 0) AS jumlah_ulasan, 
     IFNULL(ulasan.jumlah_rating, 0) AS jumlah_rating,
     COALESCE(rating_avg.rating_produk, 0) AS rating_produk

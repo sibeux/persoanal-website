@@ -21,6 +21,8 @@ function searchProduct()
     // Contoh: gula manis
     $search_terms = isset($_GET['search']) ? $_GET['search'] : '';
 
+    $offset = $_GET['offset'];
+
     // Pecah kata kunci yang dipisahkan spasi menjadi array
     $keywords = explode(" ", $search_terms);
 
@@ -95,7 +97,7 @@ ORDER BY
     kategori_distance,
     relevance DESC, 
     typo_distance
-LIMIT 10";
+LIMIT 10 OFFSET $offset;";
 }
 
 switch ($method) {

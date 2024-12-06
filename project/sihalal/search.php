@@ -100,9 +100,54 @@ ORDER BY
 LIMIT 10 OFFSET $offset;";
 }
 
+function sortCategoryProduct(){
+    global $sql;
+    $offset = $_GET['offset'];
+    $kategori = $_GET['kategori'];
+    
+    $sql = "SELECT 
+    p.*,
+    s.kategori_shhalal,
+    IFNULL(ulasan.jumlah_ulasan, 0) AS jumlah_ulasan, 
+    IFNULL(ulasan.jumlah_rating, 0) AS jumlah_rating,
+    COALESCE(rating_avg.rating_produk, 0) AS rating_produk
+FROM 
+    produk p
+JOIN 
+    shhalal s ON p.id_shhalal = s.id_shhalal
+LEFT JOIN (
+    SELECT 
+        r.id_produk, 
+        SUM(r.pesan_rating IS NOT NULL) AS jumlah_ulasan, 
+        COUNT(r.id_produk) AS jumlah_rating
+    FROM 
+        rating r
+    GROUP BY 
+        r.id_produk
+) AS ulasan ON p.id_produk = ulasan.id_produk
+LEFT JOIN (
+    SELECT 
+        r.id_produk, 
+        COALESCE(AVG(r.bintang_rating), 0) AS rating_produk
+    FROM 
+        rating r
+    GROUP BY 
+        r.id_produk
+) AS rating_avg ON p.id_produk = rating_avg.id_produk
+JOIN alamat ON alamat.id_user = p.id_user
+WHERE s.kategori_shhalal like " % $kategori % " AND
+    (alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' AND p.stok_produk != 0)
+ORDER BY 
+    p.id_produk DESC
+LIMIT 10 OFFSET $offset;";
+}
+
 switch ($method) {
     case 'search_product':
         searchProduct();
+        break;
+    case 'sort_category_product':
+        sortCategoryProduct();
         break;
     default:
         break;

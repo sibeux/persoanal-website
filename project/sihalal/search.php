@@ -135,7 +135,7 @@ LEFT JOIN (
         r.id_produk
 ) AS rating_avg ON p.id_produk = rating_avg.id_produk
 JOIN alamat ON alamat.id_user = p.id_user
-WHERE s.kategori_shhalal like " % $kategori % " AND
+WHERE s.kategori_shhalal like CONCAT('%', $kategori, '%')  AND
     (alamat.is_toko = 'true' AND p.is_ditampilkan = 'true' AND p.stok_produk != 0)
 ORDER BY 
     p.id_produk DESC
